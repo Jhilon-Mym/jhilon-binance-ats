@@ -1,0 +1,11 @@
+
+python-dotenv
+python-binance
+pandas
+numpy
+joblib
+xgboost
+ta
+scikit-learn
+matplotlib
+flask

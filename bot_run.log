@@ -1,0 +1,8 @@
+Bot started
+2025-09-18 17:32:48,154 - INFO - [INFO] Loaded symbol info for BTCUSDT: LOT_SIZE step=[{'filterType': 'PRICE_FILTER', 'minPrice': '0.01000000', 'maxPrice': '1000000.00000000', 'tickSize': '0.01000000'}, {'filterType': 'LOT_SIZE', 'minQty': '0.00001000', 'maxQty': '9000.00000000', 'stepSize': '0.00001000'}, {'filterType': 'ICEBERG_PARTS', 'limit': 10}, {'filterType': 'MARKET_LOT_SIZE', 'minQty': '0.00000000', 'maxQty': '120.64010233', 'stepSize': '0.00000000'}, {'filterType': 'TRAILING_DELTA', 'minTrailingAboveDelta': 10, 'maxTrailingAboveDelta': 2000, 'minTrailingBelowDelta': 10, 'maxTrailingBelowDelta': 2000}, {'filterType': 'PERCENT_PRICE_BY_SIDE', 'bidMultiplierUp': '5', 'bidMultiplierDown': '0.2', 'askMultiplierUp': '5', 'askMultiplierDown': '0.2', 'avgPriceMins': 5}, {'filterType': 'NOTIONAL', 'minNotional': '5.00000000', 'applyMinToMarket': True, 'maxNotional': '9000000.00000000', 'applyMaxToMarket': False, 'avgPriceMins': 5}, {'filterType': 'MAX_NUM_ORDERS', 'maxNumOrders': 200}, {'filterType': 'MAX_NUM_ALGO_ORDERS', 'maxNumAlgoOrders': 5}]
+2025-09-18 17:32:48,154 - INFO - Bot started | netmode=true | API_KEY=tIYVromj1zcNLjgoU0W9uj4NhegJMgw8xkq67imbbP5kCe912zXDwKMeZp6LeANm | API_SECRET=dRALwXXRAtpObcVFraXQWv0bEY14Uga1ik6YDRikHFGv9KbGHz6CtWibMkT8kTzx
+2025-09-18 17:32:48,343 - INFO - [BALANCE] USDT=9915.35 | BTC=1.000720
+2025-09-18 17:32:49,103 - INFO - [INFO] Seeded history with 600 candles from REST
+2025-09-18 17:32:54,126 - INFO - [WebSocket] Connection opened (attempt 1)
+2025-09-18 17:32:59,179 - ERROR - Failed to create client: 
+2025-09-18 17:32:59,180 - INFO - Socket listener stopped

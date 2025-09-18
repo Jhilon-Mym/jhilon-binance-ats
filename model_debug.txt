@@ -1,0 +1,3232 @@
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6489818295739349, 0.35101817042606515]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'macd', 'macd_signal', 'atr']
+X.shape: (1, 10)
+X_scaled.shape: (1, 10)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6489818295739349, 0.35101817042606515]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'macd', 'macd_signal', 'atr']
+X.shape: (1, 10)
+X_scaled.shape: (1, 10)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.634297619047619, 0.36570238095238095]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'macd', 'macd_signal', 'atr']
+X.shape: (1, 10)
+X_scaled.shape: (1, 10)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.519, 0.48100000000000004]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'macd', 'macd_signal', 'atr']
+X.shape: (1, 10)
+X_scaled.shape: (1, 10)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7043872918886126, 0.29561270811138735]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.669926148563339, 0.33007385143666107]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5954114621627831, 0.40458853783721693]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5527848381193969, 0.44721516188060306]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5651877685223274, 0.4348122314776725]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5540272346117935, 0.4459727653882065]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.576327546078867, 0.42367245392113295]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5968871337134546, 0.4031128662865454]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5938721764484973, 0.4061278235515027]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5938721764484973, 0.4061278235515027]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6751704126326031, 0.324829587367397]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7435607722729627, 0.25643922772703737]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6711863400626609, 0.32881365993733924]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6923952502949406, 0.3076047497050594]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7175952502949405, 0.28240474970505935]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6722246431243336, 0.32777535687566656]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6722246431243336, 0.32777535687566656]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6722246431243336, 0.32777535687566656]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6557036415382004, 0.3442963584617996]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3569047619047619, 0.643095238095238]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6144506653477242, 0.38554933465227587]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5831899330244918, 0.41681006697550804]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6350906507278412, 0.36490934927215884]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7428927874799779, 0.25710721252002217]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8132212368084271, 0.18677876319157283]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7847856723728627, 0.21521432762713721]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.718003232590423, 0.281996767409577]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6453742643364546, 0.35462573566354527]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7063647932519835, 0.2936352067480164]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8061356265853169, 0.19386437341468304]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7114273712398712, 0.28857262876012874]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7499789585414584, 0.2500210414585414]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7651932442557442, 0.23480675574425575]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8052022338910548, 0.19479776610894528]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8176219201120516, 0.18237807988794827]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.835524517514649, 0.16447548248535088]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8396110074136389, 0.160388992586361]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8145342303259924, 0.18546576967400763]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8405959304722512, 0.15940406952774866]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8294019782891686, 0.1705980217108313]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7966122703415323, 0.2033877296584676]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8406576343977659, 0.159342365602234]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8275752931279245, 0.17242470687207528]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8793702894466102, 0.1206297105533897]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7855177253440462, 0.21448227465595385]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7375926986798891, 0.262407301320111]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6745718101481311, 0.32542818985186905]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6895353393725298, 0.3104646606274703]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6194210164973374, 0.3805789835026626]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5709075282947186, 0.42909247170528125]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6614176168173073, 0.3385823831826928]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5590422199919104, 0.4409577800080895]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6641993628490533, 0.3358006371509468]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6518293994790898, 0.3481706005209101]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6944899475662684, 0.30551005243373175]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5553454670467878, 0.4446545329532121]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5433364254209843, 0.45666357457901574]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5822896672909881, 0.4177103327090119]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6661767313139216, 0.3338232686860783]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7129660475532379, 0.2870339524467621]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6750549364421268, 0.32494506355787317]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7009382697754601, 0.29906173022453986]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7501755533252435, 0.24982444667475634]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7314343920107127, 0.26856560798928725]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7565746611618513, 0.24342533883814851]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7197934285056187, 0.2802065714943811]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6307164138536042, 0.3692835861463957]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6010336104822998, 0.3989663895177003]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6758428152300056, 0.3241571847699944]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7363549364421267, 0.26364506355787326]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8384542766444081, 0.16154572335559172]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7955960220335219, 0.20440397796647797]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.822264389056151, 0.17773561094384888]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.746635796148296, 0.2533642038517039]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7453774628149629, 0.2546225371850372]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7756122217789838, 0.22438777822101622]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7157694048736668, 0.28423059512633314]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7084478236770856, 0.29155217632291436]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7630609533010848, 0.23693904669891508]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7694850708502023, 0.23051492914979754]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7711725708502023, 0.22882742914979753]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7854951923076924, 0.21450480769230773]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8201725708502023, 0.1798274291497976]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8477011880663197, 0.15229881193368036]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8127011880663197, 0.18729881193368036]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8923900769552086, 0.10760992304479146]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8895620788663408, 0.11043792113365912]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.912648013463145, 0.08735198653685494]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.9183740446783066, 0.08162595532169328]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.9094129707281023, 0.09058702927189768]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8032836000987317, 0.19671639990126832]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7666417491960112, 0.23335825080398875]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.760058415862678, 0.2399415841373221]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.669683019037281, 0.33031698096271894]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6881097589640208, 0.31189024103597907]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6213955280830281, 0.37860447191697183]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6793581630357945, 0.32064183696420545]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.698903707705338, 0.30109629229466184]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6829870410386715, 0.31701295896132853]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.736084353511985, 0.2639156464880149]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8104315103025628, 0.18956848969743711]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8169703092229408, 0.18302969077705922]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8359987183138499, 0.16400128168615014]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8144630040281357, 0.1855369959718644]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7354604513272135, 0.2645395486727867]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7772424774151605, 0.22275752258483952]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8131779863506694, 0.18682201364933057]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7553044667320984, 0.2446955332679017]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7977810846412677, 0.2022189153587323]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6866911425562741, 0.3133088574437259]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7482600359435885, 0.25173996405641147]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7821280129322749, 0.21787198706772506]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7938298663324979, 0.20617013366750211]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7395819749694748, 0.260418025030525]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7472366265408885, 0.25276337345911143]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7581659469185784, 0.24183405308142153]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7745450677976993, 0.22545493220230065]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7377851613394233, 0.26221483866057665]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.739521853511985, 0.26047814648801493]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8135093535119851, 0.18649064648801492]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7778155806182121, 0.22218441938178782]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7745017278043593, 0.22549827219564061]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8083356650024272, 0.19166433499757296]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8119759427802048, 0.18802405721979518]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8064304671205985, 0.1935695328794013]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7518929701972322, 0.2481070298027678]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6917739225781847, 0.3082260774218154]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.770034002474134, 0.22996599752586594]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7453320461797293, 0.25466795382027074]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6589327642386854, 0.3410672357613147]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7159739248324775, 0.28402607516752254]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6828858534835366, 0.31711414651646347]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5963254410063621, 0.4036745589936379]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6692826574010785, 0.33071734259892155]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6675060936870147, 0.33249390631298525]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6198515676574887, 0.3801484323425112]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7102938753497964, 0.2897061246502036]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7134475359435887, 0.28655246405641144]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.728846522921523, 0.2711534770784771]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7888349844599846, 0.21116501554001554]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8723543447145278, 0.12764565528547223]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8189917738694054, 0.18100822613059456]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7877141972793288, 0.2122858027206711]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7545808639459954, 0.24541913605400445]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8241267278043594, 0.17587327219564058]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8026255154297774, 0.19737448457022258]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8156651893428208, 0.18433481065717905]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7820870538913159, 0.21791294610868409]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7931255154297776, 0.20687448457022253]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8015144043186663, 0.19848559568133364]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7831665782317099, 0.21683342176829018]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.702553585605216, 0.297446414394784]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6808300518925521, 0.31916994810744814]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.702833257020757, 0.297166742979243]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.760771853511985, 0.2392281464880149]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7612926868453183, 0.2387073131546816]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6864999236874236, 0.31350007631257637]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6600144164410469, 0.33998558355895314]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6533798981815286, 0.34662010181847136]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6903969921986226, 0.30960300780137734]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6317915903540904, 0.3682084096459096]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6642221459096459, 0.33577785409035404]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6323471459096459, 0.36765285409035414]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6033300518925518, 0.39666994810744804]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6564790903540905, 0.34352090964590964]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6753654054279055, 0.3246345945720946]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6614790903540905, 0.33852090964590964]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6454027014652016, 0.3545972985347985]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6358300518925519, 0.364169948107448]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6520320720945721, 0.3479679279054279]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6459209609834611, 0.35407903901653903]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.608670960983461, 0.39132903901653904]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6125690073815073, 0.3874309926184927]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6599408022533022, 0.3400591977466978]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6285519133644133, 0.37144808663558654]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6840727466977466, 0.3159272533022533]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6916296911421912, 0.30837030885780886]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6960842851592852, 0.30391571484071483]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.653812062937063, 0.346187937062937]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5572057595182595, 0.4427942404817405]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.712221785159285, 0.28777821484071486]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6478852466977466, 0.3521147533022533]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6368852466977466, 0.3631147533022533]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6339963578088578, 0.3660036421911422]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6362602466977467, 0.3637397533022533]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.715659285159285, 0.2843407148407148]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7699592851592851, 0.23004071484071484]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7041756313131313, 0.2958243686868687]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7281168706293707, 0.27188312937062936]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7073454059829061, 0.29265459401709404]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7589506691408006, 0.24104933085919933]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7604885201786518, 0.23951147982134824]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7785826135852452, 0.22141738641475484]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7849965329991646, 0.2150034670008354]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7895901893428209, 0.2104098106571791]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7897009036285351, 0.21029909637146477]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8088767278043594, 0.19112327219564063]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7865422979797979, 0.213457702020202]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8808767278043593, 0.11912327219564062]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5640270843287147, 0.4359729156712852]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8497564678107298, 0.15024353218927017]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8933755154297773, 0.10662448457022254]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8887082448983764, 0.11129175510162352]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8559506691408008, 0.14404933085919927]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8841810709853329, 0.11581892901466699]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8983755154297773, 0.10162448457022254]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8850415782317097, 0.11495842176829019]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.9095901893428209, 0.09040981065717908]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8716255154297775, 0.12837448457022255]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.9012985226761542, 0.09870147732384572]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7470942291626501, 0.25290577083734983]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8146281014307329, 0.18537189856926697]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8815503389154705, 0.1184496610845295]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7213366841491841, 0.2786633158508159]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.48600075180667274, 0.5139992481933272]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5210007518066727, 0.47899924819332723]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6358676016235227, 0.3641323983764774]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5498108250667462, 0.45018917493325394]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5455251107810318, 0.4544748892189683]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6143662127346338, 0.3856337872653662]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.49445702470044567, 0.5055429752995544]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5693688836748048, 0.43063111632519535]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6298983555917768, 0.37010164440822335]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5607551931986142, 0.4392448068013858]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5898980503414715, 0.4101019496585287]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6070854740288951, 0.39291452597110504]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6868931663365874, 0.31310683366341263]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7118226382535593, 0.2881773617464407]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.572639945945867, 0.427360054054133]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6854541722166723, 0.3145458277833278]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7427963578088579, 0.2572036421911422]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.828536666111666, 0.1714633338883339]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7450682595182596, 0.25493174048174044]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7381678266178265, 0.2618321733821734]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7490485226761544, 0.2509514773238457]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7881268956920273, 0.21187310430797276]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7940713401364718, 0.2059286598635283]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7733570544221859, 0.22664294557781395]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7355713401364717, 0.2644286598635283]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7515320183471499, 0.24846798165285008]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.714845342522974, 0.2851546574770259]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6774470598845599, 0.32255294011544017]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7601273316690939, 0.23987266833090629]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7425662205579826, 0.25743377944201745]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7122203566996187, 0.2877796433003813]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7760031166932483, 0.2239968833067517]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7675415782317099, 0.23245842176829015]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7956526893428211, 0.2043473106571791]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7821255154297774, 0.21787448457022254]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7092374296025611, 0.2907625703974388]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7572130373281689, 0.2427869626718311]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7589987516138831, 0.2410012483861168]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7633465777008397, 0.23665342229916028]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.744088037328169, 0.25591196267183114]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7525269262170577, 0.2474730737829422]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7341764988666304, 0.26582350113336956]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6825014988666304, 0.3174985011333695]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7289987516138831, 0.27100124838611683]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7247130373281689, 0.2752869626718311]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6767755373281689, 0.3232244626718311]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6809898230424545, 0.31901017695754535]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7266257357408673, 0.27337426425913264]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6991402284944905, 0.30085977150550947]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6727180062722684, 0.32728199372773176]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6664225306126622, 0.33357746938733773]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5828877809420429, 0.41711221905795703]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5705901618944238, 0.4294098381055761]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5979403998778998, 0.40205960012210007]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6157883852258852, 0.38421161477411475]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7019266154167468, 0.298073384583253]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6516936050061051, 0.348306394993895]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7585205093247712, 0.24147949067522867]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7280661075036075, 0.2719338924963925]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7153389335905641, 0.28466106640943595]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7764389988666304, 0.22356100113336957]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7611911075036075, 0.2388088924963925]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8450053078595698, 0.15499469214043013]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.9108685557228177, 0.08913144427718227]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8526029269071889, 0.14739707309281105]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.848604673469805, 0.15139532653019494]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.86115961852475, 0.13884038147524988]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8352751491294111, 0.16472485087058886]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8217418157960779, 0.17825818420392217]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7990382138424758, 0.2009617861575241]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7179271027313647, 0.28207289726863527]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7619403877555194, 0.23805961224448066]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7386581630357945, 0.26134183696420543]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7238649634817255, 0.27613503651827453]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6769959158626778, 0.3230040841373221]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6772459158626779, 0.3227540841373221]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6766198388599705, 0.32338016114002954]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7250123297024612, 0.27498767029753873]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7058847284389905, 0.2941152715610096]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7371064231090547, 0.26289357689094534]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7157459158626779, 0.2842540841373221]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.708469246031746, 0.291530753968254]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7397738095238094, 0.2602261904761905]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7285238095238094, 0.2714761904761905]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7035238095238094, 0.2964761904761905]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7631290726817042, 0.23687092731829576]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7261290726817043, 0.27387092731829576]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8188767278043594, 0.18112327219564062]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8005662119313435, 0.1994337880686565]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7897140380183001, 0.21028596198169996]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7856493249535871, 0.214350675046413]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7526810709853329, 0.247318929014667]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7790415782317097, 0.22095842176829017]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7413441301483923, 0.2586558698516079]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7291689231090547, 0.2708310768909454]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.8591774634817255, 0.1408225365182745]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7845617802519118, 0.2154382197480882]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7883117802519117, 0.21168821974808819]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7655682515583832, 0.23443174844161688]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6649772102188378, 0.33502278978116223]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6387107905778661, 0.361289209422134]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6058832888569093, 0.39411671114309066]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5795878957564486, 0.42041210424355135]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5790915369917192, 0.4209084630082808]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.600768315812657, 0.39923168418734306]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6678642632930419, 0.332135736706958]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6490046715250628, 0.35099532847493736]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6179038168511177, 0.38209618314888244]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5401300610964924, 0.4598699389035076]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5600038033817839, 0.4399961966182162]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.35645442516148235, 0.6435455748385175]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3356501458373481, 0.6643498541626518]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.37910813035026264, 0.6208918696497375]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.37046808496199085, 0.6295319150380093]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.38105486048073656, 0.6189451395192636]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.30833147857944626, 0.6916685214205538]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.2866141213035326, 0.7133858786964673]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4980663134731219, 0.5019336865268782]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.28117818835869196, 0.7188218116413079]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.2898722525016343, 0.7101277474983655]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4299746365754129, 0.5700253634245871]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.41774342380322266, 0.5822565761967773]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4540060684350023, 0.5459939315649978]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5063045722012296, 0.49369542779877035]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7209792173251873, 0.27902078267481284]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
