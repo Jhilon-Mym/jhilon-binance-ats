@@ -106,9 +106,14 @@ def _quantize_qty(symbol_info: dict, qty: float) -> Optional[str]:
         return None
 
 def execute_trade(client: Client, signal_out: Dict, symbol: str, last_price: float):
+    from src.utils import TradeStats
+    import logging
+    # Prepare trade parameters
     side = signal_out.get("side")
     if side is None:
         logger.info(f"[SKIP] {signal_out.get('reason')}")
+        if signal_out.get('reason','').startswith('indicators_reject') or signal_out.get('reason','').startswith('low_conf'):
+            logging.warning(f"[TRADE] Trade rejected: {signal_out}")
         return None
 
     reason = signal_out.get("reason", "")
@@ -118,7 +123,6 @@ def execute_trade(client: Client, signal_out: Dict, symbol: str, last_price: flo
     tuned_thresh = signal_out.get("tuned_thresh")
 
     ai_min = _parse_env_float("AI_MIN_CONFIDENCE_OVERRIDE", 0.75)
-    # minimal required win_prob for any live trade; user-requested default is 0.8
     win_prob_min = _parse_env_float("WIN_PROB_MIN", 0.8)
     min_combined = _parse_env_float("MIN_COMBINED_SCORE", 0.70)
     min_ai_weight = _parse_env_float("MIN_AI_WEIGHT", 0.20)
@@ -126,35 +130,28 @@ def execute_trade(client: Client, signal_out: Dict, symbol: str, last_price: flo
     buy_usdt = _parse_env_float("BUY_USDT_PER_TRADE", 20.0)
     symbol_base = os.getenv("SYMBOL_BASE", "BTC")
 
-    # Conservative live-safety gate: when live_trades is enabled, require either
-    # - an explicit ai_confident reason with win_prob >= ai_min, OR
-    # - a combined_score >= MIN_COMBINED_SCORE (recommended), AND w_ai not below MIN_AI_WEIGHT
+    # Safety checks (same as before)
     if live_trades:
-        # Enforce a hard minimum win probability if set (user requested behavior)
         if win_prob < float(win_prob_min):
             logger.info(f"[SKIP-LIVE] Blocking live trade: win_prob {win_prob:.3f} < WIN_PROB_MIN {win_prob_min}")
             return None
-
         safety_ok = False
         if reason == "ai_confident" and win_prob >= ai_min:
             safety_ok = True
         if combined_score is not None:
             try:
                 if float(combined_score) >= float(min_combined):
-                    # also respect a minimal AI weight if provided
                     if w_ai is None or float(w_ai) >= float(min_ai_weight):
                         safety_ok = True
             except Exception:
                 safety_ok = False
-
         if not safety_ok:
             logger.info(f"[SKIP-LIVE] Blocking live trade: reason={reason} win_prob={win_prob:.3f} combined_score={combined_score} w_ai={w_ai} min_combined={min_combined} min_ai_weight={min_ai_weight}")
             return None
 
-    # common balances check
     bals = get_balances(client)
-
-    # BUY path
+    trade_stats = TradeStats()
+    # BUY
     if side == "BUY":
         if bals.get("USDT", 0.0) < buy_usdt:
             logger.info(f"[SKIP] BUY: insufficient USDT {bals.get('USDT',0.0):.2f} < {buy_usdt}")
@@ -164,19 +161,21 @@ def execute_trade(client: Client, signal_out: Dict, symbol: str, last_price: flo
         if qty_str == '' or float(qty_str) == 0.0:
             logger.info(f"[SKIP] BUY: computed qty is zero for last_price={last_price}")
             return None
-
+        order_info = None
         if live_trades:
             q = _quantize_qty(SYMBOL_INFO, float(qty_str)) if SYMBOL_INFO is not None else qty_str
             if q is None:
                 logger.info(f"[SKIP] BUY: qty {qty_str} doesn't meet symbol LOT_SIZE/minQty rules")
                 return None
-            place_order_live(client, "BUY", symbol, q, order_type="MARKET")
+            order_info = place_order_live(client, "BUY", symbol, q, order_type="MARKET")
             logger.info(f"[TRADE] BUY {q} {symbol_base} @ ~{last_price} | reason={reason} win_prob={win_prob:.3f} combined_score={combined_score}")
         else:
             logger.info(f"[PAPER] BUY {qty_str} {symbol_base} @ ~{last_price} | reason={reason} win_prob={win_prob:.3f} combined_score={combined_score}")
-
-    # SELL path
-    else:
+        trade = trade_stats.open_trade(signal_out, last_price, qty, buy_usdt, order_info=order_info)
+        return trade
+    # SELL
+    elif side == "SELL":
+        logging.info(f"[TRADE] Attempting SELL: {signal_out}")
         base_bal = bals.get(symbol_base, 0.0)
         if base_bal <= 0:
             logger.info(f"[SKIP] SELL: no {symbol_base} balance")
@@ -186,16 +185,19 @@ def execute_trade(client: Client, signal_out: Dict, symbol: str, last_price: flo
         if qty_str == '' or float(qty_str) == 0.0:
             logger.info(f"[SKIP] SELL: computed qty is zero for base_bal={base_bal}")
             return None
-
+        order_info = None
         if live_trades:
             q = _quantize_qty(SYMBOL_INFO, float(qty_str)) if SYMBOL_INFO is not None else qty_str
             if q is None:
                 logger.info(f"[SKIP] SELL: qty {qty_str} doesn't meet symbol LOT_SIZE/minQty rules")
                 return None
-            place_order_live(client, "SELL", symbol, q, order_type="MARKET")
+            order_info = place_order_live(client, "SELL", symbol, q, order_type="MARKET")
             logger.info(f"[TRADE] SELL {q} {symbol_base} @ ~{last_price} | reason={reason} win_prob={win_prob:.3f} combined_score={combined_score}")
         else:
             logger.info(f"[PAPER] SELL {qty_str} {symbol_base} @ ~{last_price} | reason={reason} win_prob={win_prob:.3f} combined_score={combined_score}")
+    trade = trade_stats.open_trade(signal_out, last_price, qty, base_bal, order_info=order_info)
+    logging.info(f"[TRADE] SELL executed: {trade}")
+    return trade
 
 def run():
     global HISTORY, SHUTTING_DOWN
@@ -268,15 +270,29 @@ def run():
             except Exception as e:
                 logger.error(f"[ERROR] predict_signal: {e}")
 
-            out = apply_strategy(HISTORY, ai_signal=ai_signal, threshold=float(os.getenv("SIGNAL_THRESHOLD", "0.8")))
+            from src.config import Config
+            out = apply_strategy(HISTORY, ai_signal=ai_signal, threshold=Config.SIGNAL_THRESHOLD)
         except Exception as e:
             logger.error(f"[ERROR] apply_strategy: {e}")
             return
         logger.info(f"[SIGNAL] {out}")
         try:
-            execute_trade(client, out, symbol, float(candle["close"]))
+            trade = execute_trade(client, out, symbol, float(candle["close"]))
+            if trade and trade.get("side") == "SELL":
+                logger.info(f"[DEBUG] SELL trade created and stored: {trade}")
         except Exception as e:
             logger.error(f"[ERROR] execute_trade: {e}")
+
+        # --- Auto-close trades on every new candle ---
+        try:
+            from src.utils import TradeStats
+            trade_stats = TradeStats()
+            closed = trade_stats.update_pending(candle)
+            for t in closed:
+                if t.get("side") == "SELL":
+                    logger.info(f"[DEBUG] SELL trade closed and persisted: {t}")
+        except Exception as e:
+            logger.error(f"[ERROR] update_pending: {e}")
 
     ws_runner = WSRunner(client, symbol, interval, on_candle_closed=on_candle_closed)
     ws_runner.start()

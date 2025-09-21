@@ -19,6 +19,7 @@ const DEFAULTS = {
   MIN_COMBINED_SCORE: 0.05,
   MIN_AI_WEIGHT: 0.0,
   WIN_PROB_MIN: 0.75,
+  SIGNAL_THRESHOLD: 0.75,
 };
 
 const SYMBOL_OPTIONS = ['BTCUSDT', 'ETHUSDT', 'BNBUSDT'];
@@ -43,6 +44,7 @@ const FIELD_META = {
   MIN_COMBINED_SCORE: { type: 'float', min: 0.0, max: 1.0 },
   MIN_AI_WEIGHT: { type: 'float', min: 0.0, max: 1.0 },
   WIN_PROB_MIN: { type: 'float', min: 0.5, max: 1.0 },
+  SIGNAL_THRESHOLD: { type: 'float', min: 0.5, max: 1.0 },
 };
 
 export default function ConfigModal({
@@ -123,10 +125,10 @@ export default function ConfigModal({
           </div>
         ))}
       </form>
-      <div className="button-row">
-        <button onClick={handleApply} disabled={!dirty || isBotRunning}>Apply</button>
-        <button onClick={handleRestore} disabled={!dirty || isBotRunning}>Restore Default</button>
-        <button onClick={onClose}>Cancel</button>
+      <div className="button-row" style={{ display: 'flex', gap: '10px', marginTop: '16px' }}>
+        <button style={{ flex: 1, padding: '10px 0', borderRadius: '8px', fontWeight: 600, fontSize: '1.05rem', background: 'linear-gradient(90deg,#2563eb 60%,#1e40af 100%)', color: '#fff', border: 'none', boxShadow: '0 2px 8px #0002', transition: 'background 0.2s' }} onClick={handleApply} disabled={!dirty || isBotRunning}>Apply</button>
+        <button style={{ flex: 1, padding: '10px 0', borderRadius: '8px', fontWeight: 600, fontSize: '1.05rem', background: '#f3f4f6', color: '#222', border: '1px solid #cbd5e1', boxShadow: '0 2px 8px #0001', transition: 'background 0.2s' }} onClick={handleRestore} disabled={!dirty || isBotRunning}>Restore Default</button>
+        <button style={{ flex: 1, padding: '10px 0', borderRadius: '8px', fontWeight: 600, fontSize: '1.05rem', background: '#fff', color: '#222', border: '1px solid #cbd5e1', boxShadow: '0 2px 8px #0001', transition: 'background 0.2s' }} onClick={onClose}>Cancel</button>
       </div>
       {showConfirm && (
         <div className="modal confirm-modal">

@@ -482,7 +482,13 @@ def _indicator_score_from_row(last_row):
             macd_signal = float(last_row.get('macd_signal', float('nan')))
         except Exception:
             macd = macd_signal = float('nan')
-    except Exception:
+    except Exception as e:
+        # log the error and input row for debugging
+        try:
+            with open('model_debug.txt', 'a', encoding='utf-8') as dbg:
+                dbg.write(f"[ind_major None] Exception: {e}\nInput row: {last_row}\n")
+        except Exception:
+            pass
         return 0.0, None
 
     buy_conf = 0
@@ -527,6 +533,13 @@ def _indicator_score_from_row(last_row):
     max_conf = 4.0
     raw = float(buy_conf - sell_conf) / max_conf
     ind_major = 'BUY' if buy_conf >= 2 and buy_conf > sell_conf else ('SELL' if sell_conf >= 2 and sell_conf > buy_conf else None)
+    if ind_major is None:
+        # log the input row and computed values for debugging
+        try:
+            with open('model_debug.txt', 'a', encoding='utf-8') as dbg:
+                dbg.write(f"[ind_major None] buy_conf={buy_conf}, sell_conf={sell_conf}, close={close}, sma_fast={sma_fast}, sma_slow={sma_slow}, ema_200={ema_200}, rsi={rsi}, macd={macd}, macd_signal={macd_signal}\nInput row: {last_row}\n")
+        except Exception:
+            pass
     return max(-1.0, min(1.0, raw)), ind_major
 
 
@@ -635,6 +648,13 @@ def weighted_consensus(history, ai_signal, tune=True):
     """
     last = history[-1] if hasattr(history, '__len__') else {}
     ind_score, ind_major = _indicator_score_from_row(last)
+    if ind_major is None:
+        # log the last row and ai_signal for debugging
+        try:
+            with open('model_debug.txt', 'a', encoding='utf-8') as dbg:
+                dbg.write(f"[weighted_consensus] ind_major is None. last_row: {last}\nai_signal: {ai_signal}\n")
+        except Exception:
+            pass
     win_prob = float(ai_signal.get('win_prob', 0.0))
     ai_score = (win_prob - 0.5) * 2.0
 
@@ -662,7 +682,9 @@ def apply_strategy(history, ai_signal=None, threshold=0.8):
     if len(history) < 200:
         return {"side": None, "sl": None, "tp": None, "win_prob": 0.0, "reason": "not_enough_data"}
 
+    import logging
     if ai_signal is None or ai_signal.get("side") is None:
+        logging.warning(f"[STRATEGY] No AI signal. Reason: {ai_signal.get('reason') if ai_signal else 'None'}")
         return {"side": None, "sl": None, "tp": None, "win_prob": 0.0, "reason": "no_ai_signal"}
 
     side = ai_signal["side"]
@@ -688,13 +710,17 @@ def apply_strategy(history, ai_signal=None, threshold=0.8):
     # If indicators have a clear majority that contradicts AI, and both AI and combined
     # confidence are below their thresholds, reject; otherwise allow the soft-vote to decide.
     if ind_major is not None and ind_major != side and win_prob < override_prob and abs(combined_score) < tuned_thresh:
+        logging.info(f"[STRATEGY] Signal rejected by indicators: AI side={side}, ind_major={ind_major}, win_prob={win_prob}, combined_score={combined_score}, tuned_thresh={tuned_thresh}")
         return {"side": None, "sl": None, "tp": None, "win_prob": win_prob, "reason": "indicators_reject"}
 
     # Accept when either AI has sufficient prob OR combined soft-vote is confident
     if not (win_prob >= threshold or abs(combined_score) >= tuned_thresh):
+        logging.info(f"[STRATEGY] Signal rejected for low confidence: side={side}, win_prob={win_prob}, combined_score={combined_score}, threshold={threshold}, tuned_thresh={tuned_thresh}")
         return {"side": None, "sl": None, "tp": None, "win_prob": win_prob, "reason": f"low_conf(win_prob<{threshold}, combined<{tuned_thresh:.2f})"}
 
     final_side = comb_side
+    if final_side == "SELL":
+        logging.info(f"[STRATEGY] SELL signal accepted: win_prob={win_prob}, combined_score={combined_score}, ind_major={ind_major}")
     last_row = history[-1]
     last_close = last_row["close"]
     atr = last_row.get("atr")

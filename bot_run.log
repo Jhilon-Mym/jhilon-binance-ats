@@ -1,8 +1,105 @@
 Bot started
-2025-09-18 17:32:48,154 - INFO - [INFO] Loaded symbol info for BTCUSDT: LOT_SIZE step=[{'filterType': 'PRICE_FILTER', 'minPrice': '0.01000000', 'maxPrice': '1000000.00000000', 'tickSize': '0.01000000'}, {'filterType': 'LOT_SIZE', 'minQty': '0.00001000', 'maxQty': '9000.00000000', 'stepSize': '0.00001000'}, {'filterType': 'ICEBERG_PARTS', 'limit': 10}, {'filterType': 'MARKET_LOT_SIZE', 'minQty': '0.00000000', 'maxQty': '120.64010233', 'stepSize': '0.00000000'}, {'filterType': 'TRAILING_DELTA', 'minTrailingAboveDelta': 10, 'maxTrailingAboveDelta': 2000, 'minTrailingBelowDelta': 10, 'maxTrailingBelowDelta': 2000}, {'filterType': 'PERCENT_PRICE_BY_SIDE', 'bidMultiplierUp': '5', 'bidMultiplierDown': '0.2', 'askMultiplierUp': '5', 'askMultiplierDown': '0.2', 'avgPriceMins': 5}, {'filterType': 'NOTIONAL', 'minNotional': '5.00000000', 'applyMinToMarket': True, 'maxNotional': '9000000.00000000', 'applyMaxToMarket': False, 'avgPriceMins': 5}, {'filterType': 'MAX_NUM_ORDERS', 'maxNumOrders': 200}, {'filterType': 'MAX_NUM_ALGO_ORDERS', 'maxNumAlgoOrders': 5}]
-2025-09-18 17:32:48,154 - INFO - Bot started | netmode=true | API_KEY=tIYVromj1zcNLjgoU0W9uj4NhegJMgw8xkq67imbbP5kCe912zXDwKMeZp6LeANm | API_SECRET=dRALwXXRAtpObcVFraXQWv0bEY14Uga1ik6YDRikHFGv9KbGHz6CtWibMkT8kTzx
-2025-09-18 17:32:48,343 - INFO - [BALANCE] USDT=9915.35 | BTC=1.000720
-2025-09-18 17:32:49,103 - INFO - [INFO] Seeded history with 600 candles from REST
-2025-09-18 17:32:54,126 - INFO - [WebSocket] Connection opened (attempt 1)
-2025-09-18 17:32:59,179 - ERROR - Failed to create client: 
-2025-09-18 17:32:59,180 - INFO - Socket listener stopped
+2025-09-21 14:08:35,466 - INFO - [INFO] Loaded symbol info for BTCUSDT: LOT_SIZE step=[{'filterType': 'PRICE_FILTER', 'minPrice': '0.01000000', 'maxPrice': '1000000.00000000', 'tickSize': '0.01000000'}, {'filterType': 'LOT_SIZE', 'minQty': '0.00001000', 'maxQty': '9000.00000000', 'stepSize': '0.00001000'}, {'filterType': 'ICEBERG_PARTS', 'limit': 10}, {'filterType': 'MARKET_LOT_SIZE', 'minQty': '0.00000000', 'maxQty': '120.64010233', 'stepSize': '0.00000000'}, {'filterType': 'TRAILING_DELTA', 'minTrailingAboveDelta': 10, 'maxTrailingAboveDelta': 2000, 'minTrailingBelowDelta': 10, 'maxTrailingBelowDelta': 2000}, {'filterType': 'PERCENT_PRICE_BY_SIDE', 'bidMultiplierUp': '5', 'bidMultiplierDown': '0.2', 'askMultiplierUp': '5', 'askMultiplierDown': '0.2', 'avgPriceMins': 5}, {'filterType': 'NOTIONAL', 'minNotional': '5.00000000', 'applyMinToMarket': True, 'maxNotional': '9000000.00000000', 'applyMaxToMarket': False, 'avgPriceMins': 5}, {'filterType': 'MAX_NUM_ORDERS', 'maxNumOrders': 200}, {'filterType': 'MAX_NUM_ALGO_ORDERS', 'maxNumAlgoOrders': 5}]
+2025-09-21 14:08:35,466 - INFO - Bot started | netmode=true | API_KEY=UhbWwlunhBLMelyFkQE5up8Y8LyT7NAbBocioy9ChgaG7IinRXnMwdZZweTXZiJk | API_SECRET=DyRFWHX4gfUauYo7K6fAw9lG7Alh7ESJvRBDJaSyFBKOUbkWvDyjl8qMTFrGkjMa
+2025-09-21 14:08:36,739 - INFO - [BALANCE] USDT=17131.92 | BTC=2.025050
+2025-09-21 14:08:37,499 - INFO - [INFO] Seeded history with 1000 candles from REST
+2025-09-21 14:08:38,005 - INFO - [WebSocket] Connection opened (attempt 1)
+2025-09-21 14:09:59,818 - INFO - [CANDLES] 1001 (last close=115715.6)
+2025-09-21 14:09:59,826 - INFO - Trying to load model from: d:\binance_ats_clone\jhilon-binance-ats\models\model.pkl
+2025-09-21 14:10:09,675 - INFO - Model loaded successfully
+2025-09-21 14:10:09,729 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.6, combined_score=0.07999999999999999, threshold=0.75, tuned_thresh=0.08360000000000005
+2025-09-21 14:10:09,730 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.6, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:10:09,733 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.08)
+2025-09-21 14:10:09,733 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.6, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:14:59,806 - INFO - [CANDLES] 1002 (last close=115651.63)
+2025-09-21 14:14:59,859 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.586, combined_score=0.06879999999999997, threshold=0.75, tuned_thresh=0.08360000000000005
+2025-09-21 14:14:59,859 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.586, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:14:59,859 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.08)
+2025-09-21 14:14:59,859 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.586, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:15:38,996 - ERROR - ConnectionClosedError (sent 1011 (internal error) keepalive ping timeout; no close frame received)
+2025-09-21 14:15:38,996 - ERROR - BinanceWebsocketClosed (Connection closed. Reconnecting...)
+2025-09-21 14:20:00,195 - INFO - [CANDLES] 1003 (last close=115662.84)
+2025-09-21 14:20:00,269 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.59, combined_score=0.07199999999999998, threshold=0.75, tuned_thresh=0.08360000000000005
+2025-09-21 14:20:00,269 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.59, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:20:00,269 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.08)
+2025-09-21 14:20:00,269 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.59, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:25:00,211 - INFO - [CANDLES] 1004 (last close=115662.83)
+2025-09-21 14:25:00,281 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.573, combined_score=0.058399999999999966, threshold=0.75, tuned_thresh=0.08360000000000005
+2025-09-21 14:25:00,282 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.573, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:25:00,282 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.08)
+2025-09-21 14:25:00,282 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.573, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:29:59,818 - INFO - [CANDLES] 1005 (last close=115593.65)
+2025-09-21 14:29:59,902 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.554, combined_score=0.043200000000000044, threshold=0.75, tuned_thresh=0.08360000000000005
+2025-09-21 14:29:59,902 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.554, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:29:59,902 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.08)
+2025-09-21 14:29:59,903 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.554, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:34:59,775 - INFO - [CANDLES] 1006 (last close=115578.68)
+2025-09-21 14:34:59,868 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.586, combined_score=0.06879999999999997, threshold=0.75, tuned_thresh=0.08360000000000005
+2025-09-21 14:34:59,868 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.586, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:34:59,868 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.08)
+2025-09-21 14:34:59,868 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.586, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:39:59,823 - INFO - [CANDLES] 1007 (last close=115606.0)
+2025-09-21 14:39:59,887 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.571, combined_score=0.05679999999999996, threshold=0.75, tuned_thresh=0.08360000000000005
+2025-09-21 14:39:59,887 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.571, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:39:59,887 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.08)
+2025-09-21 14:39:59,887 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.571, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:45:00,535 - INFO - [CANDLES] 1008 (last close=115597.52)
+2025-09-21 14:45:00,618 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.565, combined_score=0.05199999999999996, threshold=0.75, tuned_thresh=0.08360000000000005
+2025-09-21 14:45:00,618 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.565, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:45:00,618 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.08)
+2025-09-21 14:45:00,618 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.565, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:46:11,862 - ERROR - ConnectionClosedError (sent 1011 (internal error) keepalive ping timeout; no close frame received)
+2025-09-21 14:46:11,862 - ERROR - BinanceWebsocketClosed (Connection closed. Reconnecting...)
+2025-09-21 14:50:01,131 - INFO - [CANDLES] 1009 (last close=115596.7)
+2025-09-21 14:50:01,182 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.581, combined_score=0.06479999999999997, threshold=0.75, tuned_thresh=0.08360000000000005
+2025-09-21 14:50:01,182 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.581, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:50:01,182 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.08)
+2025-09-21 14:50:01,183 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.581, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:55:01,198 - INFO - [CANDLES] 1010 (last close=115639.64)
+2025-09-21 14:55:01,292 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.572, combined_score=0.057599999999999964, threshold=0.75, tuned_thresh=0.08360000000000005
+2025-09-21 14:55:01,292 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.572, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:55:01,293 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.08)
+2025-09-21 14:55:01,293 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.572, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:59:59,760 - INFO - [CANDLES] 1011 (last close=115629.6)
+2025-09-21 14:59:59,828 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.579, combined_score=0.06319999999999996, threshold=0.75, tuned_thresh=0.08360000000000005
+2025-09-21 14:59:59,829 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.579, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 14:59:59,829 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.08)
+2025-09-21 14:59:59,829 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.579, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 15:02:15,614 - ERROR - ConnectionClosedError (no close frame received or sent)
+2025-09-21 15:02:15,615 - ERROR - BinanceWebsocketClosed (Connection closed. Reconnecting...)
+2025-09-21 15:04:59,735 - INFO - [CANDLES] 1012 (last close=115629.6)
+2025-09-21 15:04:59,807 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.585, combined_score=0.06799999999999998, threshold=0.75, tuned_thresh=0.08360000000000005
+2025-09-21 15:04:59,807 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.585, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 15:04:59,807 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.08)
+2025-09-21 15:04:59,807 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.585, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 15:09:59,865 - INFO - [CANDLES] 1013 (last close=115629.6)
+2025-09-21 15:09:59,924 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.582, combined_score=0.06559999999999998, threshold=0.75, tuned_thresh=0.08360000000000005
+2025-09-21 15:09:59,925 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.582, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 15:09:59,925 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.08)
+2025-09-21 15:09:59,925 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.582, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 15:14:59,729 - INFO - [CANDLES] 1014 (last close=115580.1)
+2025-09-21 15:14:59,802 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.594, combined_score=0.07519999999999999, threshold=0.75, tuned_thresh=0.08360000000000005
+2025-09-21 15:14:59,803 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.594, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 15:14:59,803 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.08)
+2025-09-21 15:14:59,803 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.594, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
+2025-09-21 15:19:19,814 - ERROR - ConnectionClosedError (sent 1011 (internal error) keepalive ping timeout; no close frame received)
+2025-09-21 15:19:19,814 - ERROR - BinanceWebsocketClosed (Connection closed. Reconnecting...)
+2025-09-21 15:19:30,834 - ERROR - Failed to connect to websocket: timed out during opening handshake
+2025-09-21 15:20:00,103 - INFO - [CANDLES] 1015 (last close=115516.86)
+2025-09-21 15:20:00,171 - INFO - [SIGNAL] {'side': 'BUY', 'sl': 114361.6914, 'tp': 116672.0286, 'win_prob': 0.638, 'reason': 'weighted_consensus', 'combined_score': 0.11040000000000001, 'w_ai': 0.4, 'ind_major': None, 'tuned_thresh': 0.08360000000000005}
+2025-09-21 15:20:00,171 - INFO - [SKIP-LIVE] Blocking live trade: win_prob 0.638 < WIN_PROB_MIN 0.75
+2025-09-21 15:24:59,731 - INFO - [CANDLES] 1016 (last close=115502.88)
+2025-09-21 15:24:59,822 - INFO - [SIGNAL] {'side': 'BUY', 'sl': 114347.8512, 'tp': 116657.9088, 'win_prob': 0.627, 'reason': 'weighted_consensus', 'combined_score': 0.10160000000000001, 'w_ai': 0.4, 'ind_major': None, 'tuned_thresh': 0.08360000000000005}
+2025-09-21 15:24:59,823 - INFO - [SKIP-LIVE] Blocking live trade: win_prob 0.627 < WIN_PROB_MIN 0.75
+2025-09-21 15:27:54,723 - ERROR - ConnectionClosedError (sent 1011 (internal error) keepalive ping timeout; no close frame received)
+2025-09-21 15:27:54,723 - ERROR - BinanceWebsocketClosed (Connection closed. Reconnecting...)
+2025-09-21 15:28:06,736 - ERROR - Failed to connect to websocket: timed out during opening handshake
+2025-09-21 15:28:18,766 - ERROR - Failed to connect to websocket: timed out during opening handshake
+2025-09-21 15:28:20,769 - ERROR - Failed to connect to websocket: [Errno 11001] getaddrinfo failed
+2025-09-21 15:28:39,796 - ERROR - Failed to connect to websocket: timed out during opening handshake
+2025-09-21 15:28:39,796 - ERROR - Max reconnections 5 reached:
+2025-09-21 15:28:39,797 - ERROR - Unknown exception: BinanceWebsocketUnableToConnect ()
+2025-09-21 15:32:01,433 - INFO - [WebSocket] Connection closed
+2025-09-21 15:32:01,433 - INFO - [SHUTDOWN] Stopping bot...
+2025-09-21 15:32:01,679 - INFO - Socket listener stopped
+2025-09-21 15:32:01,903 - INFO - [DONE] Bot stopped.

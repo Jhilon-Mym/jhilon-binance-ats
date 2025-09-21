@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Config:
+    SIGNAL_THRESHOLD = float(os.getenv("SIGNAL_THRESHOLD", 0.8))
     USE_TESTNET = os.getenv("USE_TESTNET", "true").lower() == "true"
     if USE_TESTNET:
         API_KEY = os.getenv("TESTNET_API_KEY")

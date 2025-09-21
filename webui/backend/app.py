@@ -3,6 +3,7 @@ from flask import send_from_directory
 # webui/backend/app.py — Flask control plane for the bot
 import os, threading, json, sys, subprocess
 from flask import Flask, jsonify, request
+from flask_socketio import SocketIO, emit
 # Ensure project root is on sys.path for src imports
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 if ROOT not in sys.path:
@@ -12,6 +13,35 @@ from src.bot import run as bot_run
 bot_proc = None
 
 app = Flask(__name__)
+socketio = SocketIO(app, cors_allowed_origins="*")
+
+# --- Real-time balance update background thread ---
+import time
+def emit_realtime_balance():
+    from src.utils import profit_tracker
+    last_usdt = last_btc = None
+    while True:
+        try:
+            profit_tracker.print_balances()
+            usdt = profit_tracker.cached_balances.get('USDT', None)
+            btc = profit_tracker.cached_balances.get('BTC', None)
+            if usdt != last_usdt or btc != last_btc:
+                # Compose status_data (minimal for balance)
+                status_data = {
+                    "usdt": usdt,
+                    "btc": btc
+                }
+                socketio.emit('status_update', status_data, broadcast=True)
+                last_usdt, last_btc = usdt, btc
+        except Exception:
+            pass
+        time.sleep(5)  # Poll every 5 seconds
+
+def start_balance_thread():
+    t = threading.Thread(target=emit_realtime_balance, daemon=True)
+    t.start()
+
+start_balance_thread()
 from profit_api import profit_api
 from auth_api import auth_api
 from run_script_api import run_script_api
@@ -116,26 +146,19 @@ def status():
                         break
         except Exception:
             pass
-    # Read summary from trade_history.json and pending_trades.json
+    # Read summary using src.utils.profit_tracker for accurate win/loss/pnl
     try:
-        import json
-        trade_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../trade_history.json'))
-        pending_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../pending_trades.json'))
-        if os.path.exists(trade_path):
-            with open(trade_path, 'r', encoding='utf-8', errors='replace') as f:
-                trades = json.load(f)
-                win = sum(1 for t in trades if t.get('result')=='win')
-                loss = sum(1 for t in trades if t.get('result')=='loss')
-                pnl = sum(float(t.get('pnl',0)) for t in trades if 'pnl' in t)
-        if os.path.exists(pending_path):
-            with open(pending_path, 'r', encoding='utf-8', errors='replace') as f:
-                pendings = json.load(f)
-                pending = len(pendings)
-                pending_amt = sum(float(t.get('amount',0)) for t in pendings if 'amount' in t)
-    except Exception:
-        pass
+        sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
+        from src.utils import profit_tracker
+        win = getattr(profit_tracker, 'win', 0)
+        loss = getattr(profit_tracker, 'loss', 0)
+        pnl = getattr(profit_tracker, 'balance', 0)
+        pending = len(getattr(profit_tracker, 'pending', []))
+        pending_amt = sum(t.get('amount_usdt', 0) for t in getattr(profit_tracker, 'pending', []) if t.get('status') == 'open')
+    except Exception as e:
+        print('[ERROR] summary logic:', e)
     use_testnet = get_netmode()
-    return jsonify({
+    status_data = {
         "running": running,
         "usdt": usdt,
         "btc": btc,
@@ -147,7 +170,10 @@ def status():
         "terminal": terminal,
         "use_testnet": use_testnet,
         "error_msg": error_msg
-    })
+    }
+    # Emit status update to all connected clients
+    socketio.emit('status_update', status_data)
+    return jsonify(status_data)
 
 @app.route("/api/start", methods=["POST"])
 def start():

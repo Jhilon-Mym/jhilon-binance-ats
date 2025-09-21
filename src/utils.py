@@ -293,6 +293,9 @@ class TradeStats:
             return
 
         self.pending.append(trade)
+        if trade.get("side") == "SELL":
+            import logging
+            logging.info(f"[DEBUG] SELL trade appended to pending: {trade}")
         self.save_pending()
         # Update profit tracker for new trade
         self.update_profit_tracker(trade, mark_price=entry_price)
@@ -431,6 +434,9 @@ class TradeStats:
                 trade["pnl_pct"] = float(pnl_pct)
                 closed.append(trade)
                 self.save_trade_history(trade)
+                if trade.get("side") == "SELL":
+                    import logging
+                    logging.info(f"[DEBUG] SELL trade closed and written to history: {trade}")
             else:
                 # Update trailing state in open trade
                 trade["trail_active"] = mt.trail_active

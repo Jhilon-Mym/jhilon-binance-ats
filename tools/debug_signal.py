@@ -44,10 +44,15 @@ if __name__ == "__main__":
         print(f"AI predict_signal exception: {e}")
         ai_signal = {"side": None, "win_prob": 0.0, "reason": f"predict_exception:{e}"}
 
-    # যদি ai_signal None বা error হয়, fallback deterministic signal দিন
-    if ai_signal.get("side") is None:
-        print("AI signal not found, applying fallback deterministic rule...")
+    # যদি ai_signal None বা fallback হয়, কারণ ও ফিচার summary দেখাও
+    if ai_signal.get("side") is None or 'fallback' in str(ai_signal.get('reason','')) or 'no_model' in str(ai_signal.get('reason','')):
+        print("\n[DEBUG] AI signal fallback or None detected!")
+        print(f"Reason: {ai_signal.get('reason')}")
+        print("Last row features:")
         last = df.iloc[-1]
+        for col in df.columns:
+            print(f"  {col}: {last.get(col) if hasattr(last, 'get') else last[col]}")
+        # fallback deterministic
         sma_fast = float(last.get("sma_fast", 0.0))
         sma_slow = float(last.get("sma_slow", 0.0))
         macd = float(last.get("macd", 0.0))

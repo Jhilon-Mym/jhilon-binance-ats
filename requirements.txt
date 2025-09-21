@@ -9,3 +9,7 @@ ta
 scikit-learn
 matplotlib
 flask
+flask-socketio
+
+# For testing only (dev):
+# pytest
