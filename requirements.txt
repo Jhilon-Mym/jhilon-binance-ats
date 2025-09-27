@@ -1,4 +1,6 @@
-
+## Core Python modules (no install needed, for reference):
+# threading, datetime, json, tempfile, logging, os, sys, re, random, time, dataclasses, typing
+# External dependencies:
 python-dotenv
 python-binance
 pandas
@@ -10,6 +12,5 @@ scikit-learn
 matplotlib
 flask
 flask-socketio
-
-# For testing only (dev):
-# pytest
+requests
+websocket-client

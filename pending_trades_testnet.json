@@ -1,0 +1,117 @@
+[
+	{
+		"side": "BUY",
+		"entry": 112704.9,
+		"qty": 8e-05,
+		"amount_usdt": 9.0154904,
+		"sl": 111577.851,
+		"tp": 113831.949,
+		"status": "open",
+		"orderId": 2596813,
+		"executedQty": 8e-05,
+		"cummulativeQuoteQty": 9.0154904,
+		"fills": [
+			{
+				"price": "112693.63000000",
+				"qty": "0.00008000",
+				"commission": "0.00000000",
+				"commissionAsset": "BTC",
+				"tradeId": 690316
+			}
+		],
+		"trail_active": false,
+		"trail_stop": null
+	},
+	{
+		"side": "BUY",
+		"entry": 112618.76,
+		"qty": 8e-05,
+		"amount_usdt": 9.0095016,
+		"sl": 111492.57239999999,
+		"tp": 113744.9476,
+		"status": "open",
+		"orderId": 2597469,
+		"executedQty": 8e-05,
+		"cummulativeQuoteQty": 9.0095016,
+		"fills": [
+			{
+				"price": "112618.77000000",
+				"qty": "0.00008000",
+				"commission": "0.00000000",
+				"commissionAsset": "BTC",
+				"tradeId": 690491
+			}
+		],
+		"trail_active": false,
+		"trail_stop": null
+	},
+	{
+		"side": "BUY",
+		"entry": 112591.98,
+		"qty": 8e-05,
+		"amount_usdt": 9.0073592,
+		"sl": 111466.06019999999,
+		"tp": 113717.8998,
+		"status": "open",
+		"orderId": 2598095,
+		"executedQty": 8e-05,
+		"cummulativeQuoteQty": 9.0073592,
+		"fills": [
+			{
+				"price": "112591.99000000",
+				"qty": "0.00008000",
+				"commission": "0.00000000",
+				"commissionAsset": "BTC",
+				"tradeId": 690645
+			}
+		],
+		"trail_active": false,
+		"trail_stop": null
+	},
+	{
+		"side": "BUY",
+		"entry": 112550.05,
+		"qty": 8e-05,
+		"amount_usdt": 9.0040552,
+		"sl": 111424.54950000001,
+		"tp": 113675.5505,
+		"status": "open",
+		"orderId": 2601801,
+		"executedQty": 8e-05,
+		"cummulativeQuoteQty": 9.0040552,
+		"fills": [
+			{
+				"price": "112550.69000000",
+				"qty": "0.00008000",
+				"commission": "0.00000000",
+				"commissionAsset": "BTC",
+				"tradeId": 691557
+			}
+		],
+		"trail_active": false,
+		"trail_stop": null
+	},
+	{
+		"side": "BUY",
+		"entry": 112301.65,
+		"qty": 8e-05,
+		"amount_usdt": 8.984132,
+		"sl": 111178.6335,
+		"tp": 113424.66649999999,
+		"status": "open",
+		"orderId": 2603849,
+		"executedQty": 8e-05,
+		"cummulativeQuoteQty": 8.984132,
+		"fills": [
+			{
+				"price": "112301.65000000",
+				"qty": "0.00008000",
+				"commission": "0.00000000",
+				"commissionAsset": "BTC",
+				"tradeId": 692458
+			}
+		],
+		"trail_active": false,
+		"trail_stop": null
+	}
+]

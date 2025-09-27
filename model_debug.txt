@@ -3525,3 +3525,848 @@ X_scaled.shape: (1, 13)
 Input row: {'timestamp': Timestamp('2025-09-21 09:20:00'), 'open': 115516.87, 'high': 115516.87, 'low': 115491.46, 'close': 115502.88, 'volume': 20.40809}
 [weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-21 09:20:00'), 'open': 115516.87, 'high': 115516.87, 'low': 115491.46, 'close': 115502.88, 'volume': 20.40809}
 ai_signal: {'side': 'BUY', 'win_prob': 0.627, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.49132867151590665, 0.5086713284840934]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=112790.68, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 16:20:00'), 'open': 112734.06, 'high': 112859.89, 'low': 112734.06, 'close': 112790.68, 'volume': 34.8239}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 16:20:00'), 'open': 112734.06, 'high': 112859.89, 'low': 112734.06, 'close': 112790.68, 'volume': 34.8239}
+ai_signal: {'side': 'BUY', 'win_prob': 0.509, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.43116560229166423, 0.5688343977083358]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=112804.68, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 16:25:00'), 'open': 112790.68, 'high': 112857.02, 'low': 112790.67, 'close': 112804.68, 'volume': 18.30308}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 16:25:00'), 'open': 112790.68, 'high': 112857.02, 'low': 112790.67, 'close': 112804.68, 'volume': 18.30308}
+ai_signal: {'side': 'BUY', 'win_prob': 0.569, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3766895529165265, 0.6233104470834735]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=112704.9, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 16:30:00'), 'open': 112804.69, 'high': 112804.7, 'low': 112682.32, 'close': 112704.9, 'volume': 23.50479}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 16:30:00'), 'open': 112804.69, 'high': 112804.7, 'low': 112682.32, 'close': 112704.9, 'volume': 23.50479}
+ai_signal: {'side': 'BUY', 'win_prob': 0.623, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.33560294825001635, 0.6643970517499836]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=112618.76, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 16:35:00'), 'open': 112704.9, 'high': 112713.0, 'low': 112511.08, 'close': 112618.76, 'volume': 83.06908}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 16:35:00'), 'open': 112704.9, 'high': 112713.0, 'low': 112511.08, 'close': 112618.76, 'volume': 83.06908}
+ai_signal: {'side': 'BUY', 'win_prob': 0.664, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.33295225367760445, 0.6670477463223955]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=112591.98, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 16:40:00'), 'open': 112618.77, 'high': 112633.78, 'low': 112552.29, 'close': 112591.98, 'volume': 40.15715}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 16:40:00'), 'open': 112618.77, 'high': 112633.78, 'low': 112552.29, 'close': 112591.98, 'volume': 40.15715}
+ai_signal: {'side': 'BUY', 'win_prob': 0.667, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.41208572751220124, 0.5879142724877987]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=112649.58, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 17:00:00'), 'open': 112823.62, 'high': 112823.62, 'low': 112649.37, 'close': 112649.58, 'volume': 33.71671}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 17:00:00'), 'open': 112823.62, 'high': 112823.62, 'low': 112649.37, 'close': 112649.58, 'volume': 33.71671}
+ai_signal: {'side': 'BUY', 'win_prob': 0.588, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4345960653405164, 0.5654039346594835]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=112632.75, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 17:05:00'), 'open': 112649.57, 'high': 112706.25, 'low': 112621.89, 'close': 112632.75, 'volume': 31.65576}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 17:05:00'), 'open': 112649.57, 'high': 112706.25, 'low': 112621.89, 'close': 112632.75, 'volume': 31.65576}
+ai_signal: {'side': 'BUY', 'win_prob': 0.565, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4276512205157632, 0.5723487794842369]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=112561.41, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 17:10:00'), 'open': 112632.75, 'high': 112632.75, 'low': 112550.0, 'close': 112561.41, 'volume': 35.86429}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 17:10:00'), 'open': 112632.75, 'high': 112632.75, 'low': 112550.0, 'close': 112561.41, 'volume': 35.86429}
+ai_signal: {'side': 'BUY', 'win_prob': 0.572, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.39261050244165363, 0.6073894975583464]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=112550.05, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 17:15:00'), 'open': 112561.41, 'high': 112576.34, 'low': 112481.84, 'close': 112550.05, 'volume': 49.72075}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 17:15:00'), 'open': 112561.41, 'high': 112576.34, 'low': 112481.84, 'close': 112550.05, 'volume': 49.72075}
+ai_signal: {'side': 'BUY', 'win_prob': 0.607, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.38543168249204823, 0.6145683175079517]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=112301.65, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 17:30:00'), 'open': 112395.08, 'high': 112416.26, 'low': 112301.64, 'close': 112301.65, 'volume': 34.27815}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 17:30:00'), 'open': 112395.08, 'high': 112416.26, 'low': 112301.64, 'close': 112301.65, 'volume': 34.27815}
+ai_signal: {'side': 'BUY', 'win_prob': 0.615, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5732603954387583, 0.42673960456124177]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111957.22, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 19:15:00'), 'open': 111868.86, 'high': 111979.27, 'low': 111811.22, 'close': 111957.22, 'volume': 45.81886}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 19:15:00'), 'open': 111868.86, 'high': 111979.27, 'low': 111811.22, 'close': 111957.22, 'volume': 45.81886}
+ai_signal: {'side': 'SELL', 'win_prob': 0.573, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5562708612133991, 0.4437291387866009]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111836.34, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 19:20:00'), 'open': 111957.22, 'high': 111957.23, 'low': 111795.23, 'close': 111836.34, 'volume': 40.36992}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 19:20:00'), 'open': 111957.22, 'high': 111957.23, 'low': 111795.23, 'close': 111836.34, 'volume': 40.36992}
+ai_signal: {'side': 'SELL', 'win_prob': 0.556, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5440085805486248, 0.45599141945137533]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111771.28, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 19:25:00'), 'open': 111836.34, 'high': 111855.58, 'low': 111734.43, 'close': 111771.28, 'volume': 39.19883}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 19:25:00'), 'open': 111836.34, 'high': 111855.58, 'low': 111734.43, 'close': 111771.28, 'volume': 39.19883}
+ai_signal: {'side': 'SELL', 'win_prob': 0.544, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5295487412229205, 0.4704512587770796]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111768.95, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 19:30:00'), 'open': 111771.29, 'high': 111810.0, 'low': 111736.83, 'close': 111768.95, 'volume': 32.42921}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 19:30:00'), 'open': 111771.29, 'high': 111810.0, 'low': 111736.83, 'close': 111768.95, 'volume': 32.42921}
+ai_signal: {'side': 'SELL', 'win_prob': 0.53, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5162935846585018, 0.4837064153414983]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111712.5, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 19:35:00'), 'open': 111768.95, 'high': 111768.96, 'low': 111636.44, 'close': 111712.5, 'volume': 46.35428}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 19:35:00'), 'open': 111768.95, 'high': 111768.96, 'low': 111636.44, 'close': 111712.5, 'volume': 46.35428}
+ai_signal: {'side': 'SELL', 'win_prob': 0.516, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5581900869838666, 0.44180991301613337]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111616.01, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 19:40:00'), 'open': 111712.49, 'high': 111713.03, 'low': 111616.01, 'close': 111616.01, 'volume': 41.92614}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 19:40:00'), 'open': 111712.49, 'high': 111713.03, 'low': 111616.01, 'close': 111616.01, 'volume': 41.92614}
+ai_signal: {'side': 'SELL', 'win_prob': 0.558, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.609872870374831, 0.3901271296251691]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111620.0, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 19:45:00'), 'open': 111616.02, 'high': 111666.0, 'low': 111579.19, 'close': 111620.0, 'volume': 84.50871}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 19:45:00'), 'open': 111616.02, 'high': 111666.0, 'low': 111579.19, 'close': 111620.0, 'volume': 84.50871}
+ai_signal: {'side': 'SELL', 'win_prob': 0.61, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.5565232097618834, 0.44347679023811665]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111595.65, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 19:50:00'), 'open': 111620.01, 'high': 111657.04, 'low': 111560.01, 'close': 111595.65, 'volume': 77.90692}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 19:50:00'), 'open': 111620.01, 'high': 111657.04, 'low': 111560.01, 'close': 111595.65, 'volume': 77.90692}
+ai_signal: {'side': 'SELL', 'win_prob': 0.557, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6218870430058352, 0.37811295699416475]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111655.29, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 19:55:00'), 'open': 111595.64, 'high': 111670.61, 'low': 111540.2, 'close': 111655.29, 'volume': 38.65765}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 19:55:00'), 'open': 111595.64, 'high': 111670.61, 'low': 111540.2, 'close': 111655.29, 'volume': 38.65765}
+ai_signal: {'side': 'SELL', 'win_prob': 0.622, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4386194861302704, 0.5613805138697296]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111800.7, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 20:00:00'), 'open': 111655.29, 'high': 111823.56, 'low': 111632.94, 'close': 111800.7, 'volume': 45.16289}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 20:00:00'), 'open': 111655.29, 'high': 111823.56, 'low': 111632.94, 'close': 111800.7, 'volume': 45.16289}
+ai_signal: {'side': 'BUY', 'win_prob': 0.561, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3602821595179353, 0.6397178404820645]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111859.05, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 20:05:00'), 'open': 111800.71, 'high': 111859.06, 'low': 111775.55, 'close': 111859.05, 'volume': 23.26238}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 20:05:00'), 'open': 111800.71, 'high': 111859.06, 'low': 111775.55, 'close': 111859.05, 'volume': 23.26238}
+ai_signal: {'side': 'BUY', 'win_prob': 0.64, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.371467092851513, 0.628532907148487]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111839.04, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 20:10:00'), 'open': 111859.06, 'high': 111949.49, 'low': 111839.04, 'close': 111839.04, 'volume': 47.6348}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 20:10:00'), 'open': 111859.06, 'high': 111949.49, 'low': 111839.04, 'close': 111839.04, 'volume': 47.6348}
+ai_signal: {'side': 'BUY', 'win_prob': 0.629, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.34544562556053904, 0.6545543744394611]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111795.64, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 20:15:00'), 'open': 111839.05, 'high': 111879.7, 'low': 111795.63, 'close': 111795.64, 'volume': 21.9428}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 20:15:00'), 'open': 111839.05, 'high': 111879.7, 'low': 111795.63, 'close': 111795.64, 'volume': 21.9428}
+ai_signal: {'side': 'BUY', 'win_prob': 0.655, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.22923841874003142, 0.7707615812599681]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111694.75, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 20:20:00'), 'open': 111795.64, 'high': 111802.17, 'low': 111694.74, 'close': 111694.75, 'volume': 26.76388}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 20:20:00'), 'open': 111795.64, 'high': 111802.17, 'low': 111694.74, 'close': 111694.75, 'volume': 26.76388}
+ai_signal: {'side': 'BUY', 'win_prob': 0.771, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.23549741076244446, 0.7645025892375551]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111650.0, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 20:25:00'), 'open': 111694.75, 'high': 111694.75, 'low': 111650.0, 'close': 111650.0, 'volume': 18.78468}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 20:25:00'), 'open': 111694.75, 'high': 111694.75, 'low': 111650.0, 'close': 111650.0, 'volume': 18.78468}
+ai_signal: {'side': 'BUY', 'win_prob': 0.765, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.2457751606476584, 0.7542248393523413]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111540.01, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 20:30:00'), 'open': 111650.01, 'high': 111714.25, 'low': 111540.0, 'close': 111540.01, 'volume': 30.77983}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 20:30:00'), 'open': 111650.01, 'high': 111714.25, 'low': 111540.0, 'close': 111540.01, 'volume': 30.77983}
+ai_signal: {'side': 'BUY', 'win_prob': 0.754, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.348271525823171, 0.651728474176829]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111829.43, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 20:35:00'), 'open': 111540.01, 'high': 111838.79, 'low': 111458.73, 'close': 111829.43, 'volume': 95.23359}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 20:35:00'), 'open': 111540.01, 'high': 111838.79, 'low': 111458.73, 'close': 111829.43, 'volume': 95.23359}
+ai_signal: {'side': 'BUY', 'win_prob': 0.652, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6067012303098148, 0.39329876969018507]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111800.0, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 20:50:00'), 'open': 111709.82, 'high': 111800.0, 'low': 111685.53, 'close': 111800.0, 'volume': 59.48092}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 20:50:00'), 'open': 111709.82, 'high': 111800.0, 'low': 111685.53, 'close': 111800.0, 'volume': 59.48092}
+ai_signal: {'side': 'SELL', 'win_prob': 0.607, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.6509517075407009, 0.349048292459299]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111985.77, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 20:55:00'), 'open': 111800.0, 'high': 111994.99, 'low': 111797.01, 'close': 111985.77, 'volume': 43.59459}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 20:55:00'), 'open': 111800.0, 'high': 111994.99, 'low': 111797.01, 'close': 111985.77, 'volume': 43.59459}
+ai_signal: {'side': 'SELL', 'win_prob': 0.651, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7595375321585984, 0.24046246784140174]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111999.99, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 21:10:00'), 'open': 111944.73, 'high': 112000.0, 'low': 111944.72, 'close': 111999.99, 'volume': 24.62623}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 21:10:00'), 'open': 111944.73, 'high': 112000.0, 'low': 111944.72, 'close': 111999.99, 'volume': 24.62623}
+ai_signal: {'side': 'SELL', 'win_prob': 0.76, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7226707435198577, 0.2773292564801424]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111968.98, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 21:15:00'), 'open': 112000.0, 'high': 112006.64, 'low': 111968.98, 'close': 111968.98, 'volume': 17.60105}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 21:15:00'), 'open': 112000.0, 'high': 112006.64, 'low': 111968.98, 'close': 111968.98, 'volume': 17.60105}
+ai_signal: {'side': 'SELL', 'win_prob': 0.723, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7416829077438284, 0.25831709225617167]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=111971.46, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 21:20:00'), 'open': 111968.99, 'high': 111971.47, 'low': 111948.27, 'close': 111971.46, 'volume': 25.36267}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 21:20:00'), 'open': 111968.99, 'high': 111971.47, 'low': 111948.27, 'close': 111971.46, 'volume': 25.36267}
+ai_signal: {'side': 'SELL', 'win_prob': 0.742, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7630507832840088, 0.23694921671599153]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=112074.65, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 21:25:00'), 'open': 111971.46, 'high': 112074.65, 'low': 111971.46, 'close': 112074.65, 'volume': 75.48788}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 21:25:00'), 'open': 111971.46, 'high': 112074.65, 'low': 111971.46, 'close': 112074.65, 'volume': 75.48788}
+ai_signal: {'side': 'SELL', 'win_prob': 0.763, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.7043362733597384, 0.2956637266402618]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=112105.26, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-23 21:30:00'), 'open': 112074.65, 'high': 112105.26, 'low': 112055.46, 'close': 112105.26, 'volume': 20.68132}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-23 21:30:00'), 'open': 112074.65, 'high': 112105.26, 'low': 112055.46, 'close': 112105.26, 'volume': 20.68132}
+ai_signal: {'side': 'SELL', 'win_prob': 0.704, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4703899132987734, 0.5296100867012266]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=108850.01, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 14:30:00'), 'open': 109083.45, 'high': 109083.45, 'low': 108850.0, 'close': 108850.01, 'volume': 58.07313}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 14:30:00'), 'open': 109083.45, 'high': 109083.45, 'low': 108850.0, 'close': 108850.01, 'volume': 58.07313}
+ai_signal: {'side': 'BUY', 'win_prob': 0.53, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4974143205468121, 0.502585679453188]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109058.55, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 14:35:00'), 'open': 108850.0, 'high': 109124.29, 'low': 108781.28, 'close': 109058.55, 'volume': 113.92231}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 14:35:00'), 'open': 108850.0, 'high': 109124.29, 'low': 108781.28, 'close': 109058.55, 'volume': 113.92231}
+ai_signal: {'side': 'BUY', 'win_prob': 0.503, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4011725888584919, 0.5988274111415081]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=108905.97, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 14:40:00'), 'open': 109058.54, 'high': 109058.54, 'low': 108838.08, 'close': 108905.97, 'volume': 120.53094}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 14:40:00'), 'open': 109058.54, 'high': 109058.54, 'low': 108838.08, 'close': 108905.97, 'volume': 120.53094}
+ai_signal: {'side': 'BUY', 'win_prob': 0.599, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4275158903979872, 0.5724841096020129]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=108910.41, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 14:45:00'), 'open': 108905.97, 'high': 109000.78, 'low': 108848.01, 'close': 108910.41, 'volume': 99.50622}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 14:45:00'), 'open': 108905.97, 'high': 109000.78, 'low': 108848.01, 'close': 108910.41, 'volume': 99.50622}
+ai_signal: {'side': 'BUY', 'win_prob': 0.572, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.43760187136556683, 0.5623981286344332]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=108878.23, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 14:50:00'), 'open': 108910.41, 'high': 109107.98, 'low': 108866.5, 'close': 108878.23, 'volume': 46.70053}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 14:50:00'), 'open': 108910.41, 'high': 109107.98, 'low': 108866.5, 'close': 108878.23, 'volume': 46.70053}
+ai_signal: {'side': 'BUY', 'win_prob': 0.562, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4184295497270346, 0.5815704502729655]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=108836.0, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 14:55:00'), 'open': 108878.22, 'high': 108956.16, 'low': 108764.76, 'close': 108836.0, 'volume': 67.68269}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 14:55:00'), 'open': 108878.22, 'high': 108956.16, 'low': 108764.76, 'close': 108836.0, 'volume': 67.68269}
+ai_signal: {'side': 'BUY', 'win_prob': 0.582, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4333110469950466, 0.5666889530049535]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109090.35, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 15:00:00'), 'open': 108836.0, 'high': 109098.16, 'low': 108802.04, 'close': 109090.35, 'volume': 100.60981}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 15:00:00'), 'open': 108836.0, 'high': 109098.16, 'low': 108802.04, 'close': 109090.35, 'volume': 100.60981}
+ai_signal: {'side': 'BUY', 'win_prob': 0.567, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.33916906443272843, 0.6608309355672715]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109011.81, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 15:05:00'), 'open': 109090.36, 'high': 109121.06, 'low': 108926.59, 'close': 109011.81, 'volume': 64.76404}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 15:05:00'), 'open': 109090.36, 'high': 109121.06, 'low': 108926.59, 'close': 109011.81, 'volume': 64.76404}
+ai_signal: {'side': 'BUY', 'win_prob': 0.661, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.33378765703260915, 0.6662123429673908]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=108937.15, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 15:10:00'), 'open': 109011.8, 'high': 109052.0, 'low': 108920.0, 'close': 108937.15, 'volume': 43.98152}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 15:10:00'), 'open': 109011.8, 'high': 109052.0, 'low': 108920.0, 'close': 108937.15, 'volume': 43.98152}
+ai_signal: {'side': 'BUY', 'win_prob': 0.666, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4114682528505062, 0.5885317471494939]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109158.74, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 15:15:00'), 'open': 108937.15, 'high': 109192.0, 'low': 108889.08, 'close': 109158.74, 'volume': 67.57155}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 15:15:00'), 'open': 108937.15, 'high': 109192.0, 'low': 108889.08, 'close': 109158.74, 'volume': 67.57155}
+ai_signal: {'side': 'BUY', 'win_prob': 0.589, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.34400879318552346, 0.6559912068144764]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109099.08, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 15:20:00'), 'open': 109158.74, 'high': 109163.45, 'low': 109058.0, 'close': 109099.08, 'volume': 22.43574}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 15:20:00'), 'open': 109158.74, 'high': 109163.45, 'low': 109058.0, 'close': 109099.08, 'volume': 22.43574}
+ai_signal: {'side': 'BUY', 'win_prob': 0.656, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.460044765510274, 0.5399552344897259]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109292.81, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 15:25:00'), 'open': 109099.08, 'high': 109321.0, 'low': 109099.08, 'close': 109292.81, 'volume': 33.69869}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 15:25:00'), 'open': 109099.08, 'high': 109321.0, 'low': 109099.08, 'close': 109292.81, 'volume': 33.69869}
+ai_signal: {'side': 'BUY', 'win_prob': 0.54, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.42296430926108847, 0.5770356907389117]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109294.41, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 15:30:00'), 'open': 109292.8, 'high': 109320.0, 'low': 109207.42, 'close': 109294.41, 'volume': 25.75537}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 15:30:00'), 'open': 109292.8, 'high': 109320.0, 'low': 109207.42, 'close': 109294.41, 'volume': 25.75537}
+ai_signal: {'side': 'BUY', 'win_prob': 0.577, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3955897207491377, 0.6044102792508624]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109209.57, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 15:35:00'), 'open': 109294.41, 'high': 109358.5, 'low': 109132.66, 'close': 109209.57, 'volume': 23.96748}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 15:35:00'), 'open': 109294.41, 'high': 109358.5, 'low': 109132.66, 'close': 109209.57, 'volume': 23.96748}
+ai_signal: {'side': 'BUY', 'win_prob': 0.604, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4051666707451357, 0.5948333292548643]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109251.87, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 16:05:00'), 'open': 109194.25, 'high': 109263.99, 'low': 109194.25, 'close': 109251.87, 'volume': 15.64213}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 16:05:00'), 'open': 109194.25, 'high': 109263.99, 'low': 109194.25, 'close': 109251.87, 'volume': 15.64213}
+ai_signal: {'side': 'BUY', 'win_prob': 0.595, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4002727879008674, 0.5997272120991326]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109278.3, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 16:10:00'), 'open': 109251.88, 'high': 109313.57, 'low': 109220.27, 'close': 109278.3, 'volume': 39.47151}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 16:10:00'), 'open': 109251.88, 'high': 109313.57, 'low': 109220.27, 'close': 109278.3, 'volume': 39.47151}
+ai_signal: {'side': 'BUY', 'win_prob': 0.6, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3948473712354502, 0.6051526287645494]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109523.63, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 16:15:00'), 'open': 109278.3, 'high': 109523.63, 'low': 109261.86, 'close': 109523.63, 'volume': 32.76461}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 16:15:00'), 'open': 109278.3, 'high': 109523.63, 'low': 109261.86, 'close': 109523.63, 'volume': 32.76461}
+ai_signal: {'side': 'BUY', 'win_prob': 0.605, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.39017706645486505, 0.6098229335451351]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109519.99, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 16:20:00'), 'open': 109523.63, 'high': 109618.0, 'low': 109502.97, 'close': 109519.99, 'volume': 29.65277}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 16:20:00'), 'open': 109523.63, 'high': 109618.0, 'low': 109502.97, 'close': 109519.99, 'volume': 29.65277}
+ai_signal: {'side': 'BUY', 'win_prob': 0.61, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4176881685439835, 0.5823118314560165]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109518.18, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 16:25:00'), 'open': 109520.0, 'high': 109587.0, 'low': 109487.26, 'close': 109518.18, 'volume': 20.49139}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 16:25:00'), 'open': 109520.0, 'high': 109587.0, 'low': 109487.26, 'close': 109518.18, 'volume': 20.49139}
+ai_signal: {'side': 'BUY', 'win_prob': 0.582, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.32129969566394523, 0.6787003043360545]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109345.3, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 16:30:00'), 'open': 109518.18, 'high': 109545.21, 'low': 109343.59, 'close': 109345.3, 'volume': 24.84984}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 16:30:00'), 'open': 109518.18, 'high': 109545.21, 'low': 109343.59, 'close': 109345.3, 'volume': 24.84984}
+ai_signal: {'side': 'BUY', 'win_prob': 0.679, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.36955010192199106, 0.630449898078009]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109311.17, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 16:35:00'), 'open': 109345.3, 'high': 109389.86, 'low': 109303.01, 'close': 109311.17, 'volume': 22.41357}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 16:35:00'), 'open': 109345.3, 'high': 109389.86, 'low': 109303.01, 'close': 109311.17, 'volume': 22.41357}
+ai_signal: {'side': 'BUY', 'win_prob': 0.63, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3088809418309026, 0.6911190581690974]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109397.83, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 16:45:00'), 'open': 109345.21, 'high': 109397.84, 'low': 109304.99, 'close': 109397.83, 'volume': 24.64267}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 16:45:00'), 'open': 109345.21, 'high': 109397.84, 'low': 109304.99, 'close': 109397.83, 'volume': 24.64267}
+ai_signal: {'side': 'BUY', 'win_prob': 0.691, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.31966403968550533, 0.6803359603144946]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109391.82, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 16:50:00'), 'open': 109397.84, 'high': 109452.58, 'low': 109346.73, 'close': 109391.82, 'volume': 19.30802}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 16:50:00'), 'open': 109397.84, 'high': 109452.58, 'low': 109346.73, 'close': 109391.82, 'volume': 19.30802}
+ai_signal: {'side': 'BUY', 'win_prob': 0.68, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3478385015719578, 0.6521614984280423]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109460.01, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 16:55:00'), 'open': 109391.83, 'high': 109496.76, 'low': 109356.09, 'close': 109460.01, 'volume': 17.31495}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 16:55:00'), 'open': 109391.83, 'high': 109496.76, 'low': 109356.09, 'close': 109460.01, 'volume': 17.31495}
+ai_signal: {'side': 'BUY', 'win_prob': 0.652, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.45271594335248216, 0.5472840566475179]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109857.28, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 17:30:00'), 'open': 109912.15, 'high': 109933.28, 'low': 109703.91, 'close': 109857.28, 'volume': 86.6719}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 17:30:00'), 'open': 109912.15, 'high': 109933.28, 'low': 109703.91, 'close': 109857.28, 'volume': 86.6719}
+ai_signal: {'side': 'BUY', 'win_prob': 0.547, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.45714470316046585, 0.5428552968395342]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109915.95, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 17:35:00'), 'open': 109857.28, 'high': 109953.31, 'low': 109851.45, 'close': 109915.95, 'volume': 50.04121}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 17:35:00'), 'open': 109857.28, 'high': 109953.31, 'low': 109851.45, 'close': 109915.95, 'volume': 50.04121}
+ai_signal: {'side': 'BUY', 'win_prob': 0.543, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.4063833132679539, 0.5936166867320462]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109944.77, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 17:40:00'), 'open': 109915.95, 'high': 109953.55, 'low': 109852.33, 'close': 109944.77, 'volume': 30.07432}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 17:40:00'), 'open': 109915.95, 'high': 109953.55, 'low': 109852.33, 'close': 109944.77, 'volume': 30.07432}
+ai_signal: {'side': 'BUY', 'win_prob': 0.594, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.45828938791164864, 0.5417106120883514]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109968.53, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 17:45:00'), 'open': 109944.77, 'high': 109979.06, 'low': 109915.03, 'close': 109968.53, 'volume': 43.24825}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 17:45:00'), 'open': 109944.77, 'high': 109979.06, 'low': 109915.03, 'close': 109968.53, 'volume': 43.24825}
+ai_signal: {'side': 'BUY', 'win_prob': 0.542, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.37711022842275954, 0.6228897715772407]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109813.44, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 17:50:00'), 'open': 109968.52, 'high': 109979.99, 'low': 109813.44, 'close': 109813.44, 'volume': 70.79951}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 17:50:00'), 'open': 109968.52, 'high': 109979.99, 'low': 109813.44, 'close': 109813.44, 'volume': 70.79951}
+ai_signal: {'side': 'BUY', 'win_prob': 0.623, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.3983123273114535, 0.6016876726885463]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109899.99, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 17:55:00'), 'open': 109813.43, 'high': 109900.0, 'low': 109763.92, 'close': 109899.99, 'volume': 34.7602}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 17:55:00'), 'open': 109813.43, 'high': 109900.0, 'low': 109763.92, 'close': 109899.99, 'volume': 34.7602}
+ai_signal: {'side': 'BUY', 'win_prob': 0.602, 'reason': 'model_proba'}
+--- model_debug ---
+model_type: <class 'sklearn.ensemble._forest.RandomForestClassifier'>
+classes: [np.int64(-1), np.int64(1)]
+proba: [0.39295612214887776, 0.6070438778511222]
+features: ['returns', 'sma_fast', 'sma_slow', 'ema_200', 'volatility', 'momentum', 'rsi', 'rsi_lag1', 'rsi_lag2', 'rsi_diff1', 'macd', 'macd_signal', 'atr']
+scaler_type: <class 'sklearn.preprocessing._data.StandardScaler'>
+scaler.n_features_in_: 13
+X.shape: (1, 13)
+X_scaled.shape: (1, 13)
+[ind_major None] buy_conf=0, sell_conf=0, close=109933.06, sma_fast=nan, sma_slow=nan, ema_200=nan, rsi=nan, macd=nan, macd_signal=nan
+Input row: {'timestamp': Timestamp('2025-09-26 18:00:00'), 'open': 109900.0, 'high': 110000.0, 'low': 109899.99, 'close': 109933.06, 'volume': 44.27903}
+[weighted_consensus] ind_major is None. last_row: {'timestamp': Timestamp('2025-09-26 18:00:00'), 'open': 109900.0, 'high': 110000.0, 'low': 109899.99, 'close': 109933.06, 'volume': 44.27903}
+ai_signal: {'side': 'BUY', 'win_prob': 0.607, 'reason': 'model_proba'}

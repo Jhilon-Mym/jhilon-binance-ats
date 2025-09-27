@@ -1,0 +1,13 @@
+[
+	{
+		"orderId": 2596813,
+		"side": "BUY",
+		"qty": 8e-05,
+		"amount_usdt": 9.0154904,
+		"entry": 112704.9,
+		"close_price": 112800.0,
+		"realized_pnl_usdt": 0.5,
+		"status": "closed",
+		"timestamp": "2025-09-26T22:12:00"
+	}
+]

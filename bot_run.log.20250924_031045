@@ -1,0 +1,14 @@
+Bot started
+2025-09-24 02:53:43,447 - INFO - [INFO] Loaded symbol info for BTCUSDT: LOT_SIZE step=[{'filterType': 'PRICE_FILTER', 'minPrice': '0.01000000', 'maxPrice': '1000000.00000000', 'tickSize': '0.01000000'}, {'filterType': 'LOT_SIZE', 'minQty': '0.00001000', 'maxQty': '9000.00000000', 'stepSize': '0.00001000'}, {'filterType': 'ICEBERG_PARTS', 'limit': 10}, {'filterType': 'MARKET_LOT_SIZE', 'minQty': '0.00000000', 'maxQty': '120.64010233', 'stepSize': '0.00000000'}, {'filterType': 'TRAILING_DELTA', 'minTrailingAboveDelta': 10, 'maxTrailingAboveDelta': 2000, 'minTrailingBelowDelta': 10, 'maxTrailingBelowDelta': 2000}, {'filterType': 'PERCENT_PRICE_BY_SIDE', 'bidMultiplierUp': '5', 'bidMultiplierDown': '0.2', 'askMultiplierUp': '5', 'askMultiplierDown': '0.2', 'avgPriceMins': 5}, {'filterType': 'NOTIONAL', 'minNotional': '5.00000000', 'applyMinToMarket': True, 'maxNotional': '9000000.00000000', 'applyMaxToMarket': False, 'avgPriceMins': 5}, {'filterType': 'MAX_NUM_ORDERS', 'maxNumOrders': 200}, {'filterType': 'MAX_NUM_ALGO_ORDERS', 'maxNumAlgoOrders': 5}]
+2025-09-24 02:53:43,449 - INFO - Bot started | netmode=true | API_KEY=UhbWwlunhBLMelyFkQE5up8Y8LyT7NAbBocioy9ChgaG7IinRXnMwdZZweTXZiJk | API_SECRET=DyRFWHX4gfUauYo7K6fAw9lG7Alh7ESJvRBDJaSyFBKOUbkWvDyjl8qMTFrGkjMa
+2025-09-24 02:53:43,912 - INFO - [BALANCE] USDT=16547.03 | BTC=2.030170
+2025-09-24 02:53:44,436 - INFO - [INFO] Seeded history with 1000 candles from REST
+2025-09-24 02:53:45,345 - INFO - [WebSocket] Connection opened (attempt 1)
+2025-09-24 02:55:00,140 - INFO - [CANDLES] 1001 (last close=111800.0)
+2025-09-24 02:55:00,145 - INFO - Trying to load model from: D:\binance_ats_clone\jhilon-binance-ats-1\models\model.pkl
+2025-09-24 02:55:02,751 - INFO - Model loaded successfully
+2025-09-24 02:55:02,814 - INFO - [SIGNAL] {'side': 'BUY', 'sl': 110682.0, 'tp': 112918.0, 'win_prob': 0.607, 'reason': 'weighted_consensus', 'combined_score': 0.0856, 'w_ai': 0.4, 'ind_major': None, 'tuned_thresh': 0.08360000000000005}
+2025-09-24 02:55:08,141 - INFO - [TRADE] BUY 0.00008000 BTC @ ~111800.0 | reason=weighted_consensus win_prob=0.607 combined_score=0.0856
+2025-09-24 03:00:00,175 - INFO - [CANDLES] 1002 (last close=111985.77)
+2025-09-24 03:00:00,298 - INFO - [SIGNAL] {'side': 'BUY', 'sl': 110865.9123, 'tp': 113105.62770000001, 'win_prob': 0.651, 'reason': 'weighted_consensus', 'combined_score': 0.12080000000000002, 'w_ai': 0.4, 'ind_major': None, 'tuned_thresh': 0.08360000000000005}
+2025-09-24 03:00:02,039 - INFO - [TRADE] BUY 0.00008000 BTC @ ~111985.77 | reason=weighted_consensus win_prob=0.651 combined_score=0.12080000000000002
