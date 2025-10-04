@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import os
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+BASE_DIR = r"D:\binance_ats_clone\obaidur-binance-ats-main"
+if BASE_DIR not in sys.path:
+    sys.path.append(BASE_DIR)
 import json
 
 from dotenv import load_dotenv

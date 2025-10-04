@@ -10,8 +10,14 @@ from src.config import Config
 from pathlib import Path
 from statistics import mean, median
 ROOT = Path(__file__).resolve().parent.parent
-BOT_LOG = ROOT / 'bot_run.log'
-ORDERS_LOG = ROOT / 'orders.log'
+try:
+    # prefer per-API files when running from repository with env set
+    from src.utils import get_data_file
+    BOT_LOG = Path(get_data_file('bot_run.log'))
+    ORDERS_LOG = Path(get_data_file('orders.log'))
+except Exception:
+    BOT_LOG = ROOT / 'bot_run.log'
+    ORDERS_LOG = ROOT / 'orders.log'
 DEBUG_JSONL = ROOT / 'model_debug.jsonl'
 
 def tail_lines(path: Path, n=200):

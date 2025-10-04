@@ -17,10 +17,20 @@ from dotenv import load_dotenv
 load_dotenv()
 from src.config import Config
 
+# Prefer netmode-specific history files via src.utils.get_history_file
+try:
+    # ensure repo root on path already added above
+    from src.utils import get_history_file
+    def get_monitor_history_path():
+        return get_history_file()
+except Exception:
+    def get_monitor_history_path():
+        return os.path.join(ROOT, 'trade_history.json')
+
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 os.chdir(ROOT)
 
-TRADE_HISTORY = os.path.join(ROOT, 'trade_history.json')
+TRADE_HISTORY = get_monitor_history_path()
 
 def read_history_count():
     if not os.path.exists(TRADE_HISTORY):

@@ -1,6 +1,8 @@
 import os
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+BASE_DIR = r"D:\binance_ats_clone\obaidur-binance-ats-main"
+if BASE_DIR not in sys.path:
+    sys.path.append(BASE_DIR)
 import pandas as pd
 import numpy as np
 from dotenv import load_dotenv
@@ -80,7 +82,7 @@ if __name__ == "__main__":
             "apply_strategy": output,
             "last_row": df.iloc[-1].to_dict()
         }
-        jsonl_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'model_debug.jsonl'))
+        jsonl_path = os.path.join(BASE_DIR, 'model_debug.jsonl')
         with open(jsonl_path, 'a', encoding='utf-8') as jf:
             jf.write(json.dumps(debug_entry, default=str) + "\n")
         print(f"Wrote debug entry to {jsonl_path}")
