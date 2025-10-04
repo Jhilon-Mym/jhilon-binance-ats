@@ -1,0 +1,13 @@
+{
+  "models": {
+    "lgb": "lgb_model.pkl",
+    "xgb": "xgb_model.json",
+    "lstm": "lstm_model.h5",
+    "scaler": "scaler.pkl"
+  },
+  "weights": {
+    "lstm": 0.4,
+    "lgb": 0.3,
+    "xgb": 0.3
+  }
+}
