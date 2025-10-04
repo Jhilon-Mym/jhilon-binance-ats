@@ -6,7 +6,7 @@
     <title>Binance Bot UI</title>
     <style>
   /* Allow wider layout so dashboard can use left area and side buttons on the right */
-  body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:1280px;margin:12px auto;padding:0 12px;background:#fff;height:100vh;overflow:hidden}
+  body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:1280px;margin:12px auto;padding:0 12px;background:#fff;min-height:100vh;overflow:auto}
   .card{border:1px solid #eee;border-radius:12px;padding:16px;margin:12px 0;box-shadow:0 3px 12px rgba(10,12,14,.05);background:#fff}
 
   /* Login form tweaks */
@@ -39,9 +39,8 @@
     This prevents the terminal from flowing underneath the side buttons on narrower viewports. */
   #main_card{flex:1;min-width:320px;max-width:calc(100% - 260px)}
 
-  /* Terminal style: show single-line log entries (no wrap) and allow horizontal + vertical scrolling */
-  /* Terminal: smaller height, full width inside the main card and force scrollbars (both axes)
-    so users can scroll horizontally and vertically to read long log lines. No wrapping. */
+  /* Terminal style: keep terminal compact and prevent it from expanding vertically.
+     Show single-line log entries without wrapping; allow horizontal + vertical scrolling. */
   #terminal{
     font-family:'Fira Mono','Consolas','Menlo','Monospace';
     font-size:13px;
@@ -49,17 +48,21 @@
     color:#e6eef8;
     padding:12px;
     border-radius:12px;
-    height:220px;
-    max-height:320px;
+    height:220px;           /* preferred visible height */
+    max-height:260px;       /* limit vertical growth */
+    min-height:120px;
     min-width:0;
     width:100%;
-    overflow:auto;
-    white-space:pre-wrap;
-    word-break:break-all;
+  overflow-x:auto;        /* allow horizontal scroll when needed */
+  overflow-y:auto;        /* vertical scroll if content exceeds max-height */
+  white-space:pre-wrap;   /* wrap long lines to avoid horizontal expansion */
+  overflow-wrap:break-word;
+  word-break:break-word;
     box-shadow:inset 0 -6px 18px rgba(0,0,0,0.12);
     box-sizing:border-box;
     scrollbar-gutter:stable;
     border:1.5px solid #d1d5db;
+    max-width:100%;
   }
 
   /* Remove the thin red divider (hidden) — handled visually by spacing now */
@@ -70,9 +73,22 @@
 
   /* responsive tweaks */
   @media(max-width:900px){ #side_btns{position:static;width:100%;flex-direction:row;overflow:auto} #main_card{min-width:0} }
+  /* Keep a safe right margin for the terminal when the side button column is fixed on
+     wide viewports so logs don't visually flow under the side controls. */
+  @media(min-width:901px) {
+    #terminal { margin-right: 260px; }
+  }
     </style>
   </head>
   <body>
+  <script>
+    // Minimal global helper so early inline scripts can use $('id') safely.
+    function $(id) {
+      if (!id) return null;
+      if (typeof id === 'string' && id.startsWith('.')) return document.querySelector(id);
+      return document.getElementById(id);
+    }
+  </script>
   <div id="login_section" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:90vh;">
       <form id="login_form" style="width:370px;" autocomplete="off" onsubmit="return false;">
   <div style="font-size:2em;font-weight:bold;text-align:center;margin-bottom:0;white-space:nowrap;display:flex;justify-content:center;">Binance Auto Trading Bot</div>
@@ -100,7 +116,8 @@
           </div>
           <div>
             <b>Summary:</b><br>
-            Total Win: <span id="win">...</span> &nbsp; Total Loss: <span id="loss">...</span> &nbsp; PnL: <span id="pnl">...</span>
+              Total Win: <span id="win">...</span> &nbsp; Total Loss: <span id="loss">...</span> &nbsp; PnL: <span id="pnl">...</span>
+            <!-- Last status payload removed per user request -->
           </div>
         </div>
         <div style="flex:0 0 280px;text-align:center;">
@@ -111,8 +128,8 @@
         <div style="flex:0 0 220px;text-align:right;">
           <div style="margin-bottom:8px;font-weight:600;">Net Mode:</div>
           <div style="text-align:right;">
-            <label><input type="radio" name="netmode" value="testnet" checked> Testnet</label><br>
-            <label><input type="radio" name="netmode" value="mainnet"> Mainnet</label>
+            <label><input type="radio" name="netmode" value="testnet" checked id="netmode_testnet"> Testnet</label><br>
+            <label><input type="radio" name="netmode" value="mainnet" id="netmode_mainnet"> Mainnet</label>
           </div>
           <div style="margin-top:8px;text-align:right;color:#444;">Logged in as: <span id="logged_in_as">...</span></div>
         </div>
@@ -137,15 +154,54 @@
   <button id="equity_plot_btn" style="padding:8px 10px;font-size:13px;text-align:left;">Show Equity Curve</button>
   <button id="trade_history_btn" style="padding:8px 10px;font-size:13px;text-align:left;">Trade History Report</button>
   <button id="pending_trades_btn" style="padding:8px 10px;font-size:13px;text-align:left;">Pending Trades Report</button>
+  <button id="reconcile_btn" style="padding:8px 10px;font-size:13px;text-align:left;background:#fff7ed;">Bot Reconciliation</button>
+  <button id="force_sell_btn" style="padding:8px 10px;font-size:13px;text-align:left;background:#ffe0e0;color:#c00;font-weight:bold;">Force SELL</button>
+    <!-- Other side buttons ... -->
   <button id="change_pw_btn_side" style="padding:8px 10px;font-size:13px;text-align:left;border-radius:8px">Change Password</button>
   <button id="logout_btn_side" style="padding:8px 10px;font-size:13px;background:#f3d6d6;text-align:left;border-radius:8px">Logout</button>
   <!-- Modal for reports -->
+
+</div>
+
+<!-- Move Force SELL button handler to script block -->
+<script>
+  // Helper for element selection
+  // NOTE: a more flexible `$` helper is defined later in the file; avoid
+  // declaring it twice to prevent "Identifier '$' has already been declared".
+  // Force SELL button handler
+  if ($('force_sell_btn')) $('force_sell_btn').onclick = async () => {
+    if ($('terminal')) $('terminal').textContent = 'Force SELL: processing...';
+    try {
+      const r = await fetch('/api/force_sell', { method: 'POST', headers: { 'Content-Type': 'application/json' } });
+      const j = await r.json();
+      if (j.ok) {
+        $('terminal').textContent = 'Force SELL completed: ' + (j.closed || 0) + ' trades closed.';
+        if (typeof pollStatus === 'function') pollStatus();
+      } else {
+        $('terminal').textContent = 'Force SELL failed: ' + (j.error || 'Unknown error');
+      }
+    } catch (e) {
+      $('terminal').textContent = 'Force SELL call failed';
+    }
+  };
+</script>
   <div id="report_modal" style="display:none;position:fixed;z-index:2000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.18);align-items:center;justify-content:center;">
     <div style="background:#fff;padding:18px 12px 12px 12px;border-radius:13px;min-width:260px;max-width:90vw;width:900px;box-shadow:0 8px 32px rgba(0,0,0,0.18);position:relative;max-height:96vh;overflow-y:auto;font-size:13px;">
-      <h2 id="report_modal_title" style="margin-top:0;margin-bottom:12px;font-size:1.1em;">Report</h2>
-      <button id="report_modal_csv" style="margin-bottom:10px;display:none;float:right;">Download CSV</button>
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <h2 id="report_modal_title" style="margin-top:0;margin-bottom:12px;font-size:1.1em;">Report</h2>
+        <button id="report_modal_csv" style="margin-bottom:0;display:none;">Download CSV</button>
+      </div>
+      <div id="report_modal_summary" style="margin-bottom:8px;font-size:14px;color:#2563eb;font-weight:500;"></div>
       <div id="report_modal_table" style="overflow-x:auto;"></div>
-      <button id="report_modal_close" style="position:absolute;top:6px;right:10px;font-size:1.2em;background:none;border:none;color:#888;">&times;</button>
+      <button id="report_modal_close" style="position:absolute;top:-10px;right:-10px;font-size:1.3em;background:#fff;border-radius:50%;border:1px solid #eee;color:#888;box-shadow:0 2px 8px #0001;z-index:10;width:32px;height:32px;display:flex;align-items:center;justify-content:center;">&times;</button>
+    </div>
+  </div>
+  <!-- Reconcile Confirmation Modal -->
+  <div id="confirm_reconcile_modal" style="display:none;position:fixed;z-index:2100;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.18);align-items:center;justify-content:center;">
+    <div style="background:#fff;padding:18px;border-radius:12px;min-width:260px;max-width:90vw;width:420px;box-shadow:0 8px 32px rgba(0,0,0,0.18);">
+      <h3 style="margin-top:0;margin-bottom:8px;">Confirm Reconcile</h3>
+      <div style="margin-bottom:12px;color:#333;">This will reconcile pending trades with the exchange. Are you sure you want to continue?</div>
+      <div style="display:flex;gap:8px;justify-content:flex-end;"><button id="confirm_reconcile_cancel">Cancel</button><button id="confirm_reconcile_yes" style="background:#2563eb;color:#fff;border-color:#1e40af;">Yes, run reconcile</button></div>
     </div>
   </div>
   <script>
@@ -165,6 +221,7 @@
     } else {
       csvBtn.style.display = 'none';
     }
+    // Summary handled in fetchAndShowReport
     modal.style.display = 'flex';
   }
   function hideReportModal() {
@@ -198,12 +255,23 @@
       const j = await res.json();
       let rows = (j.trades || j.pendings || []);
       if (!Array.isArray(rows)) rows = [];
+      window.lastReportApiResult = j; // set after rows extraction
+      console.log('[DEBUG] fetchAndShowReport', url, 'rows:', rows, 'pending_qty:', j.pending_qty);
       let html = '<table style="border-collapse:collapse;width:100%">';
       html += '<tr>' + columns.map(c => `<th style=\"border:1px solid #ccc;padding:4px 6px;background:#f3f3f3;\">${c}</th>`).join('') + '</tr>';
       for (const row of rows) {
         html += '<tr>' + columns.map(c => `<td style=\"border:1px solid #eee;padding:4px 6px;\">${row[c]!==undefined?row[c]:''}</td>`).join('') + '</tr>';
       }
       html += '</table>';
+      // --- summary line update ---
+      const summaryDiv = document.getElementById('report_modal_summary');
+      if (title.toLowerCase().includes('pending trades')) {
+        let pendingQty = (typeof j.pending_qty === 'number') ? j.pending_qty : rows.reduce((sum, r) => sum + (parseFloat(r.qty)||0), 0);
+        let totalAmt = rows.reduce((sum, r) => sum + (parseFloat(r.amount_usdt)||0), 0);
+        summaryDiv.innerHTML = `Pending Qty: <b>${pendingQty.toFixed(6)}</b> | Pending Amount (USDT): <b>${totalAmt.toFixed(2)}</b>`;
+      } else {
+        summaryDiv.innerHTML = '';
+      }
       showReportModal(title, html, rows, columns);
     } catch(e) {
       showReportModal(title, '<div style="color:#c00">Failed to load report.</div>', [], []);
@@ -215,6 +283,53 @@
   document.getElementById('pending_trades_btn').onclick = function() {
     fetchAndShowReport('/api/pending_trades', 'Pending Trades Report', ['orderId','side','qty','amount_usdt','entry','status','timestamp']);
   };
+  // Show confirm modal before running reconcile
+  const reconcileBtn = document.getElementById('reconcile_btn');
+  if(reconcileBtn){
+    reconcileBtn.addEventListener('click', function(){
+      const modal = document.getElementById('confirm_reconcile_modal');
+      if(modal) modal.style.display = 'flex';
+    });
+  }
+  // Modal buttons
+  if(document.getElementById('confirm_reconcile_cancel')){
+    document.getElementById('confirm_reconcile_cancel').onclick = function(){ document.getElementById('confirm_reconcile_modal').style.display = 'none'; if($('terminal')) $('terminal').textContent = 'Reconcile cancelled'; };
+  }
+  if(document.getElementById('confirm_reconcile_yes')){
+    document.getElementById('confirm_reconcile_yes').onclick = async function(){
+      document.getElementById('confirm_reconcile_modal').style.display = 'none';
+      if($('terminal')) $('terminal').textContent = 'Running reconciliation...';
+      try{
+        const headers = {'Content-Type':'application/json'};
+        const body = {timeout:20};
+        let r = await fetch('/api/reconcile',{method:'POST', headers: headers, body: JSON.stringify(body), credentials: 'same-origin'});
+        if(r.status === 401){
+          // Not authorized with session: fallback to token prompt (for setups using RECONCILE_TOKEN)
+          sessionStorage.removeItem('reconcile_token');
+          let token = null;
+          try{ token = prompt('Enter reconcile token (leave blank to cancel):'); }catch(e){ token = null; }
+          if(!token){ if($('terminal')) $('terminal').textContent = 'Reconcile cancelled'; return; }
+          sessionStorage.setItem('reconcile_token', token);
+          body.token = token;
+          r = await fetch('/api/reconcile',{method:'POST', headers: headers, body: JSON.stringify(body)});
+        }
+        const j = await r.json();
+        if(j.ok){
+          const res = j.result || {};
+          const msg = `Reconcile finished: updated=${res.updated||0} removed=${res.removed||0} ${res.error?('| error:'+res.error):''}`;
+          if($('terminal')) $('terminal').textContent = msg;
+          pollStatus();
+        } else {
+          if(j.error && j.error === 'unauthorized'){
+            sessionStorage.removeItem('reconcile_token');
+            if($('terminal')) $('terminal').textContent = 'Reconcile unauthorized. Please log in as admin or provide correct token.';
+          } else {
+            if($('terminal')) $('terminal').textContent = 'Reconcile failed: ' + (j.error || JSON.stringify(j));
+          }
+        }
+      }catch(e){ if($('terminal')) $('terminal').textContent = 'Reconcile call failed'; }
+    };
+  }
   </script>
   <!-- Pure JS Config Modal -->
   <div id="config_modal" style="display:none;position:fixed;z-index:1000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.18);align-items:center;justify-content:center;">
@@ -229,6 +344,9 @@
         </div>
         <div id="config_msg" style="color:#c00;margin-top:8px;font-size:12px;"></div>
       </form>
+        <div style="padding:8px 0 6px 0;display:flex;align-items:center;gap:8px;">
+          <label style="font-size:13px;display:flex;align-items:center;gap:8px;"><input id="config_restart_after_apply" type="checkbox" checked /> Restart bot after apply</label>
+        </div>
       <button id="config_close_btn" style="position:absolute;top:6px;right:10px;font-size:1.2em;background:none;border:none;color:#888;">&times;</button>
     </div>
   </div>
@@ -318,7 +436,7 @@
     });
     document.getElementById('config_msg').textContent = 'Restored default values (not saved yet)';
   };
-  document.getElementById('config_apply_btn').onclick = function(){
+    document.getElementById('config_apply_btn').onclick = async function(){
     if(!validateConfig()) return;
     const vals = {};
     CONFIG_FIELDS.forEach(f=>{
@@ -327,11 +445,21 @@
       else if(f.type==='float') v = parseFloat(v);
       vals[f.k] = v;
     });
-    fetch('/api/config', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(vals)})
-      .then(r=>r.json()).then(j=>{
-        if(j.ok){ hideConfigModal(); location.reload(); }
-        else document.getElementById('config_msg').textContent = j.msg||'Failed to save config';
-      });
+    try{
+      const res = await fetch('/api/config', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(vals)});
+      const j = await res.json();
+      if(j.ok){
+        // Optionally restart bot to apply runtime-sensitive changes (preload, etc.)
+        const shouldRestart = document.getElementById('config_restart_after_apply') && document.getElementById('config_restart_after_apply').checked;
+        if(shouldRestart){
+          try{ await fetch('/api/stop', {method:'POST'}); }catch(e){}
+          try{ await fetch('/api/start', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({netmode: document.querySelector('input[name="netmode"]:checked').value})}); }catch(e){}
+        }
+        hideConfigModal(); location.reload();
+      } else {
+        document.getElementById('config_msg').textContent = j.msg||'Failed to save config';
+      }
+    }catch(e){ document.getElementById('config_msg').textContent = 'Failed to save config'; }
   };
   // ESC to close
   window.addEventListener('keydown', function(e){
@@ -345,12 +473,7 @@
     <div id="equity_plot" style="margin-top:40px;max-width:700px;"></div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
-    // Helper to safely get element by id or simple selector
-    const $ = id => {
-      if(!id) return null;
-      if(typeof id === 'string' && id.startsWith('.')) return document.querySelector(id);
-      return document.getElementById(id);
-    };
+    // Helper is defined earlier near the top of the document to allow early scripts to use `$()`.
 
     // Open profit report if button exists
     if($('profit_report_btn')) {
@@ -401,11 +524,33 @@
         showLoginUI();
       }
     }
-    // On page load and after login, always call restoreUI
-    restoreUI();
+    // On page load and after login, query server to get authoritative session state and update UI
+    async function refreshSession() {
+      try {
+        const r = await fetch('/api/whoami');
+        const j = await r.json();
+        if(j.logged_in){
+          localStorage.setItem('bot_logged_in','1');
+          try{ localStorage.setItem('bot_user_email', j.email || ''); }catch(e){}
+          if($('logged_in_as')) $('logged_in_as').textContent = j.email || '';
+        } else {
+          localStorage.removeItem('bot_logged_in');
+          try{ localStorage.removeItem('bot_user_email'); }catch(e){}
+          if($('logged_in_as')) $('logged_in_as').textContent = '...';
+        }
+        // enable/disable reconcile button based on server session
+        const recBtn = $('reconcile_btn'); if(recBtn) recBtn.disabled = !j.logged_in;
+      } catch(e) {
+        // network or server error - leave local state as-is
+      }
+  }
+  // call now and periodically refresh session state, and use it to decide which UI to show
+  (async function(){ await refreshSession(); restoreUI(); })();
+  setInterval(refreshSession, 15000);
 
     // Attach logout handler (main and side)
-  if($('logout_btn')) $('logout_btn').onclick = ()=>{
+  if($('logout_btn')) $('logout_btn').onclick = async ()=>{
+    try{ await fetch('/api/logout', {method:'POST'}); }catch(e){}
     localStorage.removeItem('bot_logged_in');
     try{ localStorage.removeItem('bot_user_email'); }catch(e){};
     if($('logged_in_as')) $('logged_in_as').textContent = '...';
@@ -414,7 +559,8 @@
     if($('login_password')) $('login_password').value = '';
     showLoginUI();
   };
-  if($('logout_btn_side')) $('logout_btn_side').onclick = ()=>{
+  if($('logout_btn_side')) $('logout_btn_side').onclick = async ()=>{
+    try{ await fetch('/api/logout', {method:'POST'}); }catch(e){}
     localStorage.removeItem('bot_logged_in');
     try{ localStorage.removeItem('bot_user_email'); }catch(e){};
     if($('logged_in_as')) $('logged_in_as').textContent = '...';
@@ -454,7 +600,12 @@
 
     // Safe attach for equity plot button
     if($('equity_plot_btn')) $('equity_plot_btn').onclick = async ()=>{
-      try{ await plotEquityCurve(); }catch(e){}
+      try{
+        await plotEquityCurve();
+      }catch(e){
+        const eqDiv = document.getElementById('equity_plot');
+        if(eqDiv) eqDiv.innerHTML = '<span style="color:#c00">Equity Curve plot error!</span>';
+      }
     };
 
     // Safe attach for signal/retrain buttons
@@ -477,7 +628,12 @@
       try{
         const r = await fetch('/api/start',{method:'POST',headers:{'Content-Type':'application/json'},body: JSON.stringify({netmode})});
         const j = await r.json();
-        if($('terminal')) $('terminal').textContent = j.msg || j.message || JSON.stringify(j);
+        if($('terminal')) {
+          let out = j.msg || j.message || JSON.stringify(j);
+          // show reconcile result if present
+          if(j.reconcile) out += '\nReconcile: updated=' + (j.reconcile.updated||0) + ' removed=' + (j.reconcile.removed||0) + (j.reconcile.error?(' error='+j.reconcile.error):'');
+          $('terminal').textContent = out;
+        }
         if(j.ok || j.success) $('status').textContent = 'running';
       }catch(e){ if($('terminal')) $('terminal').textContent = 'Error starting bot'; }
       finally{ if(btn){ btn.disabled = false; btn.textContent = btn.dataset.orig || 'Start Bot'; }}
@@ -495,18 +651,75 @@
     };
 
     // --- Real-time status update using Socket.IO + fallback polling ---
+  // --- Equity Curve Plot Logic ---
+  async function plotEquityCurve() {
+    const eqDiv = document.getElementById('equity_plot');
+    if(eqDiv) eqDiv.innerHTML = '<span style="color:#2563eb">Loading Equity Curve...</span>';
+    let url = '/api/trade_history';
+    try {
+      const res = await fetch(url);
+      const j = await res.json();
+      let trades = j.trades || [];
+      if (!Array.isArray(trades)) trades = [];
+      // Equity curve calculation
+      let equity = 0, curve = [];
+      for (const t of trades) {
+        equity += (parseFloat(t.realized_pnl_usdt)||0);
+        curve.push({ts: t.timestamp || '', eq: equity});
+      }
+      if(curve.length === 0) {
+        if(eqDiv) eqDiv.innerHTML = '<span style="color:#c00">No trades found for equity curve.</span>';
+        return;
+      }
+      // Simple plot using HTML table (no chart lib)
+      let html = '<table style="width:100%;max-width:700px;border-collapse:collapse;margin-top:8px;font-size:13px"><tr><th>Time</th><th>Equity (USDT)</th></tr>';
+      for(const pt of curve) html += `<tr><td>${pt.ts}</td><td>${pt.eq.toFixed(2)}</td></tr>`;
+      html += '</table>';
+      eqDiv.innerHTML = html;
+    } catch(e) {
+      if(eqDiv) eqDiv.innerHTML = '<span style="color:#c00">Failed to load equity curve.</span>';
+    }
+  }
     function updateStatusUI(s) {
+      try{ console.log('[UI] updateStatusUI received:', s); }catch(e){}
       if($('status')) $('status').textContent = s.running? 'running' : 'stopped';
-      if($('bal_usdt')) $('bal_usdt').textContent = s.usdt || '...';
-      if($('bal_btc')) $('bal_btc').textContent = s.btc || '...';
+      // Only update balances when a real balance event occurs (e.g. trade exec/close)
+      // or on the initial UI population to avoid flip-flopping between N/A and values.
+      try {
+        if (!window._balanceInitialized || s.balance_event === true) {
+          if($('bal_usdt')) $('bal_usdt').textContent = s.usdt || '...';
+          if($('bal_btc')) $('bal_btc').textContent = s.btc || '...';
+          window._balanceInitialized = true;
+        }
+      } catch (e) {}
       if($('win')) $('win').textContent = s.win!==undefined? s.win : '...';
       if($('loss')) $('loss').textContent = s.loss!==undefined? s.loss : '...';
       if($('pnl')) $('pnl').textContent = s.pnl!==undefined? s.pnl : '...';
       if($('pending')) $('pending').textContent = s.pending!==undefined? s.pending : '...';
       if($('pending_amt')) $('pending_amt').textContent = s.pending_amt!==undefined? s.pending_amt : '...';
       if($('terminal') && s.terminal) $('terminal').textContent = s.terminal;
-      try{ if(typeof s.use_testnet !== 'undefined'){ const val = s.use_testnet? 'testnet':'mainnet'; const el = document.querySelector('input[name="netmode"][value="'+val+'"]'); if(el) el.checked = true; } }catch(e){}
+      // Remove auto-forcing radio unless status update is from backend change
+      // Only update radio if netmode change was not user-initiated
+      if(window._netmodeChanging !== true) {
+        try{ if(typeof s.use_testnet !== 'undefined'){ const val = s.use_testnet? 'testnet':'mainnet'; const el = document.querySelector('input[name="netmode"][value="'+val+'"]'); if(el) el.checked = true; } }catch(e){}
+      }
+      window._netmodeChanging = false;
     }
+    // Netmode radio change handler
+    document.getElementById('netmode_testnet').addEventListener('change', function(e){
+      if(this.checked){
+        window._netmodeChanging = true;
+        fetch('/api/set_netmode', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({netmode:'testnet'})})
+          .then(r=>r.json()).then(j=>{ pollStatus(); });
+      }
+    });
+    document.getElementById('netmode_mainnet').addEventListener('change', function(e){
+      if(this.checked){
+        window._netmodeChanging = true;
+        fetch('/api/set_netmode', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({netmode:'mainnet'})})
+          .then(r=>r.json()).then(j=>{ pollStatus(); });
+      }
+    });
     async function pollStatus() {
       try {
         const r = await fetch('/api/status');
@@ -523,10 +736,36 @@
       var s=document.createElement('script');
       s.src='https://cdn.socket.io/4.7.5/socket.io.min.js';
       s.onload=function(){
-        var socket=io();
-        socket.on('status_update', function(s){
-          updateStatusUI(s);
-        });
+        try{
+          // Prefer connecting to the same origin that served the page. This
+          // avoids forcing a different port (like :5000) when the backend is
+          // actually hosted on the same port as the UI (e.g. :8000). If an
+          // explicit WEBUI_BACKEND_URL is provided by the server, use it.
+          var backendUrl = window.WEBUI_BACKEND_URL || window.__WEBUI_BACKEND_URL__ || window.location.origin;
+          var socket = io(backendUrl, { transports: ['websocket','polling'] });
+          // If the explicit same-origin connect fails (e.g. backend is on a
+          // different legacy port), try the old :5000 fallback once.
+          var triedFallback = false;
+          socket.on('connect_error', function(err){
+            try{ console.warn('[SOCKET] connect_error to', backendUrl, err); }catch(e){}
+            if(!triedFallback){
+              triedFallback = true;
+              try{
+                var fallback = location.protocol + '//' + location.hostname + ':5000';
+                console.log('[SOCKET] attempting fallback to', fallback);
+                socket = io(fallback, { transports: ['websocket','polling'] });
+                socket.on('connect', function(){ try{ console.log('[SOCKET] connected to fallback', fallback); }catch(e){} });
+                socket.on('status_update', function(s){ try{ console.log('[SOCKET] status_update', s); }catch(e){}; updateStatusUI(s); try{ var el = document.getElementById('last_status_payload'); if(el){ el.style.display = 'inline-block'; el.textContent = JSON.stringify(s, null, 2); } }catch(e){} });
+              }catch(e){ console.error('[SOCKET] fallback failed', e); }
+            }
+          });
+          socket.on('connect', function(){ try{ console.log('[SOCKET] connected to', backendUrl); }catch(e){} });
+          socket.on('status_update', function(s){
+            try{ console.log('[SOCKET] status_update', s); }catch(e){}
+            updateStatusUI(s);
+          });
+          socket.on('disconnect', function(){ try{ console.log('[SOCKET] disconnected'); }catch(e){} });
+        }catch(e){ console.error('Socket init failed', e); }
       };
       document.head.appendChild(s);
     })();
