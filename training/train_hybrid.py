@@ -1,57 +1,157 @@
+"""
+Hybrid training pipeline (LightGBM + XGBoost + LSTM)
 
-# training/train_hybrid.py — fetch REST klines -> build features -> train simple model -> save models/model.pkl
-import os, argparse, pickle
+Saves models to models/hybrid/:
+ - lgb_model.pkl (joblib)
+ - xgb_model.json (XGBoost native
+ - lstm_model.h5 (Keras)
+ - scaler.pkl (joblib)
+
+Usage:
+ python training/train_hybrid.py --input data/train_ready.csv --out models/hybrid --epochs 5
+
+This script is intentionally conservative with defaults so it can be run on small machines.
+"""
+import os
+import argparse
+import joblib
+import json
+import numpy as np
 import pandas as pd
-from binance.client import Client
 
-def fetch_klines(client, symbol, interval, limit):
-    kl = client.get_klines(symbol=symbol, interval=interval, limit=limit)
-    cols = ["open_time","open","high","low","close","volume","close_time","qav","num_trades","tb_base","tb_quote","ignore"]
-    df = pd.DataFrame(kl, columns=cols)
-    df[["open","high","low","close","volume"]] = df[["open","high","low","close","volume"]].astype(float)
-    df['ts'] = pd.to_datetime(df['open_time'], unit='ms')
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score, roc_auc_score
+
+
+from tensorflow import keras
+
+# Heavy ML libraries are imported lazily inside main() to keep module import cheap
+
+
+def default_feature_engineering(df):
+    # Minimal, conservative feature engineering. Expand in your pipeline as needed.
+    df = df.copy()
+    # Fill missing
+    df.fillna(method='ffill', inplace=True)
+    df.fillna(0, inplace=True)
+    # Example engineered features (if columns exist)
+    if 'close' in df.columns and 'volume' in df.columns:
+        df['close_x_vol'] = df['close'] * (df['volume'] + 1e-9)
     return df
 
-def sma(x, n): return x.rolling(n).mean()
-def ema(x, n): return x.ewm(span=n, adjust=False).mean()
 
-def build_features(df):
-    df['close'] = df['close'].astype(float)
-    df['ema20'] = ema(df['close'], 20)
-    df['ema50'] = ema(df['close'], 50)
-    df['ema200'] = ema(df['close'], 200)
-    df['sma20'] = sma(df['close'], 20)
-    # label: 1 if next close is higher than current close by > 0.2%
-    df['y'] = (df['close'].shift(-1) >= df['close'] * 1.002).astype(int)
-    feats = df[['close','ema20','ema50','ema200','sma20','y']].dropna().copy()
-    return feats
+def build_lstm(input_shape):
+    model = keras.models.Sequential()
+    model.add(keras.layers.LSTM(64, input_shape=input_shape))
+    model.add(keras.layers.Dense(1, activation='sigmoid'))
+    model.compile(optimizer=keras.optimizers.Adam(learning_rate=0.001), loss='binary_crossentropy', metrics=['accuracy'])
+    return model
+
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument('--symbol', default=os.getenv('SYMBOL','BTCUSDT'))
-    ap.add_argument('--interval', default=os.getenv('INTERVAL','5m'))
-    ap.add_argument('--limit', type=int, default=2000)
-    ap.add_argument('--out', default='models/model.pkl')
-    args = ap.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--input', required=True, help='CSV with features and target column named "target"')
+    parser.add_argument('--out', default='models/hybrid', help='Output directory for models')
+    parser.add_argument('--epochs', type=int, default=5, help='Epochs for LSTM (kept small by default)')
+    parser.add_argument('--test-size', type=float, default=0.2)
+    args = parser.parse_args()
 
-    api_key = os.getenv('BINANCE_API_KEY')
-    api_secret = os.getenv('BINANCE_API_SECRET')
-    use_testnet = os.getenv('USE_TESTNET','true').lower()=='true'
-    client = Client(api_key, api_secret, testnet=use_testnet)
+    os.makedirs(args.out, exist_ok=True)
 
-    df = fetch_klines(client, args.symbol, args.interval, args.limit)
-    feats = build_features(df)
-    X = feats[['close','ema20','ema50','ema200','sma20']].values
-    y = feats['y'].values
+    df = pd.read_csv(os.path.join(r"D:\binance_ats_clone\obaidur-binance-ats-main", os.path.basename(args.input)))
+    # Support existing labeling conventions: 'target', 'label', or 'y'
+    label_col = None
+    for c in ('target', 'label', 'y'):
+        if c in df.columns:
+            label_col = c
+            break
+    if label_col is None:
+        raise SystemExit('Input CSV must contain a label column named one of: target, label, y')
 
-    from sklearn.linear_model import LogisticRegression
-    model = LogisticRegression(max_iter=200)
-    model.fit(X, y)
+    df = default_feature_engineering(df)
 
-    os.makedirs(os.path.dirname(args.out), exist_ok=True)
-    with open(args.out, 'wb') as f:
-        pickle.dump(model, f)
-    print(f'Saved model -> {args.out} ({len(X)} samples)')
+    # Map multi-class label conventions (e.g., -1/0/1) to binary 0/1: treat 1 as positive, others as negative
+    y = (df[label_col] == 1).astype(int)
+
+    # Use all numeric columns except the label column as features
+    X = df.select_dtypes(include=[np.number]).drop(columns=[label_col])
+
+    # Train/test split (no shuffle, time-series friendly)
+    split_idx = int(len(X) * (1 - args.test_size))
+    X_train, X_test = X.iloc[:split_idx], X.iloc[split_idx:]
+    y_train, y_test = y.iloc[:split_idx], y.iloc[split_idx:]
+
+    # Scale features
+    scaler = StandardScaler()
+    X_train_s = scaler.fit_transform(X_train)
+    X_test_s = scaler.transform(X_test)
+
+    # Import heavy ML libs here (lazy import)
+    try:
+        import lightgbm as lgb
+        import xgboost as xgb
+        from tensorflow import keras
+    except Exception as e:
+        raise RuntimeError('Missing ML dependencies. Please install lightgbm, xgboost and tensorflow.') from e
+
+    # LightGBM
+    lgb_model = lgb.LGBMClassifier(n_estimators=200, learning_rate=0.05, max_depth=6)
+    lgb_model.fit(X_train_s, y_train)
+    lgb_pred = lgb_model.predict_proba(X_test_s)[:, 1]
+
+    # XGBoost
+    xgb_model = xgboost = xgb.XGBClassifier(n_estimators=200, learning_rate=0.05, max_depth=6, use_label_encoder=False, eval_metric='logloss')
+    xgb_model.fit(X_train_s, y_train)
+    xgb_pred = xgb_model.predict_proba(X_test_s)[:, 1]
+
+    # LSTM expects 3D: (samples, timesteps, features)
+    X_train_lstm = X_train_s.reshape((X_train_s.shape[0], 1, X_train_s.shape[1]))
+    X_test_lstm = X_test_s.reshape((X_test_s.shape[0], 1, X_test_s.shape[1]))
+
+    # Build a small LSTM using the helper
+    lstm_model = keras.models.Sequential()
+    lstm_model.add(keras.layers.LSTM(64, input_shape=(1, X_train_s.shape[1])))
+    lstm_model.add(keras.layers.Dense(1, activation='sigmoid'))
+    lstm_model.compile(optimizer=keras.optimizers.Adam(learning_rate=0.001), loss='binary_crossentropy', metrics=['accuracy'])
+    lstm_model.fit(X_train_lstm, y_train.values, epochs=args.epochs, batch_size=32, verbose=1)
+    lstm_pred = lstm_model.predict(X_test_lstm, verbose=0).reshape(-1)
+
+    # Ensemble weighted average
+    final_prob = 0.4 * lstm_pred + 0.3 * lgb_pred + 0.3 * xgb_pred
+    final_label = (final_prob >= 0.5).astype(int)
+
+    # Metrics
+    acc = accuracy_score(y_test, final_label)
+    try:
+        auc = roc_auc_score(y_test, final_prob)
+    except Exception:
+        auc = None
+
+    print(f'Hybrid ensemble accuracy on test: {acc:.4f}, AUC: {auc}')
+
+    # Save models and scaler
+    joblib.dump(scaler, os.path.join(args.out, 'scaler.pkl'))
+    joblib.dump(lgb_model, os.path.join(args.out, 'lgb_model.pkl'))
+    # XGBoost save to json
+    xgb_model.get_booster().save_model(os.path.join(args.out, 'xgb_model.json'))
+    lstm_model.save(os.path.join(args.out, 'lstm_model.h5'))
+
+    # Save a tiny manifest
+    manifest = {
+        'models': {
+            'lgb': 'lgb_model.pkl',
+            'xgb': 'xgb_model.json',
+            'lstm': 'lstm_model.h5',
+            'scaler': 'scaler.pkl'
+        },
+        'weights': {'lstm': 0.4, 'lgb': 0.3, 'xgb': 0.3}
+    }
+    with open(os.path.join(args.out, 'manifest.json'), 'w') as f:
+        json.dump(manifest, f, indent=2)
+
+    print('Models saved to', args.out)
+
 
 if __name__ == '__main__':
     main()
