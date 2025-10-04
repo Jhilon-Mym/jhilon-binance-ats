@@ -3,7 +3,7 @@ from flask import Blueprint, jsonify
 
 run_script_api = Blueprint('run_script_api', __name__)
 
-BASE = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
+BASE = r"D:\binance_ats_clone\obaidur-binance-ats-main"
 
 def run_script(script_path):
     try:
@@ -21,6 +21,6 @@ def run_debug_signal():
 
 @run_script_api.route('/api/run_retrain')
 def run_retrain():
-    script = os.path.join(BASE, 'training', 'train_model.py')
+    script = os.path.join(BASE, 'training', 'train_hybrid.py')
     output = run_script(script)
     return jsonify({'output': output})

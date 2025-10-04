@@ -1,6 +1,6 @@
 import os
 import time
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, session
 
 AUTH_FILE = os.path.join(os.path.dirname(__file__), 'user_auth.txt')
 auth_api = Blueprint('auth_api', __name__)
@@ -30,6 +30,13 @@ def login():
     password = data.get('password')
     saved_email, saved_password, _ = read_latest_user()
     if email == saved_email and password == saved_password:
+        # mark session as logged in
+        try:
+            session.permanent = True
+            session['logged_in'] = True
+            session['email'] = email
+        except Exception:
+            pass
         return jsonify({'success': True, 'message': 'Login successful'})
     return jsonify({'success': False, 'message': 'Invalid email or password'}), 401
 
@@ -44,3 +51,30 @@ def change_password():
         save_user(email, new_password)
         return jsonify({'success': True, 'message': 'Password updated'})
     return jsonify({'success': False, 'message': 'Invalid credentials'}), 401
+
+
+@auth_api.route('/api/logout', methods=['POST'])
+def logout():
+    try:
+        session.pop('logged_in', None)
+        session.pop('email', None)
+    except Exception:
+        pass
+    return jsonify({'success': True, 'message': 'Logged out'})
+
+
+@auth_api.route('/api/whoami', methods=['GET'])
+def whoami():
+    # Return minimal information about current session for UI
+    try:
+        logged_in = bool(session.get('logged_in'))
+        email = session.get('email') if logged_in else None
+        # Refresh session lifetime on whoami to keep active users logged in
+        try:
+            if logged_in:
+                session.permanent = True
+        except Exception:
+            pass
+        return jsonify({'logged_in': logged_in, 'email': email})
+    except Exception:
+        return jsonify({'logged_in': False, 'email': None})

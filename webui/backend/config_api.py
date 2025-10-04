@@ -50,6 +50,12 @@ def update_env(new_cfg):
             new_lines.append(f'{k}={v}\n')
     with open(CONFIG_PATH, 'w', encoding='utf-8') as f:
         f.writelines(new_lines)
+    # Also update current process environment so backend sees changes immediately
+    try:
+        for k, v in new_cfg.items():
+            os.environ[str(k)] = str(v)
+    except Exception:
+        pass
     return True
 
 @config_api.route('/api/config', methods=['GET'])
