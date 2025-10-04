@@ -1,13 +1,158 @@
 [
-	{
-		"orderId": 2596813,
-		"side": "BUY",
-		"qty": 8e-05,
-		"amount_usdt": 9.0154904,
-		"entry": 112704.9,
-		"close_price": 112800.0,
-		"realized_pnl_usdt": 0.5,
-		"status": "closed",
-		"timestamp": "2025-09-26T22:12:00"
-	}
+  {
+    "orderId": 2596813,
+    "side": "BUY",
+    "qty": 8e-05,
+    "amount_usdt": 9.0154904,
+    "entry": 112704.9,
+    "close_price": 112800.0,
+    "realized_pnl_usdt": 0.5,
+    "status": "win",
+    "timestamp": "2025-09-26T22:12:00"
+  },
+  {
+    "side": "BUY",
+    "entry": 112704.9,
+    "qty": 8e-05,
+    "amount_usdt": 9.0154904,
+    "sl": 111577.851,
+    "tp": 113831.949,
+    "status": "win",
+    "orderId": 2596813,
+    "executedQty": 8e-05,
+    "cummulativeQuoteQty": 9.0154904,
+    "fills": [
+      {
+        "price": "112693.63000000",
+        "qty": "0.00008000",
+        "commission": "0.00000000",
+        "commissionAsset": "BTC",
+        "tradeId": 690316
+      }
+    ],
+    "trail_active": true,
+    "trail_stop": 122275.08499999999,
+    "close_price": 122301.38,
+    "realized_pnl_usdt": 0.7676416314977618,
+    "pnl_pct": 0.08514696344169606,
+    "timestamp": "2025-10-04T16:25:21",
+    "closed_at": "2025-10-04T16:25:21",
+    "netmode": "testnet"
+  },
+  {
+    "side": "BUY",
+    "entry": 112618.76,
+    "qty": 8e-05,
+    "amount_usdt": 9.0095016,
+    "sl": 111492.57239999999,
+    "tp": 113744.9476,
+    "status": "win",
+    "orderId": 2597469,
+    "executedQty": 8e-05,
+    "cummulativeQuoteQty": 9.0095016,
+    "fills": [
+      {
+        "price": "112618.77000000",
+        "qty": "0.00008000",
+        "commission": "0.00000000",
+        "commissionAsset": "BTC",
+        "tradeId": 690491
+      }
+    ],
+    "trail_active": true,
+    "trail_stop": 122275.08499999999,
+    "close_price": 122301.38,
+    "realized_pnl_usdt": 0.7746096687815786,
+    "pnl_pct": 0.08597697222025895,
+    "timestamp": "2025-10-04T16:25:22",
+    "closed_at": "2025-10-04T16:25:22",
+    "netmode": "testnet"
+  },
+  {
+    "side": "BUY",
+    "entry": 112591.98,
+    "qty": 8e-05,
+    "amount_usdt": 9.0073592,
+    "sl": 111466.06019999999,
+    "tp": 113717.8998,
+    "status": "win",
+    "orderId": 2598095,
+    "executedQty": 8e-05,
+    "cummulativeQuoteQty": 9.0073592,
+    "fills": [
+      {
+        "price": "112591.99000000",
+        "qty": "0.00008000",
+        "commission": "0.00000000",
+        "commissionAsset": "BTC",
+        "tradeId": 690645
+      }
+    ],
+    "trail_active": true,
+    "trail_stop": 122275.08499999999,
+    "close_price": 122301.38,
+    "realized_pnl_usdt": 0.7767520689882181,
+    "pnl_pct": 0.0862352718195382,
+    "timestamp": "2025-10-04T16:25:22",
+    "closed_at": "2025-10-04T16:25:22",
+    "netmode": "testnet"
+  },
+  {
+    "side": "BUY",
+    "entry": 112550.05,
+    "qty": 8e-05,
+    "amount_usdt": 9.0040552,
+    "sl": 111424.54950000001,
+    "tp": 113675.5505,
+    "status": "win",
+    "orderId": 2601801,
+    "executedQty": 8e-05,
+    "cummulativeQuoteQty": 9.0040552,
+    "fills": [
+      {
+        "price": "112550.69000000",
+        "qty": "0.00008000",
+        "commission": "0.00000000",
+        "commissionAsset": "BTC",
+        "tradeId": 691557
+      }
+    ],
+    "trail_active": true,
+    "trail_stop": 122275.08499999999,
+    "close_price": 122301.38,
+    "realized_pnl_usdt": 0.7801108359651197,
+    "pnl_pct": 0.08663994374058476,
+    "timestamp": "2025-10-04T16:25:22",
+    "closed_at": "2025-10-04T16:25:22",
+    "netmode": "testnet"
+  },
+  {
+    "side": "BUY",
+    "entry": 112301.65,
+    "qty": 8e-05,
+    "amount_usdt": 8.984132,
+    "sl": 111178.6335,
+    "tp": 113424.66649999999,
+    "status": "win",
+    "orderId": 2603849,
+    "executedQty": 8e-05,
+    "cummulativeQuoteQty": 8.984132,
+    "fills": [
+      {
+        "price": "112301.65000000",
+        "qty": "0.00008000",
+        "commission": "0.00000000",
+        "commissionAsset": "BTC",
+        "tradeId": 692458
+      }
+    ],
+    "trail_active": true,
+    "trail_stop": 122275.08499999999,
+    "close_price": 122301.38,
+    "realized_pnl_usdt": 0.799978400000001,
+    "pnl_pct": 0.08904348244215478,
+    "timestamp": "2025-10-04T16:25:22",
+    "closed_at": "2025-10-04T16:25:22",
+    "netmode": "testnet"
+  }
 ]

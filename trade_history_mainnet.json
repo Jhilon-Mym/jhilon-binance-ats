@@ -1,13 +1,13 @@
 [
-	{
-		"orderId": 1234567,
-		"side": "SELL",
-		"qty": 0.0001,
-		"amount_usdt": 12.0,
-		"entry": 120000.0,
-		"close_price": 120500.0,
-		"realized_pnl_usdt": 1.0,
-		"status": "closed",
-		"timestamp": "2025-09-26T22:13:00"
-	}
+  {
+    "orderId": 1234567,
+    "side": "SELL",
+    "qty": 0.0001,
+    "amount_usdt": 12.0,
+    "entry": 120000.0,
+    "close_price": 120500.0,
+    "realized_pnl_usdt": 1.0,
+    "status": "win",
+    "timestamp": "2025-09-26T22:13:00"
+  }
 ]
