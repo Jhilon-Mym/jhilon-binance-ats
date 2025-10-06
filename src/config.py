@@ -56,3 +56,7 @@ class Config:
     DEFAULT_AI_WEIGHT = _EnvClassProperty('DEFAULT_AI_WEIGHT', cast=float, default=0.4)
     AI_MIN_CONFIDENCE_OVERRIDE = _EnvClassProperty('AI_MIN_CONFIDENCE_OVERRIDE', cast=float, default=0.75)
     INDICATOR_CONFIRM_COUNT = _EnvClassProperty('INDICATOR_CONFIRM_COUNT', cast=int, default=2)
+    ADAPTIVE_ENABLED = _EnvClassProperty('ADAPTIVE_ENABLED', cast=lambda v: str(v).lower() == 'true', default=False)
+    ADAPT_MIN_THRESH = _EnvClassProperty('ADAPT_MIN_THRESH', cast=float, default=0.55)
+    ADAPT_MAX_THRESH = _EnvClassProperty('ADAPT_MAX_THRESH', cast=float, default=0.95)
+    ADAPT_BASE_FRAC = _EnvClassProperty('ADAPT_BASE_FRAC', cast=float, default=0.02)

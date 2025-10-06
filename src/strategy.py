@@ -7,6 +7,22 @@ import json
 from datetime import datetime
 
 _MODEL = None
+_HYBRID_PREDICTOR = None
+
+def get_hybrid_predictor(model_dir=None):
+    """Lazily create and cache a HybridPredictor instance to avoid re-loading
+    heavy ML models (LSTM/Keras) on every prediction call.
+    """
+    global _HYBRID_PREDICTOR
+    if _HYBRID_PREDICTOR is not None:
+        return _HYBRID_PREDICTOR
+    try:
+        from src.predict_hybrid import HybridPredictor
+        model_dir = model_dir or os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'models', 'hybrid'))
+        _HYBRID_PREDICTOR = HybridPredictor(model_dir)
+        return _HYBRID_PREDICTOR
+    except Exception:
+        return None
 
 
 def load_model():
@@ -92,19 +108,26 @@ def predict_signal(df):
     model_obj = None
     if os.path.exists(hybrid_manifest):
         try:
-            # lazy import to avoid heavy deps at module import time
-            from src.predict_hybrid import HybridPredictor
-            hp = HybridPredictor(os.path.join(os.path.dirname(__file__), '..', 'models', 'hybrid'))
-            # Use the last row features to predict
-            try:
-                Xvals = df.select_dtypes(include=[np.number]).ffill().bfill().iloc[-1].values
-            except Exception:
-                # fallback: build feature vector using internal features list later
-                Xvals = None
-            if Xvals is not None:
-                prob = hp.predict_single(Xvals)
-                side = 'BUY' if prob >= 0.5 else 'SELL'
-                return {'side': side, 'win_prob': round(float(prob), 3), 'reason': 'hybrid_model'}
+            # use cached HybridPredictor to avoid re-loading heavy model files
+            import time, logging
+            logger = logging.getLogger(__name__)
+            hp = get_hybrid_predictor()
+            if hp is not None:
+                # Use the last row features to predict
+                try:
+                    Xvals = df.select_dtypes(include=[np.number]).ffill().bfill().iloc[-1].values
+                except Exception:
+                    Xvals = None
+                if Xvals is not None:
+                    t0 = time.time()
+                    prob = hp.predict_single(Xvals)
+                    dt = time.time() - t0
+                    try:
+                        logger.info('[TIMING][strategy.predict_signal] hybrid_predict_single=%.4fs', dt)
+                    except Exception:
+                        pass
+                    side = 'BUY' if prob >= 0.5 else 'SELL'
+                    return {'side': side, 'win_prob': round(float(prob), 3), 'reason': 'hybrid_model'}
         except Exception:
             # if hybrid fails, fall back to existing loading
             model_obj = load_model()

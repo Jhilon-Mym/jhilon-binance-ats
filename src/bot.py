@@ -3,7 +3,27 @@
 import os, time, signal, logging
 from dotenv import load_dotenv
 load_dotenv()
+# ensure centralized logging configuration is applied early for CLI runs
+try:
+    from src.logging_config import configure_logging  # noqa: F401
+except Exception:
+    pass
 from src.config import Config
+# Ensure BINANCE_API_KEY/BINANCE_API_SECRET are populated according to netmode
+# when not explicitly provided. This mirrors the behavior of the web UI start
+# endpoint which sets these env vars before launching the bot process.
+try:
+    if not os.getenv('BINANCE_API_KEY'):
+        key = Config.API_KEY() if hasattr(Config, 'API_KEY') else None
+        if key:
+            os.environ['BINANCE_API_KEY'] = key
+    if not os.getenv('BINANCE_API_SECRET'):
+        secret = Config.API_SECRET() if hasattr(Config, 'API_SECRET') else None
+        if secret:
+            os.environ['BINANCE_API_SECRET'] = secret
+except Exception:
+    # best-effort: do not fail startup if env access fails
+    pass
 import sys
 
 # Ensure project root is on sys.path so `import src.*` works when running
@@ -132,10 +152,30 @@ def execute_trade(client: Client, signal_out: Dict, symbol: str, last_price: flo
     buy_usdt = _parse_env_float("BUY_USDT_PER_TRADE", 20.0)
     symbol_base = os.getenv("SYMBOL_BASE", "BTC")
 
+    # adaptive helpers
+    try:
+        from src.adaptive import dynamic_threshold, compute_position_size
+    except Exception:
+        dynamic_threshold = None
+        compute_position_size = None
+
     # Safety checks (same as before)
     if live_trades:
-        if win_prob < float(win_prob_min):
-            logger.info(f"[SKIP-LIVE] Blocking live trade: win_prob {win_prob:.3f} < WIN_PROB_MIN {win_prob_min}")
+        # compute adaptive threshold if available using recent performance and volatility
+        adj_thresh = float(win_prob_min)
+        try:
+            # only use adaptive logic when enabled in config
+            from src.config import Config
+            if getattr(Config, 'ADAPTIVE_ENABLED', False) and dynamic_threshold is not None:
+                from src.utils import compute_recent_win_rate, compute_recent_volatility
+                recent_win_rate = compute_recent_win_rate(n=Config.HISTORY_PRELOAD if hasattr(Config, 'HISTORY_PRELOAD') else 50)
+                vol = compute_recent_volatility(n=Config.HISTORY_PRELOAD if hasattr(Config, 'HISTORY_PRELOAD') else 50)
+                adj_thresh = dynamic_threshold(float(win_prob_min), win_prob, recent_win_rate, vol)
+        except Exception:
+            adj_thresh = float(win_prob_min)
+
+        if win_prob < float(adj_thresh):
+            logger.info(f"[SKIP-LIVE] Blocking live trade: win_prob {win_prob:.3f} < adaptive WIN_PROB {adj_thresh:.3f}")
             return None
         safety_ok = False
         if reason == "ai_confident" and win_prob >= ai_min:
@@ -156,10 +196,35 @@ def execute_trade(client: Client, signal_out: Dict, symbol: str, last_price: flo
     trade_stats = get_profit_tracker()
     # BUY
     if side == "BUY":
-        if bals.get("USDT", 0.0) < buy_usdt:
-            logger.info(f"[SKIP] BUY: insufficient USDT {bals.get('USDT',0.0):.2f} < {buy_usdt}")
+        available_usdt = float(bals.get("USDT", 0.0))
+
+        # determine desired notional using adaptive sizing when available
+        desired_notional = float(buy_usdt)
+        try:
+            if compute_position_size is not None:
+                max_pct = _parse_env_float('ADAPT_MAX_PCT_OF_BALANCE', 0.2)
+                # attempt to get volatility if adaptive is enabled
+                vol = None
+                try:
+                    from src.config import Config
+                    if getattr(Config, 'ADAPTIVE_ENABLED', False):
+                        from src.utils import compute_recent_volatility
+                        vol = compute_recent_volatility(n=Config.HISTORY_PRELOAD if hasattr(Config, 'HISTORY_PRELOAD') else 50)
+                except Exception:
+                    vol = None
+                # pass None for explicit target risk; adaptive will use defaults
+                suggested = compute_position_size(available_usdt, target_risk_usdt=None, volatility=vol, max_pct_of_balance=float(max_pct))
+                # use the suggested size but never exceed available
+                if suggested is not None and float(suggested) > 0:
+                    desired_notional = min(available_usdt, float(suggested))
+        except Exception:
+            desired_notional = float(buy_usdt)
+
+        if available_usdt < 1e-8 or desired_notional <= 0.0:
+            logger.info(f"[SKIP] BUY: insufficient USDT {available_usdt:.2f} < desired {desired_notional}")
             return None
-        qty = round(buy_usdt / float(last_price), 8)
+
+        qty = round(float(desired_notional) / float(last_price), 8)
         qty_str = format(qty, '.8f').rstrip('0').rstrip('.')
         if qty_str == '' or float(qty_str) == 0.0:
             logger.info(f"[SKIP] BUY: computed qty is zero for last_price={last_price}")
@@ -171,10 +236,10 @@ def execute_trade(client: Client, signal_out: Dict, symbol: str, last_price: flo
                 logger.info(f"[SKIP] BUY: qty {qty_str} doesn't meet symbol LOT_SIZE/minQty rules")
                 return None
             order_info = place_order_live(client, "BUY", symbol, q, order_type="MARKET")
-            logger.info(f"[TRADE] BUY {q} {symbol_base} @ ~{last_price} | reason={reason} win_prob={win_prob:.3f} combined_score={combined_score}")
+            logger.info(f"[TRADE] BUY {q} {symbol_base} @ ~{last_price} | reason={reason} win_prob={win_prob:.3f} combined_score={combined_score} notional={desired_notional:.2f}")
         else:
-            logger.info(f"[PAPER] BUY {qty_str} {symbol_base} @ ~{last_price} | reason={reason} win_prob={win_prob:.3f} combined_score={combined_score}")
-        trade = trade_stats.open_trade(signal_out, last_price, qty, buy_usdt, order_info=order_info)
+            logger.info(f"[PAPER] BUY {qty_str} {symbol_base} @ ~{last_price} | reason={reason} win_prob={win_prob:.3f} combined_score={combined_score} notional={desired_notional:.2f}")
+        trade = trade_stats.open_trade(signal_out, last_price, qty, desired_notional, order_info=order_info)
         # Refresh live balance after trade execution (updates shared cached_balances)
         try:
             trade_stats.print_balances()
@@ -248,7 +313,9 @@ def run():
     os.environ.setdefault("SYMBOL_BASE", symbol.replace("USDT", ""))
 
     try:
-        client = Client(api_key, api_secret, testnet=use_testnet)
+        # Use SafeClient wrapper to protect against API rate limits and transient errors
+        from src.safe_client import SafeClient
+        client = SafeClient(api_key, api_secret, testnet=use_testnet)
     except Exception as e:
         import traceback
         logger.error(f"Failed to create client: {e}")
@@ -308,19 +375,29 @@ def run():
         try:
             # build a DataFrame view for the AI predictor (predict_signal expects a DataFrame)
             try:
+                import time
+                t_build0 = time.time()
                 df_hist = pd.DataFrame(HISTORY)
+                t_build = time.time() - t_build0
+                logger.info('[TIMING][bot] df_build=%.4fs len=%d', t_build, len(HISTORY))
             except Exception:
                 df_hist = None
 
             ai_signal = None
             try:
                 if df_hist is not None:
+                    t_pred0 = time.time()
                     ai_signal = predict_signal(df_hist)
+                    t_pred = time.time() - t_pred0
+                    logger.info('[TIMING][bot] predict_signal=%.4fs', t_pred)
             except Exception as e:
                 logger.error(f"[ERROR] predict_signal: {e}")
 
             from src.config import Config
+            t_strat0 = time.time()
             out = apply_strategy(HISTORY, ai_signal=ai_signal, threshold=Config.SIGNAL_THRESHOLD)
+            t_strat = time.time() - t_strat0
+            logger.info('[TIMING][bot] apply_strategy=%.4fs', t_strat)
         except Exception as e:
             logger.error(f"[ERROR] apply_strategy: {e}")
             return

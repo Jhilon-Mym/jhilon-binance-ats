@@ -269,10 +269,6 @@ except Exception:
 VERBOSE_BALANCE = os.getenv('VERBOSE_BALANCE', 'false').lower() == 'true'
 logger = logging.getLogger(__name__)
 
-# PENDING_FILE is netmode-specific and resolved at import time
-PENDING_FILE = get_pending_file()
-
-
 def get_history_file():
     """Return netmode-specific trade history file path.
     Keeps history separated per netmode to avoid mixing testnet/mainnet records.
@@ -286,7 +282,137 @@ def get_history_file():
         if os.path.exists(p):
             return p
     return candidate
+
+# Backwards-compatible constant expected by some tests
+HISTORY_FILE = get_history_file()
+
 ORDERS_LOG = get_data_file('orders.log')
+
+
+def compute_recent_win_rate(n: int = 50) -> float:
+    """Compute recent win rate from persisted history file.
+
+    Looks at the most recent `n` closed trades in the history file and returns
+    fraction of those marked as 'win'. Returns None if no closed trades exist.
+    """
+    try:
+        hf = get_history_file()
+        if not os.path.exists(hf):
+            return None
+        with open(hf, 'r', encoding='utf-8') as f:
+            trades = json.load(f)
+        if not isinstance(trades, list) or len(trades) == 0:
+            return None
+        # consider only closed trades (status win/loss)
+        closed = [t for t in trades if str(t.get('status')).lower() in ('win', 'loss')]
+        if not closed:
+            return None
+        closed = closed[-n:]
+        wins = sum(1 for t in closed if str(t.get('status')).lower() == 'win')
+        return float(wins) / float(len(closed))
+    except Exception:
+        return None
+
+
+def compute_recent_volatility(n: int = 50) -> float:
+    """Compute a simple volatility estimate (stddev of returns) from HISTORY if available.
+
+    Falls back to reading the last `n` candles from the in-memory HISTORY global
+    if present (bot.HISTORY), or returns None when data isn't available.
+    """
+    try:
+        # Try to import bot.HISTORY if running under the bot process
+        try:
+            from src.bot import HISTORY as BOT_HISTORY
+        except Exception:
+            BOT_HISTORY = None
+
+        prices = []
+        if BOT_HISTORY and isinstance(BOT_HISTORY, list) and len(BOT_HISTORY) > 0:
+            # get last n closes
+            recs = BOT_HISTORY[-n:]
+            prices = [float(r.get('close')) for r in recs if r.get('close') is not None]
+        else:
+            # no live HISTORY: try to derive from recent trade history mark prices
+            hf = get_history_file()
+            if os.path.exists(hf):
+                with open(hf, 'r', encoding='utf-8') as f:
+                    trades = json.load(f)
+                # use close_price/entry where possible
+                prices = [float(t.get('close_price') or t.get('entry') or 0) for t in trades[-n:] if (t.get('close_price') or t.get('entry'))]
+
+        if not prices or len(prices) < 2:
+            return None
+        # compute simple returns and stddev
+        returns = []
+        for i in range(1, len(prices)):
+            try:
+                r = (prices[i] - prices[i-1]) / float(prices[i-1])
+                returns.append(r)
+            except Exception:
+                continue
+        if not returns:
+            return None
+        # compute sample stddev
+        mean = sum(returns) / len(returns)
+        var = sum((x - mean) ** 2 for x in returns) / max(1, (len(returns) - 1))
+        return float(var ** 0.5)
+    except Exception:
+        return None
+
+
+def normalize_history_records(trades):
+    """Normalize a list of trade history records in-place.
+
+    - Ensures required history fields exist.
+    - Fills missing timestamp from 'closed_at' or current time.
+    - Normalizes 'status' based on 'realized_pnl_usdt': >0 -> 'win', <0 -> 'loss', ==0 -> 'closed'
+    Returns True if any record was changed.
+    """
+    changed = False
+    import datetime
+    for t in trades:
+        # ensure baseline fields
+        try:
+            ensure_history_fields(t)
+        except Exception:
+            pass
+        # timestamp
+        ts = t.get('timestamp')
+        if not ts or ts == 'N/A':
+            closed_at = t.get('closed_at')
+            if closed_at and isinstance(closed_at, str) and closed_at != 'N/A':
+                t['timestamp'] = closed_at
+                changed = True
+            else:
+                try:
+                    t['timestamp'] = datetime.datetime.now().isoformat(timespec='seconds')
+                    changed = True
+                except Exception:
+                    t['timestamp'] = 'N/A'
+                    changed = True
+
+        # normalize realized_pnl_usdt to float when possible
+        rp = t.get('realized_pnl_usdt')
+        try:
+            rp_val = float(rp) if rp is not None else None
+        except Exception:
+            rp_val = None
+
+        st = str(t.get('status') or '').lower()
+        # If status is not explicit win/loss/closed, derive from realized pnl when available
+        if rp_val is not None:
+            derived = None
+            if rp_val > 0:
+                derived = 'win'
+            elif rp_val < 0:
+                derived = 'loss'
+            else:
+                derived = 'closed'
+            if st not in ('win', 'loss', 'closed') or st != derived:
+                t['status'] = derived
+                changed = True
+    return changed
 
 
 def place_order_live(client: Client, side: str, symbol: str, quantity: float, price=None, order_type="MARKET"):
@@ -402,7 +528,12 @@ class TradeStats:
         self.client = None
         if use_real_client:
             try:
-                self.client = Client(self.api_key, self.api_secret, testnet=self.use_testnet)
+                try:
+                    from src.safe_client import SafeClient
+                    self.client = SafeClient(self.api_key, self.api_secret, testnet=self.use_testnet)
+                except Exception:
+                    # fallback to raw Client
+                    self.client = Client(self.api_key, self.api_secret, testnet=self.use_testnet)
             except Exception:
                 self.client = None
 
@@ -415,7 +546,10 @@ class TradeStats:
         self.balance = self.get_real_balance()
         # cached balances map (asset -> free amount) updated by print_balances()
         self.cached_balances = {}
-        self.pending = self.load_pending()
+        # Defer loading pending trades until first operation to avoid
+        # importing-time resolution issues (tests may change CWD or remove
+        # files after module import). Load lazily on first access.
+        self.pending = []
         # embed a ProfitTracker instance to handle realized/unrealized PnL and reporting
         try:
             # Use symbol from Config if available
@@ -500,18 +634,21 @@ class TradeStats:
 
 
     def load_pending(self):
-        if os.path.exists(PENDING_FILE):
+        pf = get_pending_file()
+        if os.path.exists(pf):
             try:
-                with open(PENDING_FILE, "r") as f:
+                with open(pf, "r") as f:
                     data = json.load(f)
             except Exception:
                 # corrupted file -> reset safely
                 print("[WARN] pending_trades.json malformed, resetting to empty list")
                 try:
                     with self._lock:
-                        with tempfile.NamedTemporaryFile('w', delete=False, dir='.', prefix='pending_', suffix='.json') as tf:
+                        # write temp file next to the real pending file location
+                        dest_dir = os.path.dirname(pf) or '.'
+                        with tempfile.NamedTemporaryFile('w', delete=False, dir=dest_dir, prefix='pending_', suffix='.json') as tf:
                             json.dump([], tf)
-                        os.replace(tf.name, PENDING_FILE)
+                        os.replace(tf.name, pf)
                 except Exception:
                     pass
                 return []
@@ -551,14 +688,23 @@ class TradeStats:
             with self._lock:
                 # Ensure all pending trades have required fields before writing
                 normalized = [ensure_pending_fields(dict(t)) for t in self.pending]
-                with tempfile.NamedTemporaryFile('w', delete=False, dir='.', prefix='pending_', suffix='.json') as tf:
+                pf = get_pending_file()
+                dest_dir = os.path.dirname(pf) or '.'
+                with tempfile.NamedTemporaryFile('w', delete=False, dir=dest_dir, prefix='pending_', suffix='.json') as tf:
                     json.dump(self._to_native(normalized), tf, indent=2, ensure_ascii=False)
-                os.replace(tf.name, PENDING_FILE)
+                os.replace(tf.name, pf)
         except Exception as e:
             print(f"[ERROR] Failed to save pending trades atomically: {e}")
 
 
     def open_trade(self, signal, entry_price, qty, amount_usdt, order_info=None):
+        # Refresh pending from disk to pick up any external changes (tests may
+        # remove/create pending file after TradeStats was instantiated).
+        try:
+            self.pending = self.load_pending() or []
+        except Exception:
+            # best-effort: keep current in-memory pending
+            pass
         # Restrict total pending trade amount to 75% of current balance.
         # In test environments or when balance==0 (no real client), allow opening trades
         # so unit tests can run deterministically.
@@ -677,6 +823,11 @@ class TradeStats:
         except ImportError:
             print("[ERROR] Could not import ManagedTrade for trailing logic!")
             return []
+        # Ensure we operate on the latest persisted pending state
+        try:
+            self.pending = self.load_pending() or []
+        except Exception:
+            pass
         closed = []
         for trade in list(self.pending):
             if trade["status"] != "open":
@@ -858,7 +1009,12 @@ class TradeStats:
                 pass
 
             history.append(self._to_native(trade))
-            with tempfile.NamedTemporaryFile('w', delete=False, dir='.', prefix='history_', suffix='.json', encoding='utf-8') as tf:
+            history_dir = os.path.dirname(history_file) or '.'
+            try:
+                os.makedirs(history_dir, exist_ok=True)
+            except Exception:
+                pass
+            with tempfile.NamedTemporaryFile('w', delete=False, dir=history_dir, prefix='history_', suffix='.json', encoding='utf-8') as tf:
                 json.dump(history, tf, indent=2, ensure_ascii=False)
             os.replace(tf.name, history_file)
             # Refresh cached balances from exchange (if client available)
@@ -869,8 +1025,9 @@ class TradeStats:
                 pass
             # Notify webui backend to emit status update so UI is refreshed immediately.
             try:
-                import requests, os
-                backend = os.getenv('WEBUI_BACKEND_URL', 'http://127.0.0.1:5000')
+                import requests
+                # Default to a non-common, browser-safe dev port to reduce collisions
+                backend = os.getenv('WEBUI_BACKEND_URL', 'http://127.0.0.1:8102')
                 try:
                     requests.post(f"{backend}/api/notify_update", timeout=1)
                 except Exception:

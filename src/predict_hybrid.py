@@ -18,6 +18,8 @@ import joblib
 import json
 import argparse
 import pandas as pd
+import time
+import logging
 
 # Heavy ML imports are performed lazily inside the class to allow simple imports
 _tf = None
@@ -73,19 +75,44 @@ class HybridPredictor:
         """Return final probability for a single sample feature vector."""
         arr, scaled = self._prep(x)
 
-        # LightGBM and XGBoost expect 2D scaled
-        prob_lgb = self.lgb.predict_proba(scaled)[0][1]
-        # XGBoost: use DMatrix
-        dmat = _xgb.DMatrix(scaled)
-        prob_xgb = float(self.xgb.predict(dmat).ravel()[0])
-
-        # LSTM expects 3D
-        lstm_in = scaled.reshape((scaled.shape[0], 1, scaled.shape[1]))
-        prob_lstm = float(self.lstm.predict(lstm_in, verbose=0).ravel()[0])
+        # Measure per-model inference time for diagnosis
+        logger = logging.getLogger(__name__)
+        t0 = time.time()
+        prob_lgb = 0.0
+        prob_xgb = 0.0
+        prob_lstm = 0.0
+        try:
+            lgb_start = time.time()
+            prob_lgb = self.lgb.predict_proba(scaled)[0][1]
+            lgb_dt = time.time() - lgb_start
+        except Exception as e:
+            lgb_dt = None
+            logger.debug('lgb predict failed: %s', e)
+        try:
+            xgb_start = time.time()
+            dmat = _xgb.DMatrix(scaled)
+            prob_xgb = float(self.xgb.predict(dmat).ravel()[0])
+            xgb_dt = time.time() - xgb_start
+        except Exception as e:
+            xgb_dt = None
+            logger.debug('xgb predict failed: %s', e)
+        try:
+            lstm_start = time.time()
+            lstm_in = scaled.reshape((scaled.shape[0], 1, scaled.shape[1]))
+            prob_lstm = float(self.lstm.predict(lstm_in, verbose=0).ravel()[0])
+            lstm_dt = time.time() - lstm_start
+        except Exception as e:
+            lstm_dt = None
+            logger.debug('lstm predict failed: %s', e)
 
         final = self.weights['lstm'] * prob_lstm + self.weights['lgb'] * prob_lgb + self.weights['xgb'] * prob_xgb
         # Clamp to [0,1]
         final = max(0.0, min(1.0, float(final)))
+        total_dt = time.time() - t0
+        try:
+            logger.info('[TIMING][HybridPredictor] total=%.4fs lgb=%s xgb=%s lstm=%s', total_dt, ('%.4fs' % lgb_dt) if lgb_dt is not None else 'err', ('%.4fs' % xgb_dt) if xgb_dt is not None else 'err', ('%.4fs' % lstm_dt) if lstm_dt is not None else 'err')
+        except Exception:
+            pass
         return final
 
     def predict_csv(self, csv_path, output_col='win_prob'):
