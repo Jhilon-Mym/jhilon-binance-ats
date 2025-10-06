@@ -979,7 +979,7 @@ if __name__ == "__main__":
         except Exception:
             pass
         try:
-            socketio.run(app, host="127.0.0.1", port=int(os.getenv("PORT", 8101)))
+            socketio.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 8101)))
         except KeyboardInterrupt:
             try:
                 print('[INFO] KeyboardInterrupt caught in main runner, initiating shutdown...')
@@ -995,7 +995,7 @@ if __name__ == "__main__":
                 pass
     except Exception as e:
         print('Failed to start socketio.run, falling back to app.run:', e)
-        app.run(host="127.0.0.1", port=int(os.getenv("PORT", 8101)))
+        app.run(host="0.0.0.0", port=int(os.getenv("PORT", 8101)))
 
 
 @app.after_request
@@ -1020,3 +1020,4 @@ def _maybe_add_dev_csp(response):
     except Exception:
         pass
     return response
+
