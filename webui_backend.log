@@ -1,0 +1,3 @@
+Failed to start socketio.run, falling back to app.run: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted
+ * Serving Flask app 'app'
+ * Debug mode: off

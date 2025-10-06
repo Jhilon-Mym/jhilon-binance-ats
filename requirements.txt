@@ -1,4 +1,4 @@
-## Core Python modules (no install needed, for reference):
+# Core Python modules (no install needed, for reference):
 # threading, datetime, json, tempfile, logging, os, sys, re, random, time, dataclasses, typing
 # External dependencies:
 python-dotenv
@@ -9,7 +9,7 @@ joblib
 xgboost
 lightgbm
 ta
-scikit-learn
+scikit-learn==1.7.1
 matplotlib
 flask
 flask-socketio
@@ -19,3 +19,5 @@ tensorflow
 eventlet
 python-socketio
 python-engineio
+pytest
+pytest-asyncio

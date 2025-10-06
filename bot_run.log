@@ -1,25 +1,265 @@
 Bot started
-2025-09-26 23:56:54,216 - INFO - [INFO] Loaded symbol info for BTCUSDT: LOT_SIZE step=[{'filterType': 'PRICE_FILTER', 'minPrice': '0.01000000', 'maxPrice': '1000000.00000000', 'tickSize': '0.01000000'}, {'filterType': 'LOT_SIZE', 'minQty': '0.00001000', 'maxQty': '9000.00000000', 'stepSize': '0.00001000'}, {'filterType': 'ICEBERG_PARTS', 'limit': 10}, {'filterType': 'MARKET_LOT_SIZE', 'minQty': '0.00000000', 'maxQty': '120.64010233', 'stepSize': '0.00000000'}, {'filterType': 'TRAILING_DELTA', 'minTrailingAboveDelta': 10, 'maxTrailingAboveDelta': 2000, 'minTrailingBelowDelta': 10, 'maxTrailingBelowDelta': 2000}, {'filterType': 'PERCENT_PRICE_BY_SIDE', 'bidMultiplierUp': '5', 'bidMultiplierDown': '0.2', 'askMultiplierUp': '5', 'askMultiplierDown': '0.2', 'avgPriceMins': 5}, {'filterType': 'NOTIONAL', 'minNotional': '5.00000000', 'applyMinToMarket': True, 'maxNotional': '9000000.00000000', 'applyMaxToMarket': False, 'avgPriceMins': 5}, {'filterType': 'MAX_NUM_ORDERS', 'maxNumOrders': 200}, {'filterType': 'MAX_NUM_ALGO_ORDERS', 'maxNumAlgoOrders': 5}]
-2025-09-26 23:56:54,216 - INFO - Bot started | netmode=true | API_KEY=UhbWwlunhBLMelyFkQE5up8Y8LyT7NAbBocioy9ChgaG7IinRXnMwdZZweTXZiJk | API_SECRET=DyRFWHX4gfUauYo7K6fAw9lG7Alh7ESJvRBDJaSyFBKOUbkWvDyjl8qMTFrGkjMa
-2025-09-26 23:56:54,379 - INFO - [BALANCE] USDT=16346.63 | BTC=2.031990
-2025-09-26 23:56:54,785 - INFO - [INFO] Seeded history with 1000 candles from REST
-2025-09-26 23:56:55,792 - INFO - [WebSocket] Connection opened (attempt 1)
-2025-09-26 23:59:59,776 - INFO - [CANDLES] 1001 (last close=109899.99)
-2025-09-26 23:59:59,785 - INFO - Trying to load model from: d:\binance_ats_clone\jhilon-binance-ats-1\models\model.pkl
-D:\binance_ats_clone\jhilon-binance-ats-1\.venv\Lib\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.7.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+2025-10-04 20:22:23,550 - INFO - [INFO] Loaded symbol info for BTCUSDT: LOT_SIZE step=[{'filterType': 'PRICE_FILTER', 'minPrice': '0.01000000', 'maxPrice': '1000000.00000000', 'tickSize': '0.01000000'}, {'filterType': 'LOT_SIZE', 'minQty': '0.00001000', 'maxQty': '9000.00000000', 'stepSize': '0.00001000'}, {'filterType': 'ICEBERG_PARTS', 'limit': 10}, {'filterType': 'MARKET_LOT_SIZE', 'minQty': '0.00000000', 'maxQty': '134.23809950', 'stepSize': '0.00000000'}, {'filterType': 'TRAILING_DELTA', 'minTrailingAboveDelta': 10, 'maxTrailingAboveDelta': 2000, 'minTrailingBelowDelta': 10, 'maxTrailingBelowDelta': 2000}, {'filterType': 'PERCENT_PRICE_BY_SIDE', 'bidMultiplierUp': '5', 'bidMultiplierDown': '0.2', 'askMultiplierUp': '5', 'askMultiplierDown': '0.2', 'avgPriceMins': 5}, {'filterType': 'NOTIONAL', 'minNotional': '5.00000000', 'applyMinToMarket': True, 'maxNotional': '9000000.00000000', 'applyMaxToMarket': False, 'avgPriceMins': 5}, {'filterType': 'MAX_NUM_ORDERS', 'maxNumOrders': 200}, {'filterType': 'MAX_NUM_ALGO_ORDERS', 'maxNumAlgoOrders': 5}]
+2025-10-04 20:22:23,551 - INFO - Bot started | netmode=true | API_KEY=rs7DTd8IW4Ya2a3yW5jqDkEAvyKv0mQPxlejYeOo2qTp5M5ONOfqCfh6lC3V2jx9 | API_SECRET=ojLWIsjUo87fhIqpLakyz2r1QThn58tgnscPv1ed9JiMeTcRnaiSNIlrrsTdIbim
+2025-10-04 20:22:23,907 - INFO - [BALANCE] USDT=132379.43 | BTC=0.000000
+2025-10-04 20:22:24,490 - INFO - [PRELOAD] requested=1000 end_time=None got=900
+2025-10-04 20:22:24,491 - INFO - [PRELOAD] fewer returned than requested (got 900 < 1000), stopping pagination
+2025-10-04 20:22:24,519 - INFO - [INFO] Seeded history with 900 candles from REST
+2025-10-04 20:22:25,625 - INFO - [WebSocket] Connection opened (attempt 1)
+2025-10-04 20:24:59,993 - INFO - [CANDLES] 901 (last close=122340.08)
+2025-10-04 20:25:02.371662: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-04 20:25:07.436127: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-10-04 20:25:09.321003: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-10-04 20:25:09,455 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 20:25:09,463 - INFO - Trying to load model from: d:\binance_ats_clone\obaidur-binance-ats-main\models\model.pkl
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.7.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
 https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
   warnings.warn(
-D:\binance_ats_clone\jhilon-binance-ats-1\.venv\Lib\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator RandomForestClassifier from version 1.7.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator RandomForestClassifier from version 1.7.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
 https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
   warnings.warn(
-D:\binance_ats_clone\jhilon-binance-ats-1\.venv\Lib\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator StandardScaler from version 1.7.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\base.py:442: InconsistentVersionWarning: Trying to unpickle estimator StandardScaler from version 1.7.1 when using version 1.7.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
 https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
   warnings.warn(
-2025-09-27 00:00:01,915 - INFO - Model loaded successfully
-2025-09-27 00:00:02,039 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.602, combined_score=0.08159999999999999, threshold=0.75, tuned_thresh=0.08360000000000005
-2025-09-27 00:00:02,039 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.602, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
-2025-09-27 00:00:02,039 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.08)
-2025-09-27 00:00:02,039 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.602, 'reason': 'low_conf(win_prob<0.75, combined<0.08)'}
-2025-09-27 00:04:59,750 - INFO - [CANDLES] 1002 (last close=109933.06)
-2025-09-27 00:04:59,851 - INFO - [SIGNAL] {'side': 'BUY', 'sl': 108833.7294, 'tp': 111032.3906, 'win_prob': 0.607, 'reason': 'weighted_consensus', 'combined_score': 0.0856, 'w_ai': 0.4, 'ind_major': None, 'tuned_thresh': 0.08360000000000005}
-2025-09-27 00:05:03,350 - INFO - [TRADE] BUY 0.00009000 BTC @ ~109933.06 | reason=weighted_consensus win_prob=0.607 combined_score=0.0856
+2025-10-04 20:25:09,680 - INFO - Model loaded successfully
+2025-10-04 20:25:09,737 - INFO - [STRATEGY] Market-high override: Forcing SELL (close=122340.08, recent_high=122566.93)
+2025-10-04 20:25:09,737 - INFO - [STRATEGY] SELL signal accepted: win_prob=0.646, combined_score=0.11680000000000001, ind_major=None
+2025-10-04 20:25:09,738 - INFO - [SIGNAL] {'side': 'SELL', 'sl': 123563.4808, 'tp': 121116.6792, 'win_prob': 0.646, 'reason': 'weighted_consensus', 'combined_score': 0.11680000000000001, 'w_ai': 0.4, 'ind_major': None, 'tuned_thresh': 0.1076}
+2025-10-04 20:25:09,738 - INFO - [SKIP-LIVE] Blocking live trade: win_prob 0.646 < WIN_PROB_MIN 0.7
+2025-10-04 20:30:00,155 - INFO - [CANDLES] 902 (last close=122313.55)
+2025-10-04 20:30:00,276 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 20:30:00,344 - INFO - [STRATEGY] Market-high override: Forcing SELL (close=122313.55, recent_high=122566.93)
+2025-10-04 20:30:00,344 - INFO - [STRATEGY] SELL signal accepted: win_prob=0.66, combined_score=0.12800000000000003, ind_major=None
+2025-10-04 20:30:00,344 - INFO - [SIGNAL] {'side': 'SELL', 'sl': 123536.6855, 'tp': 121090.4145, 'win_prob': 0.66, 'reason': 'weighted_consensus', 'combined_score': 0.12800000000000003, 'w_ai': 0.4, 'ind_major': None, 'tuned_thresh': 0.1076}
+2025-10-04 20:30:00,345 - INFO - [SKIP-LIVE] Blocking live trade: win_prob 0.660 < WIN_PROB_MIN 0.7
+2025-10-04 20:35:00,294 - INFO - [CANDLES] 903 (last close=122292.44)
+2025-10-04 20:35:00,449 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 20:35:00,592 - INFO - [STRATEGY] Signal rejected for low confidence: side=SELL, win_prob=0.632, combined_score=0.10560000000000001, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 20:35:00,592 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.632, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:35:00,592 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 20:35:00,592 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.632, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:40:00,012 - INFO - [CANDLES] 904 (last close=122260.01)
+2025-10-04 20:40:00,115 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 20:40:00,186 - INFO - [STRATEGY] Signal rejected for low confidence: side=SELL, win_prob=0.604, combined_score=0.0832, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 20:40:00,186 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.604, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:40:00,186 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 20:40:00,186 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.604, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:45:00,223 - INFO - [CANDLES] 905 (last close=122245.17)
+2025-10-04 20:45:00,336 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 20:45:00,400 - INFO - [STRATEGY] Signal rejected for low confidence: side=SELL, win_prob=0.537, combined_score=0.02960000000000003, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 20:45:00,400 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.537, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:45:00,400 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 20:45:00,400 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.537, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:50:00,272 - INFO - [CANDLES] 906 (last close=122180.81)
+2025-10-04 20:50:00,378 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 20:50:00,450 - INFO - [STRATEGY] Signal rejected for low confidence: side=SELL, win_prob=0.51, combined_score=0.008000000000000007, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 20:50:00,450 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.51, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:50:00,450 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 20:50:00,450 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.51, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:54:59,984 - INFO - [CANDLES] 907 (last close=122086.19)
+2025-10-04 20:55:00,112 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 20:55:00,170 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.5, combined_score=0.0, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 20:55:00,171 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.5, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:55:00,171 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 20:55:00,171 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.5, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:00:00,301 - INFO - [CANDLES] 908 (last close=122000.01)
+2025-10-04 21:00:00,413 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:00:00,482 - INFO - [STRATEGY] Signal rejected for low confidence: side=SELL, win_prob=0.5, combined_score=0.0, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 21:00:00,482 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.5, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:00:00,482 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 21:00:00,482 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.5, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:05:00,125 - INFO - [CANDLES] 909 (last close=122034.42)
+2025-10-04 21:05:00,217 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:05:00,284 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.519, combined_score=0.015200000000000014, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 21:05:00,284 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.519, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:05:00,284 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 21:05:00,284 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.519, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:10:00,315 - INFO - [CANDLES] 910 (last close=122034.66)
+2025-10-04 21:10:00,431 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:10:00,501 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.558, combined_score=0.046400000000000045, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 21:10:00,501 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.558, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:10:00,501 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 21:10:00,501 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.558, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:14:59,930 - INFO - [CANDLES] 911 (last close=121902.71)
+2025-10-04 21:15:00,099 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:15:00,245 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.615, combined_score=0.092, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 21:15:00,245 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.615, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:15:00,245 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 21:15:00,245 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.615, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:20:00,208 - INFO - [CANDLES] 912 (last close=121917.61)
+2025-10-04 21:20:00,337 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:20:00,400 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.619, combined_score=0.0952, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 21:20:00,401 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.619, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:20:00,401 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 21:20:00,401 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.619, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:25:00,022 - INFO - [CANDLES] 913 (last close=121811.21)
+2025-10-04 21:25:00,116 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:25:00,185 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.631, combined_score=0.1048, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 21:25:00,185 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.631, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:25:00,185 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 21:25:00,185 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.631, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:30:00,011 - INFO - [CANDLES] 914 (last close=121733.94)
+2025-10-04 21:30:00,116 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:30:00,201 - INFO - [SIGNAL] {'side': 'BUY', 'sl': 120516.6006, 'tp': 122951.2794, 'win_prob': 0.657, 'reason': 'weighted_consensus', 'combined_score': 0.12560000000000002, 'w_ai': 0.4, 'ind_major': None, 'tuned_thresh': 0.1076}
+2025-10-04 21:30:00,201 - INFO - [SKIP-LIVE] Blocking live trade: win_prob 0.657 < WIN_PROB_MIN 0.7
+2025-10-04 21:34:59,902 - INFO - [CANDLES] 915 (last close=121731.88)
+2025-10-04 21:35:00,010 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:35:00,090 - INFO - [SIGNAL] {'side': 'BUY', 'sl': 120514.5612, 'tp': 122949.19880000001, 'win_prob': 0.686, 'reason': 'weighted_consensus', 'combined_score': 0.14880000000000004, 'w_ai': 0.4, 'ind_major': None, 'tuned_thresh': 0.1076}
+2025-10-04 21:35:00,090 - INFO - [SKIP-LIVE] Blocking live trade: win_prob 0.686 < WIN_PROB_MIN 0.7
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          2025-10-04 20:25:00,623 - INFO - [CANDLES] 901 (last close=122340.08)
+2025-10-04 20:25:00,716 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 20:25:00,792 - INFO - [STRATEGY] Market-high override: Forcing SELL (close=122340.08, recent_high=122483.44)
+2025-10-04 20:25:00,792 - INFO - [STRATEGY] SELL signal accepted: win_prob=0.672, combined_score=0.13760000000000003, ind_major=None
+2025-10-04 20:25:00,793 - INFO - [SIGNAL] {'side': 'SELL', 'sl': 123563.4808, 'tp': 121116.6792, 'win_prob': 0.672, 'reason': 'weighted_consensus', 'combined_score': 0.13760000000000003, 'w_ai': 0.4, 'ind_major': None, 'tuned_thresh': 0.1076}
+2025-10-04 20:25:00,793 - INFO - [SKIP-LIVE] Blocking live trade: win_prob 0.672 < WIN_PROB_MIN 0.7
+2025-10-04 20:30:00,438 - INFO - [CANDLES] 902 (last close=122313.55)
+2025-10-04 20:30:00,522 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 20:30:00,604 - INFO - [STRATEGY] Market-high override: Forcing SELL (close=122313.55, recent_high=122483.44)
+2025-10-04 20:30:00,605 - INFO - [STRATEGY] SELL signal accepted: win_prob=0.639, combined_score=0.11120000000000002, ind_major=None
+2025-10-04 20:30:00,605 - INFO - [SIGNAL] {'side': 'SELL', 'sl': 123536.6855, 'tp': 121090.4145, 'win_prob': 0.639, 'reason': 'weighted_consensus', 'combined_score': 0.11120000000000002, 'w_ai': 0.4, 'ind_major': None, 'tuned_thresh': 0.1076}
+2025-10-04 20:30:00,605 - INFO - [SKIP-LIVE] Blocking live trade: win_prob 0.639 < WIN_PROB_MIN 0.7
+2025-10-04 20:35:00,367 - INFO - [CANDLES] 903 (last close=122292.44)
+2025-10-04 20:35:00,478 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 20:35:00,633 - INFO - [STRATEGY] Market-high override: Forcing SELL (close=122292.44, recent_high=122483.44)
+2025-10-04 20:35:00,633 - INFO - [STRATEGY] SELL signal accepted: win_prob=0.644, combined_score=0.11520000000000002, ind_major=None
+2025-10-04 20:35:00,634 - INFO - [SIGNAL] {'side': 'SELL', 'sl': 123515.3644, 'tp': 121069.5156, 'win_prob': 0.644, 'reason': 'weighted_consensus', 'combined_score': 0.11520000000000002, 'w_ai': 0.4, 'ind_major': None, 'tuned_thresh': 0.1076}
+2025-10-04 20:35:00,634 - INFO - [SKIP-LIVE] Blocking live trade: win_prob 0.644 < WIN_PROB_MIN 0.7
+2025-10-04 20:40:00,673 - INFO - [CANDLES] 904 (last close=122260.01)
+2025-10-04 20:40:00,767 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 20:40:00,834 - INFO - [STRATEGY] Signal rejected for low confidence: side=SELL, win_prob=0.612, combined_score=0.0896, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 20:40:00,834 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.612, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:40:00,834 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 20:40:00,834 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.612, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:45:00,441 - INFO - [CANDLES] 905 (last close=122245.17)
+2025-10-04 20:45:00,533 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 20:45:00,604 - INFO - [STRATEGY] Signal rejected for low confidence: side=SELL, win_prob=0.604, combined_score=0.0832, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 20:45:00,604 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.604, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:45:00,605 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 20:45:00,605 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.604, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:50:00,614 - INFO - [CANDLES] 906 (last close=122180.81)
+2025-10-04 20:50:00,720 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 20:50:00,803 - INFO - [STRATEGY] Signal rejected for low confidence: side=SELL, win_prob=0.526, combined_score=0.02080000000000002, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 20:50:00,803 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.526, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:50:00,803 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 20:50:00,803 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.526, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:55:00,419 - INFO - [CANDLES] 907 (last close=122086.19)
+2025-10-04 20:55:00,502 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 20:55:00,573 - INFO - [STRATEGY] Signal rejected for low confidence: side=SELL, win_prob=0.507, combined_score=0.005600000000000005, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 20:55:00,574 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.507, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 20:55:00,574 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 20:55:00,574 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.507, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:00:02,976 - INFO - [CANDLES] 908 (last close=122000.01)
+2025-10-04 21:00:03,104 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:00:03,265 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.517, combined_score=0.013600000000000013, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 21:00:03,265 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.517, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:00:03,265 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 21:00:03,266 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.517, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:05:01,970 - INFO - [CANDLES] 909 (last close=122034.42)
+2025-10-04 21:05:02,108 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:05:02,173 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.523, combined_score=0.018400000000000017, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 21:05:02,173 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.523, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:05:02,173 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 21:05:02,173 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.523, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:10:00,985 - INFO - [CANDLES] 910 (last close=122034.66)
+2025-10-04 21:10:01,116 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:10:01,183 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.553, combined_score=0.04240000000000004, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 21:10:01,183 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.553, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:10:01,183 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 21:10:01,183 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.553, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:15:01,416 - INFO - [CANDLES] 911 (last close=121902.71)
+2025-10-04 21:15:01,560 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:15:01,683 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.615, combined_score=0.092, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 21:15:01,683 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.615, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:15:01,683 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 21:15:01,683 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.615, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:20:00,820 - INFO - [CANDLES] 912 (last close=121917.61)
+2025-10-04 21:20:00,927 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:20:00,981 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.61, combined_score=0.088, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 21:20:00,981 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.61, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:20:00,981 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 21:20:00,981 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.61, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:22:26,796 - ERROR - ConnectionClosedError (sent 1011 (internal error) keepalive ping timeout; no close frame received)
+2025-10-04 21:22:26,796 - ERROR - BinanceWebsocketClosed (Connection closed. Reconnecting...)
+2025-10-04 21:25:01,520 - INFO - [CANDLES] 913 (last close=121811.21)
+2025-10-04 21:25:01,645 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:25:01,717 - INFO - [STRATEGY] Signal rejected for low confidence: side=BUY, win_prob=0.624, combined_score=0.09920000000000001, threshold=0.75, tuned_thresh=0.1076
+2025-10-04 21:25:01,717 - INFO - [SIGNAL] {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.624, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:25:01,717 - INFO - [SKIP] low_conf(win_prob<0.75, combined<0.11)
+2025-10-04 21:25:01,717 - WARNING - [TRADE] Trade rejected: {'side': None, 'sl': None, 'tp': None, 'win_prob': 0.624, 'reason': 'low_conf(win_prob<0.75, combined<0.11)'}
+2025-10-04 21:30:00,790 - INFO - [CANDLES] 914 (last close=121733.94)
+2025-10-04 21:30:00,891 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:30:00,974 - INFO - [SIGNAL] {'side': 'BUY', 'sl': 120516.6006, 'tp': 122951.2794, 'win_prob': 0.685, 'reason': 'weighted_consensus', 'combined_score': 0.14800000000000005, 'w_ai': 0.4, 'ind_major': None, 'tuned_thresh': 0.1076}
+2025-10-04 21:30:00,974 - INFO - [SKIP-LIVE] Blocking live trade: win_prob 0.685 < WIN_PROB_MIN 0.7
+2025-10-04 21:35:00,698 - INFO - [CANDLES] 915 (last close=121731.88)
+2025-10-04 21:35:00,801 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+D:\binance_ats_clone\obaidur-binance-ats-main\.venv\.venv\Lib\site-packages\sklearn\utils\validation.py:2749: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-10-04 21:35:00,884 - INFO - [SIGNAL] {'side': 'BUY', 'sl': 120514.5612, 'tp': 122949.19880000001, 'win_prob': 0.685, 'reason': 'weighted_consensus', 'combined_score': 0.14800000000000005, 'w_ai': 0.4, 'ind_major': None, 'tuned_thresh': 0.1076}
+2025-10-04 21:35:00,884 - INFO - [SKIP-LIVE] Blocking live trade: win_prob 0.685 < WIN_PROB_MIN 0.7
+2025-10-04 21:39:53,020 - ERROR - ConnectionClosedError (no close frame received or sent)
+2025-10-04 21:39:53,021 - ERROR - BinanceWebsocketClosed (Connection closed. Reconnecting...)
+2025-10-04 21:39:54,092 - ERROR - Failed to connect to websocket: [WinError 5] Access is denied
+2025-10-04 21:39:58,096 - ERROR - Failed to connect to websocket: [WinError 5] Access is denied
+2025-10-04 21:40:05,113 - ERROR - Failed to connect to websocket: [WinError 5] Access is denied
+2025-10-04 21:40:10,130 - ERROR - Failed to connect to websocket: [WinError 5] Access is denied
+2025-10-04 21:40:10,131 - ERROR - Max reconnections 5 reached:
+2025-10-04 21:40:10,134 - ERROR - Unknown exception: BinanceWebsocketUnableToConnect ()
