@@ -3,6 +3,13 @@ import sys as _sys
 
 app = Flask(__name__)
 
+# Ensure project logging configuration is applied for the web UI so
+# safe_client logs and Flask logs share the same formatting and LOG_LEVEL.
+try:
+    from src.logging_config import configure_logging  # noqa: F401
+except Exception:
+    pass
+
 @app.route('/api/force_sell', methods=['POST'])
 def force_sell():
     """Manually close all pending trades with profit >= MIN_PROFIT_TO_CLOSE."""
@@ -112,11 +119,40 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 import json
-from src.utils import get_profit_tracker, get_pending_file, get_netmode
+from src.utils import get_profit_tracker, get_pending_file, get_netmode, get_history_file
+
+
+def get_best_history_file():
+    """Return the preferred history file path.
+
+    Rule: prefer the repo-level netmode-specific file (trade_history_testnet.json
+    or trade_history_mainnet.json) when it exists; otherwise fall back to the
+    per-API data-dir history file returned by get_history_file().
+    """
+    try:
+        history_file = get_history_file()
+    except Exception:
+        history_file = None
+    repo_candidate = os.path.join(PROJECT_ROOT, 'trade_history_testnet.json' if get_netmode() else 'trade_history_mainnet.json')
+    try:
+        if os.path.exists(repo_candidate):
+            return repo_candidate
+    except Exception:
+        pass
+    try:
+        if history_file and os.path.exists(history_file):
+            return history_file
+    except Exception:
+        pass
+    # last-resort: return whatever get_history_file() gave (may not exist)
+    return history_file
 
 import threading
 _status_emit_lock = threading.Lock()
 _last_status_emit = 0
+import threading as _threading
+# Event used to request background threads to stop during shutdown
+shutdown_event = _threading.Event()
 def emit_status_update():
     global _last_status_emit
     try:
@@ -208,10 +244,10 @@ def notify_update():
         # Rebuild in-memory profit counts from persisted history so web UI shows
         # accurate win/loss/pnl even though the bot runs in a separate process.
         try:
-            from src.utils import get_history_file, get_profit_tracker
+            from src.utils import get_profit_tracker
             import json
-            hf = get_history_file()
-            if os.path.exists(hf):
+            hf = get_best_history_file()
+            if hf and os.path.exists(hf):
                 try:
                     with open(hf, 'r', encoding='utf-8') as f:
                         trades = json.load(f)
@@ -353,11 +389,11 @@ def status_from_history():
     values the server would emit.
     """
     try:
-        from src.utils import get_history_file, get_pending_file
-        # compute trades summary
-        hf = get_history_file()
+        from src.utils import get_pending_file
+        # compute trades summary using best (repo-preferring) history file
+        hf = get_best_history_file()
         trades = []
-        if os.path.exists(hf):
+        if hf and os.path.exists(hf):
             try:
                 with open(hf, 'r', encoding='utf-8') as f:
                     trades = json.load(f)
@@ -467,7 +503,7 @@ def _run_reconcile_with_timeout(timeout=20, symbol=None):
 import time
 def emit_realtime_balance():
     last_usdt = last_btc = None
-    while True:
+    while not shutdown_event.is_set():
         try:
             tracker = get_profit_tracker()
             tracker.print_balances()
@@ -478,7 +514,11 @@ def emit_realtime_balance():
             last_usdt, last_btc = usdt, btc
         except Exception:
             pass
-        time.sleep(2)  # Poll every 2 seconds
+        # Poll every 2 seconds but exit quickly when shutdown_event is set
+        for _ in range(20):
+            if shutdown_event.is_set():
+                break
+            time.sleep(0.1)
 
 def start_balance_thread():
     t = threading.Thread(target=emit_realtime_balance, daemon=True)
@@ -610,9 +650,71 @@ def status():
                 pending_list = data
             pending = len([t for t in pending_list if t.get('status') == 'open'])
             pending_amt = sum(t.get('amount_usdt', 0) for t in pending_list if t.get('status') == 'open')
-        win = getattr(profit_tracker, 'win', 0)
-        loss = getattr(profit_tracker, 'loss', 0)
-        pnl = getattr(profit_tracker, 'balance', 0)
+        # Compute summary directly from persisted history so UI reflects saved trades
+        try:
+            history_file = get_history_file()
+            trades = []
+            # If both a per-API data-dir history and a repo-root history exist,
+            # choose the one with more closed trades (win/loss) to prefer the
+            # fuller persisted history. This handles cases where multiple data
+            # directories exist and some are sparse.
+            repo_candidate = os.path.join(PROJECT_ROOT, 'trade_history_testnet.json' if get_netmode() else 'trade_history_mainnet.json')
+            candidates = []
+            if history_file:
+                candidates.append(history_file)
+            if os.path.exists(repo_candidate):
+                candidates.append(repo_candidate)
+
+            def closed_count(path):
+                try:
+                    with open(path, 'r', encoding='utf-8') as hf:
+                        d = json.load(hf)
+                    if isinstance(d, dict) and 'history' in d and isinstance(d['history'], list):
+                        lst = d['history']
+                    elif isinstance(d, list):
+                        lst = d
+                    else:
+                        lst = []
+                    return sum(1 for t in lst if str(t.get('status','')).lower() in ('win','loss'))
+                except Exception:
+                    return 0
+
+            # Prefer the repo-level netmode-specific history file when it exists.
+            # Historically we attempted to pick the "fullest" candidate by counting
+            # closed trades, but this turned out to be nondeterministic on some
+            # setups. Use a simple rule: if the repo-level netmode file exists
+            # (e.g. trade_history_testnet.json) prefer it; otherwise fall back to
+            # the per-API data-dir history file when present.
+            best = None
+            try:
+                if os.path.exists(repo_candidate):
+                    best = repo_candidate
+                elif history_file and os.path.exists(history_file):
+                    best = history_file
+                else:
+                    best = None
+            except Exception:
+                best = history_file
+            if best and os.path.exists(best):
+                try:
+                    with open(best, 'r', encoding='utf-8') as hf:
+                        trades = json.load(hf)
+                except Exception:
+                    trades = []
+            win = sum(1 for t in trades if str(t.get('status')).lower() == 'win')
+            loss = sum(1 for t in trades if str(t.get('status')).lower() == 'loss')
+            realized_sum = 0.0
+            for t in trades:
+                try:
+                    realized_sum += float(t.get('realized_pnl_usdt') or 0)
+                except Exception:
+                    pass
+            pnl = float(realized_sum)
+        except Exception:
+            # fallback to profit_tracker if history read fails
+            win = getattr(profit_tracker, 'win', 0)
+            loss = getattr(profit_tracker, 'loss', 0)
+            pnl = getattr(profit_tracker, 'balance', 0)
     except Exception as e:
         print('[ERROR] summary logic:', e)
     use_testnet = get_netmode()
@@ -638,9 +740,9 @@ def status():
 def trade_history():
     """Return netmode-specific trade history as JSON object with 'trades' key (empty list if missing)."""
     try:
-        history_file = get_history_file()
+        history_file = get_best_history_file()
         trades = []
-        if os.path.exists(history_file):
+        if history_file and os.path.exists(history_file):
             with open(history_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             if isinstance(data, list):
@@ -648,6 +750,20 @@ def trade_history():
             # some older formats may store a dict; try to extract list
             elif isinstance(data, dict) and 'history' in data and isinstance(data['history'], list):
                 trades = data['history']
+        # Normalize records (fix status from realized_pnl_usdt and ensure timestamp)
+        try:
+            from src.utils import normalize_history_records
+            changed = normalize_history_records(trades)
+            # If we normalized and this is the repo-level file, persist corrections
+            repo_candidate = os.path.join(PROJECT_ROOT, 'trade_history_testnet.json' if get_netmode() else 'trade_history_mainnet.json')
+            if changed and history_file and os.path.abspath(history_file) == os.path.abspath(repo_candidate):
+                try:
+                    with open(history_file, 'w', encoding='utf-8') as f:
+                        json.dump(trades, f, indent=2, ensure_ascii=False)
+                except Exception:
+                    pass
+        except Exception:
+            pass
         return jsonify({'trades': trades})
     except Exception as e:
         print('[ERROR] trade_history API:', e)
@@ -804,7 +920,82 @@ def static_proxy(path):
     return send_from_directory(static_dir, path)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
+    # Use Flask-SocketIO's runner so the selected async mode (eventlet/gevent)
+    # is used for websocket upgrades. This avoids the RuntimeError raised when
+    # engineio's eventlet driver is used but the WSGI server is the plain
+    # werkzeug development server.
+    try:
+        # Prefer an uncommon, browser-safe port to avoid conflicts with common dev ports
+        # and browser restrictions on low-numbered ports. Default to 8101.
+        # Install graceful shutdown handlers so Ctrl+C doesn't leave eventlet
+        # greenlets in a noisy traceback. The Flask-SocketIO runner provides
+        # socketio.stop() which will stop the server loop.
+        try:
+            import signal
+            def _graceful_shutdown(signum, frame):
+                try:
+                    print('[INFO] Received shutdown signal, stopping socketio...')
+                except Exception:
+                    pass
+                try:
+                    # signal background threads to stop
+                    try:
+                        shutdown_event.set()
+                    except Exception:
+                        pass
+                    socketio.stop()
+                except Exception:
+                    pass
+                # Ensure we always exit: if socketio.stop() doesn't return within
+                # a short time (e.g. blocking IO in other threads), force exit.
+                try:
+                    import threading as _thr
+                    def _force_exit():
+                        try:
+                            os._exit(0)
+                        except Exception:
+                            pass
+                    t = _thr.Timer(5.0, _force_exit)
+                    t.daemon = True
+                    t.start()
+                except Exception:
+                    pass
+                try:
+                    sys.exit(0)
+                except Exception:
+                    try:
+                        os._exit(0)
+                    except Exception:
+                        pass
+            signal.signal(signal.SIGINT, _graceful_shutdown)
+            signal.signal(signal.SIGTERM, _graceful_shutdown)
+            # On Windows, also handle CTRL_BREAK_EVENT (SIGBREAK) so sending
+            # CTRL_BREAK_EVENT to a new process group is caught and handled.
+            if hasattr(signal, 'SIGBREAK'):
+                try:
+                    signal.signal(signal.SIGBREAK, _graceful_shutdown)
+                except Exception:
+                    pass
+        except Exception:
+            pass
+        try:
+            socketio.run(app, host="127.0.0.1", port=int(os.getenv("PORT", 8101)))
+        except KeyboardInterrupt:
+            try:
+                print('[INFO] KeyboardInterrupt caught in main runner, initiating shutdown...')
+            except Exception:
+                pass
+            try:
+                shutdown_event.set()
+            except Exception:
+                pass
+            try:
+                socketio.stop()
+            except Exception:
+                pass
+    except Exception as e:
+        print('Failed to start socketio.run, falling back to app.run:', e)
+        app.run(host="127.0.0.1", port=int(os.getenv("PORT", 8101)))
 
 
 @app.after_request

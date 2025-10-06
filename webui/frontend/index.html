@@ -378,6 +378,12 @@
     FAST_SMA:9, SLOW_SMA:21, ATR_LEN:14, EMA_HTF:200, ATR_SL_MULT:1.0, ATR_TP_MULT:1.0,
     AI_MIN_CONFIDENCE_OVERRIDE:0.75, AI_OVERRIDE_PROB:0.85, INDICATOR_CONFIRM_COUNT:2, MIN_COMBINED_SCORE:0.05, MIN_AI_WEIGHT:0.0, WIN_PROB_MIN:0.75
   };
+  // Add adaptive toggle default
+  CONFIG_DEFAULTS.ADAPTIVE_ENABLED = false;
+  // Adaptive tuning defaults
+  CONFIG_DEFAULTS.ADAPT_MIN_THRESH = 0.55;
+  CONFIG_DEFAULTS.ADAPT_MAX_THRESH = 0.95;
+  CONFIG_DEFAULTS.ADAPT_BASE_FRAC = 0.02;
   let configCache = {};
   function showConfigModal() {
     const modal = document.getElementById('config_modal');
@@ -408,7 +414,46 @@
         html += `</div>`;
         fields.innerHTML += html;
       });
+        // Append ADAPTIVE_ENABLED checkbox (not part of numeric CONFIG_FIELDS)
+        try{
+          const adaptiveValRaw = (cfg && (cfg['ADAPTIVE_ENABLED'] !== undefined && cfg['ADAPTIVE_ENABLED'] !== null && cfg['ADAPTIVE_ENABLED'] !== '')) ? cfg['ADAPTIVE_ENABLED'] : CONFIG_DEFAULTS['ADAPTIVE_ENABLED'];
+          const adaptiveVal = (adaptiveValRaw === true || String(adaptiveValRaw).toLowerCase() === 'true');
+          const chkHtml = `<div style='display:flex;align-items:center;gap:8px;margin-bottom:7px;'><label for='cf_ADAPTIVE_ENABLED' style='font-weight:500;min-width:170px;'>ADAPTIVE_ENABLED</label><input id='cf_ADAPTIVE_ENABLED' type='checkbox' ${adaptiveVal? 'checked':''} /></div>`;
+          fields.innerHTML += chkHtml;
+          // Add adaptive tuning fields under the toggle (they can be enabled when ADAPTIVE_ENABLED is checked)
+          const minVal = (cfg && cfg['ADAPT_MIN_THRESH']!==undefined)?cfg['ADAPT_MIN_THRESH']:CONFIG_DEFAULTS.ADAPT_MIN_THRESH;
+          const maxVal = (cfg && cfg['ADAPT_MAX_THRESH']!==undefined)?cfg['ADAPT_MAX_THRESH']:CONFIG_DEFAULTS.ADAPT_MAX_THRESH;
+          const baseVal = (cfg && cfg['ADAPT_BASE_FRAC']!==undefined)?cfg['ADAPT_BASE_FRAC']:CONFIG_DEFAULTS.ADAPT_BASE_FRAC;
+          const adaptHtml = `
+            <div id='adaptive_fields' style='margin-left:6px;margin-bottom:8px;'>
+              <div style='display:flex;align-items:center;gap:8px;margin-bottom:6px;'><label style='min-width:170px;color:#666;'>ADAPT_MIN_THRESH</label><input id='cf_ADAPT_MIN_THRESH' type='number' step='0.01' value='${minVal}' style='width:80px;' /></div>
+              <div style='display:flex;align-items:center;gap:8px;margin-bottom:6px;'><label style='min-width:170px;color:#666;'>ADAPT_MAX_THRESH</label><input id='cf_ADAPT_MAX_THRESH' type='number' step='0.01' value='${maxVal}' style='width:80px;' /></div>
+              <div style='display:flex;align-items:center;gap:8px;margin-bottom:6px;'><label style='min-width:170px;color:#666;'>ADAPT_BASE_FRAC</label><input id='cf_ADAPT_BASE_FRAC' type='number' step='0.001' value='${baseVal}' style='width:80px;' /></div>
+            </div>`;
+          fields.innerHTML += adaptHtml;
+          // Wire checkbox change event to enable/disable adaptive inputs
+          try{
+            const cb = document.getElementById('cf_ADAPTIVE_ENABLED');
+            if(cb) {
+              cb.addEventListener('change', function(){ try{ setAdaptiveFieldsState(cb.checked); }catch(e){} });
+            }
+          }catch(e){}
+          // Set initial enabled/disabled state
+          setTimeout(()=>{
+            try{ const cb2 = document.getElementById('cf_ADAPTIVE_ENABLED'); if(cb2) setAdaptiveFieldsState(cb2.checked); }catch(e){}
+          }, 10);
+        }catch(e){ }
     });
+  }
+  // Enable or disable adaptive tuning inputs when ADAPTIVE_ENABLED toggles
+  function setAdaptiveFieldsState(enabled){
+    try{
+      const ids = ['cf_ADAPT_MIN_THRESH','cf_ADAPT_MAX_THRESH','cf_ADAPT_BASE_FRAC'];
+      ids.forEach(id=>{ const el = document.getElementById(id); if(el) el.disabled = !enabled; });
+      // Adjust label color to visually indicate disabled state
+      const labels = document.querySelectorAll('#adaptive_fields label');
+      labels.forEach(l=>{ l.style.color = enabled ? '#000' : '#888'; });
+    }catch(e){}
   }
   function validateConfig() {
     let ok = true, msg = '';
@@ -434,6 +479,7 @@
       const el = document.getElementById('cf_'+f.k);
       el.value = CONFIG_DEFAULTS[f.k];
     });
+    try{ document.getElementById('cf_ADAPTIVE_ENABLED').checked = CONFIG_DEFAULTS['ADAPTIVE_ENABLED']; }catch(e){}
     document.getElementById('config_msg').textContent = 'Restored default values (not saved yet)';
   };
     document.getElementById('config_apply_btn').onclick = async function(){
@@ -445,6 +491,12 @@
       else if(f.type==='float') v = parseFloat(v);
       vals[f.k] = v;
     });
+  // include adaptive toggle
+  try{ vals['ADAPTIVE_ENABLED'] = (document.getElementById('cf_ADAPTIVE_ENABLED') && document.getElementById('cf_ADAPTIVE_ENABLED').checked) ? 'true' : 'false'; }catch(e){}
+  // include adaptive tuning values (always send current values so backend persists them)
+  try{ vals['ADAPT_MIN_THRESH'] = parseFloat(document.getElementById('cf_ADAPT_MIN_THRESH').value); }catch(e){}
+  try{ vals['ADAPT_MAX_THRESH'] = parseFloat(document.getElementById('cf_ADAPT_MAX_THRESH').value); }catch(e){}
+  try{ vals['ADAPT_BASE_FRAC'] = parseFloat(document.getElementById('cf_ADAPT_BASE_FRAC').value); }catch(e){}
     try{
       const res = await fetch('/api/config', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(vals)});
       const j = await res.json();
@@ -672,9 +724,14 @@
         return;
       }
       // Simple plot using HTML table (no chart lib)
-      let html = '<table style="width:100%;max-width:700px;border-collapse:collapse;margin-top:8px;font-size:13px"><tr><th>Time</th><th>Equity (USDT)</th></tr>';
-      for(const pt of curve) html += `<tr><td>${pt.ts}</td><td>${pt.eq.toFixed(2)}</td></tr>`;
-      html += '</table>';
+      // Use a thead/tbody structure and fixed layout so headers align above columns.
+      let html = '<table style="width:100%;max-width:700px;border-collapse:collapse;margin-top:8px;font-size:13px;table-layout:fixed;">';
+      html += '<thead><tr>' +
+        '<th style="width:55%;text-align:left;padding:6px;border:1px solid #e6e6e6;background:#f7fafc">Time</th>' +
+        '<th style="width:45%;text-align:right;padding:6px;border:1px solid #e6e6e6;background:#f7fafc">Equity (USDT)</th>' +
+        '</tr></thead><tbody>';
+      for(const pt of curve) html += `<tr><td style="padding:6px;border:1px solid #f1f5f9;white-space:nowrap;">${pt.ts}</td><td style="padding:6px;border:1px solid #f1f5f9;text-align:right;">${pt.eq.toFixed(2)}</td></tr>`;
+      html += '</tbody></table>';
       eqDiv.innerHTML = html;
     } catch(e) {
       if(eqDiv) eqDiv.innerHTML = '<span style="color:#c00">Failed to load equity curve.</span>';
@@ -742,23 +799,9 @@
           // actually hosted on the same port as the UI (e.g. :8000). If an
           // explicit WEBUI_BACKEND_URL is provided by the server, use it.
           var backendUrl = window.WEBUI_BACKEND_URL || window.__WEBUI_BACKEND_URL__ || window.location.origin;
-          var socket = io(backendUrl, { transports: ['websocket','polling'] });
-          // If the explicit same-origin connect fails (e.g. backend is on a
-          // different legacy port), try the old :5000 fallback once.
-          var triedFallback = false;
-          socket.on('connect_error', function(err){
-            try{ console.warn('[SOCKET] connect_error to', backendUrl, err); }catch(e){}
-            if(!triedFallback){
-              triedFallback = true;
-              try{
-                var fallback = location.protocol + '//' + location.hostname + ':5000';
-                console.log('[SOCKET] attempting fallback to', fallback);
-                socket = io(fallback, { transports: ['websocket','polling'] });
-                socket.on('connect', function(){ try{ console.log('[SOCKET] connected to fallback', fallback); }catch(e){} });
-                socket.on('status_update', function(s){ try{ console.log('[SOCKET] status_update', s); }catch(e){}; updateStatusUI(s); try{ var el = document.getElementById('last_status_payload'); if(el){ el.style.display = 'inline-block'; el.textContent = JSON.stringify(s, null, 2); } }catch(e){} });
-              }catch(e){ console.error('[SOCKET] fallback failed', e); }
-            }
-          });
+          // Prefer polling first (more robust in development hosts); then allow websocket.
+          var socket = io(backendUrl, { transports: ['polling','websocket'] });
+          socket.on('connect_error', function(err){ try{ console.warn('[SOCKET] connect_error to', backendUrl, err); }catch(e){} });
           socket.on('connect', function(){ try{ console.log('[SOCKET] connected to', backendUrl); }catch(e){} });
           socket.on('status_update', function(s){
             try{ console.log('[SOCKET] status_update', s); }catch(e){}

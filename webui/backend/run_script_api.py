@@ -8,7 +8,8 @@ BASE = r"D:\binance_ats_clone\obaidur-binance-ats-main"
 def run_script(script_path):
     try:
         proc = subprocess.Popen([os.environ.get('PYTHON_EXEC','python'), script_path], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, cwd=BASE)
-        out, _ = proc.communicate(timeout=60)
+        # Allow longer-running retrain tasks (e.g., epochs) — 20 minutes timeout
+        out, _ = proc.communicate(timeout=20*60)
         return out.decode('utf-8', errors='replace')
     except Exception as e:
         return f'Error: {e}'
